@@ -38,9 +38,9 @@ $routes->set404Override();
 
 
 $routes->get('/', 'Home::index');
-$routes->get('/sisuar/public/BerandaSurat', 'BerandaSurat::index');
-$routes->get('sisuar/public/BerandaArsip', 'BerandaArsip::index');
-$routes->get('sisuar/public/SuratMasuk', 'SuratMasuk::index');
+$routes->get('/BerandaSurat', 'BerandaSurat::index');
+$routes->get('/BerandaArsip', 'BerandaArsip::index');
+$routes->get('/SuratMasuk', 'SuratMasuk::index');
 
 
 
