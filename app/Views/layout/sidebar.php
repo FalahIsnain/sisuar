@@ -9,16 +9,15 @@
                 <span class="link_name">Dashboard</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">Category</a></li>
+                <li><a class="link_name" href="#">Dashboard</a></li>
             </ul>
         </li>
         <li>
             <a href="<?= base_url('/BerandaSurat') ?>">
                 <i class='bx bx-envelope'></i>
-                <span class="link_name">Surat</span>
             </a>
             <ul class="sub-menu blank">
-                <li><a class="link_name" href="#">surat</a></li>
+                <li><a class="link_name" href="#">Surat</a></li>
             </ul>
         </li>
         <!-- <li>

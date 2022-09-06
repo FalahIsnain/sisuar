@@ -1,4 +1,4 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/dashboard/template'); ?>
 <?= $this->section('content'); ?>
 
 <div class="container text-center mt-5">

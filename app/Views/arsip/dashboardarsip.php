@@ -1,7 +1,7 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/arsip/template'); ?>
 <?= $this->section('content'); ?>
 
-<div class="container" style="width: 850px;">
+<div class="container" style="width: 1050px;">
     <canvas id="arsip"></canvas>
 </div>
 <?php

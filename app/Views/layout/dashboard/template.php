@@ -27,14 +27,16 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <title><?= $title; ?></title>
+    <link rel="icon" href="https://raw.githubusercontent.com/aldiskatel/cdn/main/dist/2.png" type="image/x-icon">
 </head>
 
 <body>
     <?= $this->include('layout/sidebar'); ?>
     <section class="home-section" style="background-color: white;">
-        <?= $this->include('layout/navbar'); ?>
         <?= $this->renderSection('content'); ?>
     </section>
+    <?= $this->include('layout/footer'); ?>
+
     <!-- //boot5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
