@@ -17,6 +17,15 @@
 
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <?php $surat = ['Surat Masuk', 'Surat Keluar', 'Surat Tugas'];
+        $j = 0; ?>
+        <?php for ($i = 1; $i <= 4; $i++) { ?>
+
+
+
+        <?php } ?>
+
         <div class="col">
             <div class="card">
                 <div class="card-body">
@@ -29,9 +38,9 @@
         <div class="col">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Surat Masuk</h5>
-                    <p class="card-text">Jumlah Surat Masuk : 10 </p>
-                    <a href="#" class="btn btn-primary">Lihat</a>
+                    <h5 class="card-title">Surat Keluar</h5>
+                    <p class="card-text">Jumlah Surat Keluar : 10 </p>
+                    <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-primary">Lihat</a>
                 </div>
             </div>
         </div>
@@ -39,8 +48,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Surat Masuk</h5>
-                    <p class="card-text">Jumlah Surat Masuk : 10 </p>
-                    <a href="#" class="btn btn-primary">Lihat</a>
+                    <p class="card-text">Jumlah Surat Tugas : 10 </p>
+                    <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-primary">Lihat</a>
                 </div>
             </div>
         </div>

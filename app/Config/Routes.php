@@ -41,6 +41,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/BerandaSurat', 'BerandaSurat::index');
 $routes->get('/BerandaArsip', 'BerandaArsip::index');
 $routes->get('/SuratMasuk', 'SuratMasuk::index');
+$routes->get('/SuratKeluar', 'SuratKeluar::index');
+$routes->get('/SuratTugas', 'SuratTugas::index');
 
 
 

@@ -2,10 +2,10 @@
 <?= $this->section('content'); ?>
 
 <div class="container" style="width: 850px;">
-    <canvas id="suratmasuk"></canvas>
+    <canvas id="arsip"></canvas>
 </div>
 <?php
-$bulan = ['january', 'february', 'maret', 'april', 'mei', 'juny', 'july', 'agustus', 'september', 'oktober', 'november', 'desember']
+$bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
 ?>
 
 <div class="container mt-4 mb-4">
