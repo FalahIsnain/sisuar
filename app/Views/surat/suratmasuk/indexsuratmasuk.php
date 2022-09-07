@@ -15,11 +15,11 @@
                     <th>Tujuan</th>
                     <th>Perihal</th>
                     <th>Tanggal date</th>
-                    <th>Keterangan</th>
+                    <th>Terlaksana</th>
                 </tr>
             </thead>
-            <?php foreach ($suratmasuk as $sm) : ?>
-                <tbody>
+            <tbody>
+                <?php foreach ($suratmasuk as $sm) : ?>
                     <tr>
                         <td><?= $sm['no_surat'] ?></td>
                         <td><?= $sm['asal_surat'] ?></td>
@@ -29,8 +29,8 @@
                         <td><?= $sm['ket_surat'] ?> </td>
                     </tr>
                 <?php endforeach; ?>
+            </tbody>
 
-                </tbody>
         </table>
     </div>
 </div>

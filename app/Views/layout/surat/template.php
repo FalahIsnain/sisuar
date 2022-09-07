@@ -55,6 +55,7 @@
 
 
 
+
     <script>
         let arrow = document.querySelectorAll(".arrow");
         for (var i = 0; i < arrow.length; i++) {
@@ -88,18 +89,6 @@
             }
         }
     </script>
-
-    <script>
-        $(document).ready(function() {
-            $('#table').DataTable({
-                "lengthMenu": [
-                    [3, 5, 7, -1],
-                    [3, 5, 7, "All"]
-                ]
-            });
-        });
-    </script>
-
 
 
     <script>
@@ -251,6 +240,17 @@
                     }
                 }
             }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#table').DataTable({
+                "lengthMenu": [
+                    [3, 5, 7, -1],
+                    [3, 5, 7, "All"]
+                ]
+            });
         });
     </script>
 
