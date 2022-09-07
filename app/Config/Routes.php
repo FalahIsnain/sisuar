@@ -45,6 +45,8 @@ $routes->get('/SuratKeluar', 'SuratKeluar::index');
 $routes->get('/SuratTugas', 'SuratTugas::index');
 $routes->add('/SuratMasuk/(:any)', 'SuratMasuk::$1');
 $routes->add('/SuratKeluar/(:any)', 'SuratKeluar::$1');
+$routes->add('/BerandaSurat/(:any)', 'BerandaSurat::$1');
+
 
 
 

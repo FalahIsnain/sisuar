@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\SuratKeluarModels;
 use App\Models\SuratMasukModels;
 
 class SuratMasuk extends BaseController
@@ -10,6 +11,7 @@ class SuratMasuk extends BaseController
 
     public function __construct()
     {
+        $this->SuratKeluarModels = new SuratKeluarModels();
         $this->SuratMasukModels = new SuratMasukModels();
     }
 
@@ -17,7 +19,9 @@ class SuratMasuk extends BaseController
     {
         $data = [
             'title' => 'SISUAR',
-            'suratmasuk' => $this->SuratMasukModels->findAll()
+            'suratmasuk' => $this->SuratMasukModels->findAll(),
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar()
         ];
         return view('surat/suratmasuk/indexsuratmasuk.php', $data);
     }

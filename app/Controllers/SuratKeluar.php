@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\SuratKeluarModels;
+use App\Models\SuratMasukModels;
 
 class SuratKeluar extends BaseController
 {
@@ -11,12 +12,15 @@ class SuratKeluar extends BaseController
     public function __construct()
     {
         $this->SuratKeluarModels = new SuratKeluarModels();
+        $this->SuratMasukModels = new SuratMasukModels();
     }
     public function index()
     {
         $data = [
             'title' => 'SISUAR',
-            'suratkeluar' => $this->SuratKeluarModels->findAll()
+            'suratkeluar' => $this->SuratKeluarModels->findAll(),
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar()
 
         ];
         return view('surat/suratkeluar/indexsuratkeluar.php', $data);

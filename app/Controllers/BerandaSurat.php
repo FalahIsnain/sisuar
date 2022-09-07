@@ -27,4 +27,34 @@ class BerandaSurat extends BaseController
 
         return view('surat/dashboardsurat.php', $data);
     }
+    public function tambahSuratMasukDashboard()
+    {
+        $dataSuratMasuk = [
+            'no_surat' => $this->request->getVar('no_surat'),
+            'asal_surat' => $this->request->getVar('asal_surat'),
+            'tujuan_surat' => $this->request->getVar('tujuan_surat'),
+            'perihal' => $this->request->getVar('perihal'),
+            'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+            'ket_surat' => $this->request->getVar('ket_surat'),
+            'file' => '-',
+        ];
+        $this->SuratMasukModels->save($dataSuratMasuk);
+        return redirect()->to(base_url('/BerandaSurat'));
+    }
+    public function tambahSuratKeluarDashboard()
+    {
+        $dataSuratKeluar = [
+            'no_surat' => $this->request->getVar('no_surat'),
+            'asal_surat' => $this->request->getVar('asal_surat'),
+            'tujuan_surat' => $this->request->getVar('tujuan_surat'),
+            'perihal' => $this->request->getVar('perihal'),
+            'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
+            // 'ket_surat' => $this->request->getVar('ket_surat'),
+            'ket_surat' => '-',
+
+            'file' => '-',
+        ];
+        $this->SuratKeluarModels->save($dataSuratKeluar);
+        return redirect()->to(base_url('/BerandaSurat'));
+    }
 }

@@ -11,7 +11,7 @@
         </div>
     </center>
 
-    <button type="button" class="btn btn-success mb-4 mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <button type="button" class="btn btn-primary mb-4 mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Tambah Surat
     </button>
     <div class="tablebox" style="width: 1300px;">
