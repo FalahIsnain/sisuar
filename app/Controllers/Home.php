@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         $data = [
             'title' => 'SISUAR',
-            'konten' => 'ini halaman home'
+            
         ];
         return view('home', $data);
     }

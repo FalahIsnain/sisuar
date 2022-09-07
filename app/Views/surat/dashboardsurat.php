@@ -20,7 +20,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Surat Masuk</h5>
-                    <p class="card-text">Jumlah Surat Masuk : 10 </p>
+                    <p class="card-text">Jumlah Surat Masuk : <?= $jumlahSuratMasuk ?> </p>
                     <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-primary">Lihat</a>
                 </div>
             </div>
@@ -29,7 +29,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Surat Keluar</h5>
-                    <p class="card-text">Jumlah Surat Keluar : 10 </p>
+                    <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
                     <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-primary">Lihat</a>
                 </div>
             </div>
@@ -62,81 +62,50 @@
         </ul>
     </div>
     <div class="container mt-4">
-    <div class="tablebox" style="width: 1300px;">
-        <table id="table" class="table table-striped" style="width:100%">
-            <thead>
-                <tr>
-                    <th>No surat</th>
-                    <th>Asal Surat</th>
-                    <th>Tujuan</th>
-                    <th>Perihal</th>
-                    <th>Tanggal date</th>
-                    <th>Keterangan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Shou Itou</td>
-                    <td>Regional Marketing</td>
-                    <td>Tokyo</td>
-                    <td>20</td>
-                    <td>2011-08-14</td>
-                    <td>$163,000</td>
-                </tr>
-                <tr>
-                    <td>Michelle House</td>
-                    <td>Integration Specialist</td>
-                    <td>Sydney</td>
-                    <td>37</td>
-                    <td>2011-06-02</td>
-                    <td>$95,400</td>
-                </tr>
-                <tr>
-                    <td>Suki Burks</td>
-                    <td>Developer</td>
-                    <td>London</td>
-                    <td>53</td>
-                    <td>2009-10-22</td>
-                    <td>$114,500</td>
-                </tr>
-                <tr>
-                    <td>Prescott Bartlett</td>
-                    <td>Technical Author</td>
-                    <td>London</td>
-                    <td>27</td>
-                    <td>2011-05-07</td>
-                    <td>$145,000</td>
-                </tr>
-                <tr>
-                    <td>Gavin Cortez</td>
-                    <td>Team Leader</td>
-                    <td>San Francisco</td>
-                    <td>22</td>
-                    <td>2008-10-26</td>
-                    <td>$235,500</td>
-                </tr>
-                <tr>
-                    <td>Martena Mccray</td>
-                    <td>Post-Sales support</td>
-                    <td>Edinburgh</td>
-                    <td>46</td>
-                    <td>2011-03-09</td>
-                    <td>$324,050</td>
-                </tr>
-                <tr>
-                    <td>Unity Butler</td>
-                    <td>Marketing Designer</td>
-                    <td>San Francisco</td>
-                    <td>47</td>
-                    <td>2009-12-09</td>
-                    <td>$85,675</td>
-                </tr>
-        </table>
+        <div class="tablebox" style="width: 1300px;">
+            <table id="table" class="table table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>No surat</th>
+                        <th>Asal Surat</th>
+                        <th>Tujuan</th>
+                        <th>Perihal</th>
+                        <th>Tanggal date</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($suratmasuk as $sm) : ?>
+                        <tr>
+                            <td><?= $sm['no_surat'] ?></td>
+                            <td><?= $sm['asal_surat'] ?></td>
+                            <td><?= $sm['tujuan_surat'] ?></td>
+                            <td><?= $sm['perihal'] ?></td>
+                            <?php $date = date('d-m-Y', strtotime($sm['tanggal_masuk'])) ?>
+                            <td><?= $date ?></td>
+                            <td><?= $sm['ket_surat'] ?> </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    <?php foreach ($suratkeluar as $sm) : ?>
+                        <tr>
+                            <td><?= $sm['no_surat'] ?></td>
+                            <td><?= $sm['asal_surat'] ?></td>
+                            <td><?= $sm['tujuan_surat'] ?></td>
+                            <td><?= $sm['perihal'] ?></td>
+                            <?php $date = date('d-m-Y', strtotime($sm['tanggal_keluar'])) ?>
+                            <td><?= $date ?></td>
+                            <td><?= $sm['ket_surat'] ?> </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+
+
+            </table>
+        </div>
     </div>
+
 </div>
 
-    </div>
-   
 
 <!-- Modal -->
 <div class="modal fade" id="masuk" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -209,7 +178,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <form class="row g-3">
+                <form class="row g-3">
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">No surat</label>
                         <input type="email" class="form-control" id="inputEmail4">
@@ -271,7 +240,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <form class="row g-3">
+                <form class="row g-3">
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">No surat</label>
                         <input type="email" class="form-control" id="inputEmail4">

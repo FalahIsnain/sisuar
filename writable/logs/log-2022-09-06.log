@@ -671,3 +671,61 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
 11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
 12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-06 23:04:21 --> Undefined variable: suratmasuk
+in APPPATH\Views\surat\dashboardsurat.php on line 78.
+ 1 APPPATH\Views\surat\dashboardsurat.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratmasuk', 'APPPATH\\Views\\surat\\dashboardsurat.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\dashboardsurat.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/dashboardsurat.php', [], true)
+ 5 APPPATH\Controllers\BerandaSurat.php(13): view('surat/dashboardsurat.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-06 23:05:28 --> Undefined variable: suratmasuk
+in APPPATH\Views\surat\dashboardsurat.php on line 78.
+ 1 APPPATH\Views\surat\dashboardsurat.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratmasuk', 'APPPATH\\Views\\surat\\dashboardsurat.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\dashboardsurat.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/dashboardsurat.php', [], true)
+ 5 APPPATH\Controllers\BerandaSurat.php(13): view('surat/dashboardsurat.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-06 23:05:29 --> Undefined variable: suratmasuk
+in APPPATH\Views\surat\dashboardsurat.php on line 78.
+ 1 APPPATH\Views\surat\dashboardsurat.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratmasuk', 'APPPATH\\Views\\surat\\dashboardsurat.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\dashboardsurat.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/dashboardsurat.php', [], true)
+ 5 APPPATH\Controllers\BerandaSurat.php(13): view('surat/dashboardsurat.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-06 23:05:30 --> Undefined variable: suratmasuk
+in APPPATH\Views\surat\dashboardsurat.php on line 78.
+ 1 APPPATH\Views\surat\dashboardsurat.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratmasuk', 'APPPATH\\Views\\surat\\dashboardsurat.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\dashboardsurat.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/dashboardsurat.php', [], true)
+ 5 APPPATH\Controllers\BerandaSurat.php(13): view('surat/dashboardsurat.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-06 23:14:39 --> Call to undefined method App\Models\SuratKeluarModels::hitungSuratMasuk
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\BerandaSurat.php(24): CodeIgniter\Model->__call('hitungSuratMasuk', [])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-06 23:20:33 --> Call to undefined method App\Models\SuratMasukModels::hitungSuratKeluar
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\BerandaSurat.php(25): CodeIgniter\Model->__call('hitungSuratKeluar', [])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
