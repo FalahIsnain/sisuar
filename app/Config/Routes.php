@@ -43,6 +43,8 @@ $routes->get('/BerandaArsip', 'BerandaArsip::index');
 $routes->get('/SuratMasuk', 'SuratMasuk::index');
 $routes->get('/SuratKeluar', 'SuratKeluar::index');
 $routes->get('/SuratTugas', 'SuratTugas::index');
+$routes->add('/SuratMasuk/(:any)', 'SuratMasuk::$1');
+$routes->add('/SuratKeluar/(:any)', 'SuratKeluar::$1');
 
 
 

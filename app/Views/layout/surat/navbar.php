@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Surat Masuk</a>
+                    <a class="nav-link" href="<?= base_url('/SuratMasuk') ?>">Surat Masuk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Surat Keluar</a>
+                    <a class="nav-link" href="<?= base_url('/SuratKeluar') ?>">Surat Keluar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Surat Tugas</a>
+                    <a class="nav-link" href="<?= base_url('/SuratTugas') ?>">Surat Tugas</a>
                 </li>
             </ul>
         </div>
