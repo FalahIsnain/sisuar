@@ -4,16 +4,20 @@ namespace App\Controllers;
 
 use App\Models\SuratKeluarModels;
 use App\Models\SuratMasukModels;
+use App\Models\SuratTugasModels;
 
 
 class BerandaSurat extends BaseController
 {
+    protected $SuratMasukModels;
     protected $SuratKeluarModels;
+    protected $SuratTugasModels;
 
     public function __construct()
     {
         $this->SuratKeluarModels = new SuratKeluarModels();
         $this->SuratMasukModels = new SuratMasukModels();
+        $this->SuratTugasModels = new SuratTugasModels();
     }
     public function index()
     {
@@ -21,8 +25,10 @@ class BerandaSurat extends BaseController
             'title' => 'SISUAR',
             'suratmasuk' => $this->SuratMasukModels->findAll(),
             'suratkeluar' => $this->SuratKeluarModels->findAll(),
+            'surattugas' => $this->SuratTugasModels->findAll(),
             'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
-            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar()
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas()
         ];
 
         return view('surat/dashboardsurat.php', $data);

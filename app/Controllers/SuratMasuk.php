@@ -4,15 +4,19 @@ namespace App\Controllers;
 
 use App\Models\SuratKeluarModels;
 use App\Models\SuratMasukModels;
+use App\Models\SuratTugasModels;
 
 class SuratMasuk extends BaseController
 {
     protected $SuratMasukModels;
+    protected $SuratKeluarModels;
+    protected $SuratTugasModels;
 
     public function __construct()
     {
         $this->SuratKeluarModels = new SuratKeluarModels();
         $this->SuratMasukModels = new SuratMasukModels();
+        $this->SuratTugasModels = new SuratTugasModels();
     }
 
     public function index()
@@ -21,7 +25,8 @@ class SuratMasuk extends BaseController
             'title' => 'SISUAR',
             'suratmasuk' => $this->SuratMasukModels->findAll(),
             'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
-            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar()
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas()
         ];
         return view('surat/suratmasuk/indexsuratmasuk.php', $data);
     }
@@ -38,6 +43,15 @@ class SuratMasuk extends BaseController
             'file' => '-',
         ];
         $this->SuratMasukModels->save($dataSuratMasuk);
+        return redirect()->to(base_url('/SuratMasuk'));
+    }
+
+    public function hapusSuratMasuk()
+    {
+        helper(['form', 'url']);
+        $id = $this->request->uri->getSegment(2);
+        $this->SuratMasukModels->delete($id);
+        session()->setFlashdata('pesan', 'data berhasil di hapus');
         return redirect()->to(base_url('/SuratMasuk'));
     }
 }

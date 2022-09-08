@@ -104,7 +104,7 @@
                     ],
                     datasets: [{
                         label: 'Surat',
-                        data: [<?php echo $jumlahSuratMasuk ?>, <?php echo $jumlahSuratKeluar ?>, 10],
+                        data: [<?php echo $jumlahSuratMasuk ?>, <?php echo $jumlahSuratKeluar ?>, <?php echo $jumlahSuratTugas ?>],
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',

@@ -24,6 +24,7 @@
                     <th>Perihal</th>
                     <th>Tanggal Surat</th>
                     <th>Terlaksana</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +37,14 @@
                         <?php $date = date('d-m-Y', strtotime($sm['tanggal_masuk'])) ?>
                         <td><?= $date ?></td>
                         <td><?= $sm['ket_surat'] ?> </td>
+                        <td>
+                            <form action="<?= base_url('SuratMasuk/' . $sm['id_surat']) ?>" method="post" class="d-inline">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
+                            </form>
+                        </td>
+
                     </tr>
                 <?php endforeach; ?>
             </tbody>

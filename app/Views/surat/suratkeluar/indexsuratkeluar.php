@@ -4,13 +4,13 @@
 
 <div class="container ml-8">
     <center>
-    <div class ="container mt-1">
-        <h2>
-            Surat Keluar
-        </h2>
-    </div>
+        <div class="container mt-1">
+            <h2>
+                Surat Keluar
+            </h2>
+        </div>
     </center>
-   
+
     <button type="button" class="btn btn-primary mb-4 mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Tambah Surat
     </button>
@@ -24,6 +24,7 @@
                     <th>Perihal</th>
                     <th>Tanggal Surat</th>
                     <th>Terlaksana</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +37,13 @@
                         <?php $date = date('d-m-Y', strtotime($sm['tanggal_keluar'])) ?>
                         <td><?= $date ?></td>
                         <td><?= $sm['ket_surat'] ?> </td>
+                        <td>
+                            <form action="<?= base_url('SuratKeluar/' . $sm['id_surat']) ?>" method="post" class="d-inline">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
+                            </form>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -54,7 +62,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <form action="<?= base_url('/SuratKeluar/tambahSuratKeluar') ?>" class="row g-3" method="post">
+                <form action="<?= base_url('/SuratKeluar/tambahSuratKeluar') ?>" class="row g-3" method="post">
                     <?= csrf_field(); ?>
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">No surat</label>

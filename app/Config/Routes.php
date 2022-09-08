@@ -45,7 +45,11 @@ $routes->get('/SuratKeluar', 'SuratKeluar::index');
 $routes->get('/SuratTugas', 'SuratTugas::index');
 $routes->add('/SuratMasuk/(:any)', 'SuratMasuk::$1');
 $routes->add('/SuratKeluar/(:any)', 'SuratKeluar::$1');
+$routes->add('/SuratTugas/(:any)', 'SuratTugas::$1');
 $routes->add('/BerandaSurat/(:any)', 'BerandaSurat::$1');
+$routes->delete('/SuratMasuk/(:num)', 'SuratMasuk::hapusSuratMasuk/$1');
+$routes->delete('/SuratKeluar/(:num)', 'SuratKeluar::hapusSuratKeluar/$1');
+$routes->delete('/SuratTugas/(:num)', 'SuratTugas::hapusSuratTugas/$1');
 
 
 

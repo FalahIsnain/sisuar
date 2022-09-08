@@ -19,7 +19,7 @@
 <div class="container mt-5">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-        <div class="card" style="background-color: #FF5C7E;" border-radius:10>
+            <div class="card" style="background-color: #FF5C7E;" border-radius:10>
                 <div class="card-body">
                     <h5 class="card-title">Surat Masuk</h5>
                     <p class="card-text">Jumlah Surat Masuk : <?= $jumlahSuratMasuk ?> </p>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="col">
-        <div class="card" style="background-color: #36A2EB;" border-radius:10>
+            <div class="card" style="background-color: #36A2EB;" border-radius:10>
                 <div class="card-body">
                     <h5 class="card-title">Surat Keluar</h5>
                     <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
@@ -38,9 +38,9 @@
         </div>
         <div class="col">
             <div class="card" style="background-color: #FFCD55;" border-radius:10>
-                <div class="card-body" >
+                <div class="card-body">
                     <h5 class="card-title">Surat Tugas</h5>
-                    <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratKeluar + $jumlahSuratMasuk ?></p>
+                    <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratTugas ?></p>
                     <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-success">Lihat</a>
                 </div>
             </div>
@@ -74,6 +74,7 @@
                         <th>Perihal</th>
                         <th>Tanggal date</th>
                         <th>Keterangan</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -86,6 +87,14 @@
                             <?php $date = date('d-m-Y', strtotime($sm['tanggal_masuk'])) ?>
                             <td><?= $date ?></td>
                             <td><?= $sm['ket_surat'] ?> </td>
+                            <td>
+                                <form action="<?= base_url('SuratMasuk/' . $sm['id_surat']) ?>" method="post" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </td>
+
                         </tr>
                     <?php endforeach; ?>
                     <?php foreach ($suratkeluar as $sm) : ?>
@@ -97,9 +106,36 @@
                             <?php $date = date('d-m-Y', strtotime($sm['tanggal_keluar'])) ?>
                             <td><?= $date ?></td>
                             <td><?= $sm['ket_surat'] ?> </td>
+                            <td>
+                                <form action="<?= base_url('SuratKeluar/' . $sm['id_surat']) ?>" method="post" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    <?php foreach ($surattugas as $sm) : ?>
+                        <tr>
+                            <td><?= $sm['no_surat'] ?></td>
+                            <td><?= $sm['asal_surat'] ?></td>
+                            <td><?= $sm['tujuan_surat'] ?></td>
+                            <td><?= $sm['perihal'] ?></td>
+                            <?php $date = date('d-m-Y', strtotime($sm['tanggal_masuk'])) ?>
+                            <td><?= $date ?></td>
+                            <td><?= $sm['ket_surat'] ?> </td>
+                            <td>
+                                <form action="<?= base_url('SuratTugas/' . $sm['id_surat']) ?>" method="post" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </td>
+
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
+
 
 
             </table>
