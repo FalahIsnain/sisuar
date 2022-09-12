@@ -14,4 +14,9 @@ class SuratMasukModels extends Model
     {
         return $this->db->table('surat_masuk')->countAll();
     }
+
+    public function getOne($id)
+    {
+        return $this->where(['id_surat' => $id])->first();
+    }
 }

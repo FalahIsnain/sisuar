@@ -21,6 +21,11 @@ class SuratMasuk extends BaseController
 
     public function index()
     {
+
+        $id = $this->request->uri->getSegment(2);
+        helper(['form', 'url']);
+        $jumlahRecord = $this->SuratMasukModels->where('id_surat', $id)->countAllResults();
+
         $data = [
             'title' => 'SISUAR',
             'suratmasuk' => $this->SuratMasukModels->findAll(),
@@ -28,7 +33,13 @@ class SuratMasuk extends BaseController
             'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
             'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas()
         ];
-        return view('surat/suratmasuk/indexsuratmasuk.php', $data);
+        $dataEdit = [
+            'dataEdit' => $this->SuratMasukModels->getOne($id),
+
+        ];
+
+
+        return view('surat/suratmasuk/indexsuratmasuk.php', $data, $dataEdit);
     }
 
     public function tambahSuratMasuk()
@@ -53,5 +64,25 @@ class SuratMasuk extends BaseController
         $this->SuratMasukModels->delete($id);
         session()->setFlashdata('pesan', 'data berhasil di hapus');
         return redirect()->to(base_url('/SuratMasuk'));
+    }
+
+    public function formEditSuratMasuk()
+    {
+        $id = $this->request->uri->getSegment(2);
+        helper(['form', 'url']);
+        $jumlahRecord = $this->SuratMasukModels->where('id_surat', $id)->countAllResults();
+
+        if ($jumlahRecord == 1) {
+
+            $dataEdit = [
+                'dataEdit' => $this->SuratMasukModels->getOne($id),
+                'title' => "form update data",
+            ];
+            dd($dataEdit);
+            return view('/SuratMasuk', $dataEdit);
+        } else {
+            session()->setFlashdata('pesan', 'data tidak ada di database');
+            return redirect()->to(base_url('/SuratMasuk'));
+        }
     }
 }

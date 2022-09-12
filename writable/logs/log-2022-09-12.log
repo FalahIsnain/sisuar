@@ -1,0 +1,161 @@
+ERROR - 2022-09-12 00:52:12 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\sisuar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sisuar\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\sisuar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\sisuar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\sisuar\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\sisuar\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\sisuar\app\Controllers\SuratMasuk.php(62): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(904): App\Controllers\SuratMasuk->formEditSuratMasuk('6')
+#7 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+#8 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sisuar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-12 00:52:12 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\SuratMasuk.php(62): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->formEditSuratMasuk('6')
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 00:54:06 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\sisuar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sisuar\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\sisuar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\sisuar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\sisuar\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\sisuar\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\sisuar\app\Controllers\SuratMasuk.php(62): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(904): App\Controllers\SuratMasuk->formEditSuratMasuk('6')
+#7 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+#8 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sisuar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-12 00:54:06 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\SuratMasuk.php(62): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->formEditSuratMasuk('6')
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-12 00:54:29 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\sisuar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sisuar\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\sisuar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\sisuar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\sisuar\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\sisuar\system\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\sisuar\app\Controllers\SuratMasuk.php(62): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(904): App\Controllers\SuratMasuk->formEditSuratMasuk('6')
+#7 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+#8 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sisuar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-12 00:54:29 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = \'formEditSuratMasuk\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `surat_masuk`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\SuratMasuk.php(62): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->formEditSuratMasuk('6')
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-12 01:02:07 --> Undefined variable: dataEdit
+in APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php on line 129.
+ 1 APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php(129): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataEdit', 'APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php', 129, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/indexsuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(31): view('surat/suratmasuk/indexsuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-12 01:03:26 --> Undefined variable: dataEdit
+in APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php on line 129.
+ 1 APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php(129): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataEdit', 'APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php', 129, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/indexsuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(31): view('surat/suratmasuk/indexsuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-12 01:29:20 --> Undefined variable: dataEdit
+in APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php on line 124.
+ 1 APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataEdit', 'APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php', 124, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/indexsuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(31): view('surat/suratmasuk/indexsuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-12 01:30:30 --> Undefined variable: dataEdit
+in APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php on line 124.
+ 1 APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataEdit', 'APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php', 124, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/indexsuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(32): view('surat/suratmasuk/indexsuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-12 01:31:35 --> Call to undefined method App\Models\SuratMasukModels::getOne
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\SuratMasuk.php(37): CodeIgniter\Model->__call('getOne', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-12 01:32:30 --> Undefined variable: dataEdit
+in APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php on line 124.
+ 1 APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataEdit', 'APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php', 124, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/indexsuratmasuk.php', [...], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(42): view('surat/suratmasuk/indexsuratmasuk.php', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
