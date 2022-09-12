@@ -8,7 +8,7 @@ class SuratTugasModels extends Model
 {
     protected $table = 'surat_Tugas';
     protected $primaryKey = 'id_surat';
-    protected $allowedFields = ['no_surat', 'asal_surat', 'tujuan_surat', 'perihal', 'tanggal_masuk', 'ket_surat', 'file'];
+    protected $allowedFields = ['no_surat', 'asal_surat', 'tujuan_surat', 'perihal', 'tanggal_tugas', 'ket_surat', 'file'];
 
     public function hitungSuratTugas()
     {

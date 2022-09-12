@@ -38,7 +38,7 @@ class SuratTugas extends BaseController
             'asal_surat' => $this->request->getVar('asal_surat'),
             'tujuan_surat' => $this->request->getVar('tujuan_surat'),
             'perihal' => $this->request->getVar('perihal'),
-            'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+            'tanggal_tugas' => $this->request->getVar('tanggal_tugas'),
             'ket_surat' => $this->request->getVar('ket_surat'),
             'file' => '-',
         ];

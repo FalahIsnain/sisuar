@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal_masuk" name="tanggal_masuk">
+                        <input type="date" class="form-control" id="tanggal_tugas" name="tanggal_tugas">
                     </div>
                     <div class="col-md-4">
                         <label for="inputState" class="form-label">Keterangan</label>
