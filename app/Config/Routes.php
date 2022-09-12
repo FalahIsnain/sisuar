@@ -53,6 +53,7 @@ $routes->delete('/SuratTugas/(:num)', 'SuratTugas::hapusSuratTugas/$1');
 $routes->delete('/BerandaSuratMasuk/(:num)', 'BerandaSurat::hapusSuratMasukDashboard/$1');
 $routes->delete('/BerandaSuratKeluar/(:num)', 'BerandaSurat::hapusSuratKeluarDashboard/$1');
 $routes->delete('/BerandaSuratTugas/(:num)', 'BerandaSurat::hapusSuratTugasDashboard/$1');
+$routes->add('/SuratMasuk/edit/(:any)', 'SuratMasuk::edit/$1');
 
 
 

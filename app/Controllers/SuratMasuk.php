@@ -66,23 +66,19 @@ class SuratMasuk extends BaseController
         return redirect()->to(base_url('/SuratMasuk'));
     }
 
-    public function formEditSuratMasuk()
+    public function edit($id_surat)
     {
-        $id = $this->request->uri->getSegment(2);
-        helper(['form', 'url']);
-        $jumlahRecord = $this->SuratMasukModels->where('id_surat', $id)->countAllResults();
 
-        if ($jumlahRecord == 1) {
+        $this->SuratMasukModels->update($id_surat, [
+            'no_surat' => $this->request->getVar('no_surat'),
+            'asal_surat' => $this->request->getVar('asal_surat'),
+            'tujuan_surat' => $this->request->getVar('tujuan_surat'),
+            'perihal' => $this->request->getVar('perihal'),
+            'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+            'ket_surat' => $this->request->getVar('ket_surat'),
+            'file' => '-',
+        ]);
 
-            $dataEdit = [
-                'dataEdit' => $this->SuratMasukModels->getOne($id),
-                'title' => "form update data",
-            ];
-            dd($dataEdit);
-            return view('/SuratMasuk', $dataEdit);
-        } else {
-            session()->setFlashdata('pesan', 'data tidak ada di database');
-            return redirect()->to(base_url('/SuratMasuk'));
-        }
+        return redirect()->to(base_url('/SuratMasuk'));
     }
 }
