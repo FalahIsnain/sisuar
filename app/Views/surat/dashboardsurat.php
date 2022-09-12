@@ -88,7 +88,7 @@
                             <td><?= $date ?></td>
                             <td><?= $sm['ket_surat'] ?> </td>
                             <td>
-                                <form action="<?= base_url('SuratMasuk/' . $sm['id_surat']) ?>" method="post" class="d-inline">
+                                <form action="<?= base_url('BerandaSuratMasuk/' . $sm['id_surat']) ?>" method="post" class="d-inline">
                                     <?= csrf_field(); ?>
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
@@ -107,7 +107,7 @@
                             <td><?= $date ?></td>
                             <td><?= $sm['ket_surat'] ?> </td>
                             <td>
-                                <form action="<?= base_url('SuratKeluar/' . $sm['id_surat']) ?>" method="post" class="d-inline">
+                                <form action="<?= base_url('BerandaSuratKeluar/' . $sm['id_surat']) ?>" method="post" class="d-inline">
                                     <?= csrf_field(); ?>
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
@@ -121,11 +121,11 @@
                             <td><?= $sm['asal_surat'] ?></td>
                             <td><?= $sm['tujuan_surat'] ?></td>
                             <td><?= $sm['perihal'] ?></td>
-                            <?php $date = date('d-m-Y', strtotime($sm['tanggal_masuk'])) ?>
+                            <?php $date = date('d-m-Y', strtotime($sm['tanggal_tugas'])) ?>
                             <td><?= $date ?></td>
                             <td><?= $sm['ket_surat'] ?> </td>
                             <td>
-                                <form action="<?= base_url('SuratTugas/' . $sm['id_surat']) ?>" method="post" class="d-inline">
+                                <form action="<?= base_url('BerandaSuratTugas/' . $sm['id_surat']) ?>" method="post" class="d-inline">
                                     <?= csrf_field(); ?>
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
@@ -257,54 +257,44 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="row g-3">
+                <form action="<?= base_url('/BerandaSurat/tambahSuratTugasDashboard') ?>" class="row g-3" method="post">
+                    <?= csrf_field(); ?>
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
                     </div>
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Asal Surat</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <input type="text" class="form-control" id="asal_surat" name="asal_surat">
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Tujuan</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        <input type="text" class="form-control" id="tujuan_surat" name="tujuan_surat">
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">Perihal</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        <input type="text" class="form-control" id="perihal" name="perihal">
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" id="inputCity">
+                        <input type="date" class="form-control" id="tanggal_tugas" name="tanggal_tugas">
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <label for="inputState" class="form-label">Keterangan</label>
-                        <select id="inputState" class="form-select">
-                            <option selected>Choose...</option>
-                            <option>...</option>
+                        <select id="ket_surat" class="form-select" name="ket_surat">
+                            <option value="Ya">Ya</option>
+                            <option value="tidak">Tidak</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="col-12">
                         <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control" id="inputZip">
+                        <input type="file" class="form-control" id="inputZip" name="file">
                     </div>
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                                Check me out
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Tambah</button>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Tambah</button>
             </div>
         </div>
     </div>

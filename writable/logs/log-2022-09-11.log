@@ -1,0 +1,11 @@
+CRITICAL - 2022-09-11 22:12:19 --> Undefined index: tanggal_masuk
+in APPPATH\Views\surat\dashboardsurat.php on line 124.
+ 1 APPPATH\Views\surat\dashboardsurat.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: tanggal_masuk', 'APPPATH\\Views\\surat\\dashboardsurat.php', 124, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\dashboardsurat.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/dashboardsurat.php', [], true)
+ 5 APPPATH\Controllers\BerandaSurat.php(34): view('surat/dashboardsurat.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

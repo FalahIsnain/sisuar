@@ -63,4 +63,47 @@ class BerandaSurat extends BaseController
         $this->SuratKeluarModels->save($dataSuratKeluar);
         return redirect()->to(base_url('/BerandaSurat'));
     }
+    public function tambahSuratTugasDashboard()
+    {
+        $dataSuratTugas = [
+            'no_surat' => $this->request->getVar('no_surat'),
+            'asal_surat' => $this->request->getVar('asal_surat'),
+            'tujuan_surat' => $this->request->getVar('tujuan_surat'),
+            'perihal' => $this->request->getVar('perihal'),
+            'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
+            // 'ket_surat' => $this->request->getVar('ket_surat'),
+            'ket_surat' => '-',
+
+            'file' => '-',
+        ];
+        $this->SuratTugasModels->save($dataSuratTugas);
+        return redirect()->to(base_url('/BerandaSurat'));
+    }
+
+    public function hapusSuratMasukDashboard()
+    {
+        helper(['form', 'url']);
+        $id = $this->request->uri->getSegment(2);
+        $this->SuratMasukModels->delete($id);
+        session()->setFlashdata('pesan', 'data berhasil di hapus');
+        return redirect()->to(base_url('/BerandaSurat'));
+    }
+
+    public function hapusSuratKeluarDashboard()
+    {
+        helper(['form', 'url']);
+        $id = $this->request->uri->getSegment(2);
+        $this->SuratKeluarModels->delete($id);
+        session()->setFlashdata('pesan', 'data berhasil di hapus');
+        return redirect()->to(base_url('/BerandaSurat'));
+    }
+
+    public function hapusSuratTugasDashboard()
+    {
+        helper(['form', 'url']);
+        $id = $this->request->uri->getSegment(2);
+        $this->SuratTugasModels->delete($id);
+        session()->setFlashdata('pesan', 'data berhasil di hapus');
+        return redirect()->to(base_url('/BerandaSurat'));
+    }
 }
