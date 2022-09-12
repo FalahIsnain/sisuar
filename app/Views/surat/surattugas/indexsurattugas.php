@@ -34,7 +34,7 @@
                         <td><?= $sm['asal_surat'] ?></td>
                         <td><?= $sm['tujuan_surat'] ?></td>
                         <td><?= $sm['perihal'] ?></td>
-                        <?php $date = date('d-m-Y', strtotime($sm['tanggal_masuk'])) ?>
+                        <?php $date = date('d-m-Y', strtotime($sm['tanggal_tugas'])) ?>
                         <td><?= $date ?></td>
                         <td><?= $sm['ket_surat'] ?> </td>
                         <td>
