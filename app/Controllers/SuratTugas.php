@@ -33,14 +33,19 @@ class SuratTugas extends BaseController
 
     public function tambahSuratTugas()
     {
+        $file = $this->request->getFile('file');
+        $namaFile = $file->getName();
+        $file->move('asset/pdf', $namaFile);
         $dataSuratTugas = [
             'no_surat' => $this->request->getVar('no_surat'),
-            'asal_surat' => $this->request->getVar('asal_surat'),
-            'tujuan_surat' => $this->request->getVar('tujuan_surat'),
-            'perihal' => $this->request->getVar('perihal'),
-            'tanggal_tugas' => $this->request->getVar('tanggal_tugas'),
-            'ket_surat' => $this->request->getVar('ket_surat'),
-            'file' => '-',
+            'keperluan' => $this->request->getVar('keperluan'),
+            'tempat_tujuan' => $this->request->getVar('tempat_tujuan'),
+            'tanggal_mulai' => $this->request->getVar('tanggal_mulai'),
+            'tanggal_selesai' => $this->request->getVar('tanggal_selesai'),
+            'beban_biaya' => $this->request->getVar('beban_biaya'),
+            'tgl_rilis' => $this->request->getVar('tgl_rilis'),
+            'jenis_surat' => "Tugas",
+            'file' => $namaFile,
         ];
         $this->SuratTugasModels->save($dataSuratTugas);
         return redirect()->to(base_url('/SuratTugas'));
@@ -52,6 +57,25 @@ class SuratTugas extends BaseController
         $id = $this->request->uri->getSegment(2);
         $this->SuratTugasModels->delete($id);
         session()->setFlashdata('pesan', 'data berhasil di hapus');
+        return redirect()->to(base_url('/SuratTugas'));
+    }
+
+    public function edit($id_surat)
+    {
+        $file = $this->request->getFile('file');
+        $namaFile = $file->getName();
+        $file->move('asset/pdf', $namaFile);
+        $this->SuratMasukModels->update($id_surat, [
+            'no_surat' => $this->request->getVar('no_surat'),
+            'keperluan' => $this->request->getVar('keperluan'),
+            'tempat_tujuan' => $this->request->getVar('tempat_tujuan'),
+            'tanggal_mulai' => $this->request->getVar('tanggal_mulai'),
+            'tanggal_selesai' => $this->request->getVar('tanggal_selesai'),
+            'beban_biaya' => $this->request->getVar('beban_biaya'),
+            'tgl_rilis' => $this->request->getVar('tgl_rilis'),
+            'jenis_surat' => "Tugas",
+            'file' => $namaFile,
+        ]);
         return redirect()->to(base_url('/SuratTugas'));
     }
 }

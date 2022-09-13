@@ -19,11 +19,11 @@
             <thead>
                 <tr>
                     <th>No surat</th>
-                    <th>Asal Surat</th>
-                    <th>Tujuan</th>
+                    <th>Tujuan Surat</th>
                     <th>Perihal</th>
-                    <th>Tanggal Surat</th>
-                    <th>Terlaksana</th>
+                    <th>Isi Ringkas</th>
+                    <th>Tanggal Keluar</th>
+                    <th>Berkas</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -31,13 +31,18 @@
                 <?php foreach ($suratkeluar as $sm) : ?>
                     <tr>
                         <td><?= $sm['no_surat'] ?></td>
-                        <td><?= $sm['asal_surat'] ?></td>
                         <td><?= $sm['tujuan_surat'] ?></td>
                         <td><?= $sm['perihal'] ?></td>
+                        <td><?= $sm['isi_ringkas'] ?> </td>
                         <?php $date = date('d-m-Y', strtotime($sm['tanggal_keluar'])) ?>
                         <td><?= $date ?></td>
-                        <td><?= $sm['ket_surat'] ?> </td>
                         <td>
+                            <a href="<?= base_url('asset/pdf/' . $sm['file'])?>"><?= $sm['file'] ?> </a>
+                       </td>
+                        <td>
+                            <button type="button " class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formedit-<?= $sm['id_surat'] ?>">
+                                <a><i class="fas fa-edit"></i></a>
+                            </button>
                             <form action="<?= base_url('SuratKeluar/' . $sm['id_surat']) ?>" method="post" class="d-inline">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
@@ -53,7 +58,7 @@
 </div>
 
 
-<!-- Modal -->
+<!-- Modal Create-->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -62,38 +67,31 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('/SuratKeluar/tambahSuratKeluar') ?>" class="row g-3" method="post">
+                <form action="<?= base_url('/SuratKeluar/tambahSuratKeluar') ?>" class="row g-3" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
-                    <div class="col-md-6">
+                    <div class="col-12">
                         <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Asal Surat</label>
-                        <input type="text" class="form-control" id="asal_surat" name="asal_surat">
+                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022"  name="no_surat"  auttofocus >
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Tujuan</label>
-                        <input type="text" class="form-control" id="tujuan_surat" name="tujuan_surat">
+                        <label for="inputPassword4" class="form-label">Tujuan Surat</label>
+                        <input type="text" class="form-control" id="tujuan_surat" name="tujuan_surat" ">
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Perihal</label>
+                        <label for="inputAddress" class="form-label">Perihal</label>
                         <input type="text" class="form-control" id="perihal" name="perihal">
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal_keluar" name="tanggal_keluar">
+                        <input type="date" class="form-control" id="tanggal_keluar" name="tanggal_keluar" >
                     </div>
-                    <!-- <div class="col-md-4">
-                        <label for="inputState" class="form-label">Keterangan</label>
-                        <select id="ket_surat" class="form-select" name="ket_surat">
-                            <option value="Ya">Ya</option>
-                            <option value="tidak">Tidak</option>
-                        </select>
-                    </div> -->
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Isi Ringkas</label>
+                        <input type="text" class="form-control" id="isi_ringkas" name="isi_ringkas" >
+                    </div>
                     <div class="col-12">
                         <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control" id="inputZip" name="file">
+                        <input type="file" class="form-control" id="inputZip" name="file" >
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -104,5 +102,53 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal Edit-->
+<?php foreach ($suratkeluar as $sm) : ?>
+<div class="modal fade" id="formedit-<?= $sm['id_surat'] ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Edit Surat Keluar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="<?= base_url('/SuratKeluar/edit/' . $sm['id_surat']) ?>" class="row g-3" method="post" enctype="multipart/form-data">
+                    <?= csrf_field(); ?>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">No surat</label>
+                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" value="<?= $sm['no_surat']?>" auttofocus>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Tujuan Surat</label>
+                        <input type="text" class="form-control" id="tujuan_surat" name="tujuan_surat" value="<?= $sm['tujuan_surat']?>">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Perihal</label>
+                        <input type="text" class="form-control" id="perihal" name="perihal" value="<?= $sm['perihal']?>">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Tanggal</label>
+                        <input type="date" class="form-control" id="tanggal_keluar" name="tanggal_keluar" value="<?= $sm['tanggal_keluar']?>">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Isi Ringkas</label>
+                        <input type="text" class="form-control" id="isi_ringkas" name="isi_ringkas" value="<?= $sm['isi_ringkas']?>">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputZip" class="form-label">Upload File</label>
+                        <input type="file" class="form-control" id="inputZip" name="file" >
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Tambah</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>
 
 <?= $this->endSection(); ?>

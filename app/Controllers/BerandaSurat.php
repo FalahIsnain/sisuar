@@ -35,46 +35,57 @@ class BerandaSurat extends BaseController
     }
     public function tambahSuratMasukDashboard()
     {
+        $file = $this->request->getFile('file');
+        $namaFile = $file->getName();
+        $file->move('asset/pdf', $namaFile);
         $dataSuratMasuk = [
             'no_surat' => $this->request->getVar('no_surat'),
             'asal_surat' => $this->request->getVar('asal_surat'),
             'tujuan_surat' => $this->request->getVar('tujuan_surat'),
             'perihal' => $this->request->getVar('perihal'),
             'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+            'isi_ringkas' => $this->request->getVar('isi_ringkas'),
             'ket_surat' => $this->request->getVar('ket_surat'),
-            'file' => '-',
+            'alasan' => $this->request->getVar('alasan'),
+            'jenis_surat'=>'Surat Masuk',
+            'file' =>  $namaFile,
         ];
+        session()->setFlashdata('pesan', 'Berhasil Di Tambahkan');
         $this->SuratMasukModels->save($dataSuratMasuk);
         return redirect()->to(base_url('/BerandaSurat'));
     }
     public function tambahSuratKeluarDashboard()
     {
+        $file = $this->request->getFile('file');
+        $namaFile = $file->getName();
+        $file->move('asset/pdf', $namaFile);
         $dataSuratKeluar = [
             'no_surat' => $this->request->getVar('no_surat'),
-            'asal_surat' => $this->request->getVar('asal_surat'),
             'tujuan_surat' => $this->request->getVar('tujuan_surat'),
             'perihal' => $this->request->getVar('perihal'),
             'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
-            // 'ket_surat' => $this->request->getVar('ket_surat'),
-            'ket_surat' => '-',
-
-            'file' => '-',
+            'isi_ringkas' => $this->request->getVar('isi_ringkas'),
+            'jenis_surat'=>'Surat Keluar',
+            'file' => $namaFile,
         ];
         $this->SuratKeluarModels->save($dataSuratKeluar);
         return redirect()->to(base_url('/BerandaSurat'));
     }
     public function tambahSuratTugasDashboard()
     {
+        $file = $this->request->getFile('file');
+        $namaFile = $file->getName();
+        $file->move('asset/pdf', $namaFile);
         $dataSuratTugas = [
             'no_surat' => $this->request->getVar('no_surat'),
-            'asal_surat' => $this->request->getVar('asal_surat'),
-            'tujuan_surat' => $this->request->getVar('tujuan_surat'),
-            'perihal' => $this->request->getVar('perihal'),
-            'tanggal_tugas' => $this->request->getVar('tanggal_tugas'),
-            // 'ket_surat' => $this->request->getVar('ket_surat'),
-            'ket_surat' => '-',
-
-            'file' => '-',
+            'keperluan' => $this->request->getVar('keperluan'),
+            'tempat_tujuan' => $this->request->getVar('tempat_tujuan'),
+            'tanggal_mulai' => $this->request->getVar('tanggal_mulai'),
+            'tanggal_selesai' => $this->request->getVar('tanggal_selesai'),
+            'beban_biaya' => $this->request->getVar('beban_biaya'),
+            'tgl_rilis' => $this->request->getVar('tgl_rilis'),
+            'jenis_surat' => "Tugas",
+            'file' => $namaFile,
         ];
         $this->SuratTugasModels->save($dataSuratTugas);
         return redirect()->to(base_url('/BerandaSurat'));

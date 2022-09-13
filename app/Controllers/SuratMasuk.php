@@ -44,15 +44,22 @@ class SuratMasuk extends BaseController
 
     public function tambahSuratMasuk()
     {
+        $file = $this->request->getFile('file');
+        $namaFile = $file->getName();
+        $file->move('asset/pdf', $namaFile);
         $dataSuratMasuk = [
             'no_surat' => $this->request->getVar('no_surat'),
             'asal_surat' => $this->request->getVar('asal_surat'),
             'tujuan_surat' => $this->request->getVar('tujuan_surat'),
             'perihal' => $this->request->getVar('perihal'),
             'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+            'isi_ringkas' => $this->request->getVar('isi_ringkas'),
             'ket_surat' => $this->request->getVar('ket_surat'),
-            'file' => '-',
+            'alasan' => $this->request->getVar('alasan'),
+            'jenis_surat'=>'Masuk',
+            'file' =>  $namaFile,
         ];
+        session()->setFlashdata('pesan', 'Berhasil Di Tambahkan');
         $this->SuratMasukModels->save($dataSuratMasuk);
         return redirect()->to(base_url('/SuratMasuk'));
     }
@@ -68,15 +75,20 @@ class SuratMasuk extends BaseController
 
     public function edit($id_surat)
     {
-
+        $file = $this->request->getFile('file');
+        $namaFile = $file->getName();
+        $file->move('asset/pdf', $namaFile);
         $this->SuratMasukModels->update($id_surat, [
             'no_surat' => $this->request->getVar('no_surat'),
             'asal_surat' => $this->request->getVar('asal_surat'),
             'tujuan_surat' => $this->request->getVar('tujuan_surat'),
             'perihal' => $this->request->getVar('perihal'),
             'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+            'isi_ringkas' => $this->request->getVar('isi_ringkas'),
             'ket_surat' => $this->request->getVar('ket_surat'),
-            'file' => '-',
+            'alasan' => $this->request->getVar('alasan'),
+            'jenis_surat'=>'Surat Masuk',
+            'file' => $namaFile,
         ]);
 
         return redirect()->to(base_url('/SuratMasuk'));

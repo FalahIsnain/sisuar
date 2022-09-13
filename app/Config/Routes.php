@@ -50,10 +50,9 @@ $routes->add('/BerandaSurat/(:any)', 'BerandaSurat::$1');
 $routes->delete('/SuratMasuk/(:num)', 'SuratMasuk::hapusSuratMasuk/$1');
 $routes->delete('/SuratKeluar/(:num)', 'SuratKeluar::hapusSuratKeluar/$1');
 $routes->delete('/SuratTugas/(:num)', 'SuratTugas::hapusSuratTugas/$1');
-$routes->delete('/BerandaSuratMasuk/(:num)', 'BerandaSurat::hapusSuratMasukDashboard/$1');
-$routes->delete('/BerandaSuratKeluar/(:num)', 'BerandaSurat::hapusSuratKeluarDashboard/$1');
-$routes->delete('/BerandaSuratTugas/(:num)', 'BerandaSurat::hapusSuratTugasDashboard/$1');
 $routes->add('/SuratMasuk/edit/(:any)', 'SuratMasuk::edit/$1');
+$routes->add('/SuratKeluar/edit/(:any)', 'SuratKeluar::edit/$1');
+$routes->add('/SuratTugas/edit/(:any)', 'SuratTugas::edit/$1');
 
 
 
