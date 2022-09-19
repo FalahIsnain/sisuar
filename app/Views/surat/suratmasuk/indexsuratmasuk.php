@@ -19,6 +19,18 @@
         Tambah Surat
     </button>
     <div class="tablebox" style="width: 1300px;">
+        <table border="0" cellspacing="5" cellpadding="5">
+            <tbody>
+                <tr>
+                    <td>Minimum date:</td>
+                    <td><input type="text" id="min" name="min"></td>
+                </tr>
+                <tr>
+                    <td>Maximum date:</td>
+                    <td><input type="text" id="max" name="max"></td>
+                </tr>
+            </tbody>
+        </table>
         <table id="table" class="table table-striped" style="width:100%">
             <thead>
                 <tr>
@@ -34,7 +46,7 @@
                     <th>Aksi</th>
                 </tr>
             </thead>
-            <tbody>     
+            <tbody>
                 <?php foreach ($suratmasuk as $sm) : ?>
                     <tr>
                         <td><?= $sm['no_surat'] ?></td>
@@ -47,8 +59,8 @@
                         <?php $date = date('d-m-Y', strtotime($sm['tanggal_masuk'])) ?>
                         <td><?= $date ?></td>
                         <td>
-                            <a href="<?= base_url('asset/pdf/' . $sm['file'])?>"><?= $sm['file'] ?> </a>
-                       </td>
+                            <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
+                        </td>
                         <td>
                             <button type="button " class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formedit-<?= $sm['id_surat'] ?>">
                                 <a><i class="fas fa-edit"></i></a>
@@ -138,7 +150,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('/SuratMasuk/edit/' . $sm['id_surat']) ?>" class="row g-3" method="post"  enctype="multipart/form-data">
+                    <form action="<?= base_url('/SuratMasuk/edit/' . $sm['id_surat']) ?>" class="row g-3" method="post" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">No surat</label>
