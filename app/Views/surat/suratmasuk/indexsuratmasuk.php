@@ -56,7 +56,7 @@
                         <td><?= $sm['isi_ringkas'] ?></td>
                         <td><?= $sm['ket_surat'] ?> </td>
                         <td><?= $sm['alasan'] ?> </td>
-                        <?php $date = date('d-m-Y', strtotime($sm['tanggal_masuk'])) ?>
+                        <?php $date = date('d-M-Y', strtotime($sm['tanggal_masuk'])) ?>
                         <td><?= $date ?></td>
                         <td>
                             <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
