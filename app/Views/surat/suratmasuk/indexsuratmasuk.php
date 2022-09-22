@@ -82,6 +82,7 @@
 
 
 <!-- Modal -->
+
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -90,50 +91,75 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('/SuratMasuk/tambahSuratMasuk') ?>" class="row g-3" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url('/SuratMasuk/tambahSuratMasuk') ?>" class="row g-3" method="post" enctype="multipart/form-data" id="formTambahSuratMasuk">
                     <?= csrf_field(); ?>
                     <div class="col-12">
                         <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
+                        <input type="text" class="form-control <?= ($validation->hasError('no_surat')) ? 'is-invalid' : ''; ?>" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('no_surat'); ?>
+                        </div>
                     </div>
                     <div class="col-12">
                         <label for="inputPassword4" class="form-label">Asal Surat</label>
-                        <input type="text" class="form-control" id="asal_surat" name="asal_surat">
+                        <input type="text" class="form-control <?= ($validation->hasError('asal_surat')) ? 'is-invalid' : ''; ?>" id="asal_surat" name="asal_surat">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('asal_surat'); ?>
+                        </div>
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Tujuan</label>
-                        <input type="text" class="form-control" id="tujuan_surat" name="tujuan_surat">
+                        <input type="text" class="form-control <?= ($validation->hasError('tujuan_surat')) ? 'is-invalid' : ''; ?>" id="tujuan_surat" name="tujuan_surat">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('tujuan_surat'); ?>
+                        </div>
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">Perihal</label>
-                        <input type="text" class="form-control" id="perihal" name="perihal">
+                        <input type="text" class="form-control <?= ($validation->hasError('perihal')) ? 'is-invalid' : ''; ?>" id="perihal" name="perihal">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('perihal'); ?>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Tanggal Masuk</label>
-                        <input type="date" class="form-control" id="tanggal_masuk" name="tanggal_masuk">
+                        <input type="date" class="form-control <?= ($validation->hasError('tanggal_masuk')) ? 'is-invalid' : ''; ?>" id="tanggal_masuk" name="tanggal_masuk">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('tanggal_masuk'); ?>
+                        </div>
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">Isi Ringkas</label>
-                        <input type="text" class="form-control" id="perihal" name="isi ringkas">
+                        <input type="text" class="form-control <?= ($validation->hasError('isi_ringkas')) ? 'is-invalid' : ''; ?>" id="isi_ringkas" name="isi_ringkas">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('isi_ringkas'); ?>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <label for="inputState" class="form-label">Terlaksana</label>
-                        <select id="ket_surat" class="form-select" name="ket_surat">
+                        <select id="ket_surat" class="form-select <?= ($validation->hasError('ket_surat')) ? 'is-invalid' : ''; ?>" name="ket_surat" require>
                             <option value="Ya">Ya</option>
                             <option value="tidak">Tidak</option>
                         </select>
+
                     </div>
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">Alasan</label>
-                        <input type="text" class="form-control" id="perihal" name="alasan">
+                        <input type="text" class="form-control <?= ($validation->hasError('alasan')) ? 'is-invalid' : ''; ?>" id="alasan" name="alasan">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('alasan'); ?>
+                        </div>
                     </div>
                     <div class="col-12">
                         <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control" id="inputZip" name="file">
+                        <input type="file" class="form-control <?= ($validation->hasError('file')) ? 'is-invalid' : ''; ?>" id="inputZip" name="file">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('file'); ?>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
+                        <button type="submit" class="btn btn-primary" id="btnTambahSuratMasuk">Tambah</button>
                     </div>
                 </form>
             </div>

@@ -31,7 +31,8 @@ class SuratMasuk extends BaseController
             'suratmasuk' => $this->SuratMasukModels->findAll(),
             'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
             'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
-            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas()
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
+            'validation' => \Config\Services::validation(),
         ];
         $dataEdit = [
             'dataEdit' => $this->SuratMasukModels->getOne($id),
@@ -44,6 +45,70 @@ class SuratMasuk extends BaseController
 
     public function tambahSuratMasuk()
     {
+
+        helper(['form', 'url']);
+        if (!$this->validate([
+            'no_surat' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'no surat harus diisi',
+                ]
+            ],
+            'asal_surat' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'asal surat harus diisi',
+                ]
+            ],
+            'tujuan_surat' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'tujuan surat harus diisi',
+                ]
+            ],
+            'perihal' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'perihal surat harus diisi',
+                ]
+            ],
+            'tanggal_masuk' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'tanggal masuk harus diisi',
+                ]
+            ],
+            'isi_ringkas' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'isi_ringkas harus diisi',
+                ]
+            ],
+            'ket_surat' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'keterangan harus diisi',
+                ]
+            ],
+            'alasan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'alasan harus diisi',
+                ]
+            ],
+            'file' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'file harus diisi',
+                ]
+            ]
+
+        ])) {
+
+            return redirect()->to(base_url('/SuratMasuk'))->withInput();
+        }
+
+
         $file = $this->request->getFile('file');
         $namaFile = $file->getName();
         $file->move('asset/pdf', $namaFile);
@@ -56,7 +121,7 @@ class SuratMasuk extends BaseController
             'isi_ringkas' => $this->request->getVar('isi_ringkas'),
             'ket_surat' => $this->request->getVar('ket_surat'),
             'alasan' => $this->request->getVar('alasan'),
-            'jenis_surat'=>'Masuk',
+            'jenis_surat' => 'Masuk',
             'file' =>  $namaFile,
         ];
         session()->setFlashdata('pesan', 'Berhasil Di Tambahkan');
@@ -71,6 +136,7 @@ class SuratMasuk extends BaseController
         $this->SuratMasukModels->delete($id);
         session()->setFlashdata('pesan', 'data berhasil di hapus');
         return redirect()->to(base_url('/SuratMasuk'));
+        echo json_encode(array("status" => TRUE));
     }
 
     public function edit($id_surat)
@@ -87,7 +153,7 @@ class SuratMasuk extends BaseController
             'isi_ringkas' => $this->request->getVar('isi_ringkas'),
             'ket_surat' => $this->request->getVar('ket_surat'),
             'alasan' => $this->request->getVar('alasan'),
-            'jenis_surat'=>'Surat Masuk',
+            'jenis_surat' => 'Surat Masuk',
             'file' => $namaFile,
         ]);
 
