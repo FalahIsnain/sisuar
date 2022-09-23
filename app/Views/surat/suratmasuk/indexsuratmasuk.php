@@ -1,7 +1,6 @@
 <?= $this->extend('layout/surat/template'); ?>
 <?= $this->section('content'); ?>
 
-
 <div class="container ml-8">
     <center>
         <div class="container mt-1">
@@ -91,11 +90,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('/SuratMasuk/tambahSuratMasuk') ?>" class="row g-3" method="post" enctype="multipart/form-data" id="formTambahSuratMasuk">
+                <form action="<?= base_url('/SuratMasuk/tambahSuratMasuk') ?>" class=row g-3 needs-validation" method="post" enctype="multipart/form-data" id="formTambahSuratMasuk" novalidate>
                     <?= csrf_field(); ?>
                     <div class="col-12">
                         <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('no_surat')) ? 'is-invalid' : ''; ?>" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
+                        <input type="text" class="form-control <?= ($validation->hasError('no_surat')) ? 'is-invalid' : ''; ?>" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus required>
                         <div class="invalid-feedback">
                             <?= $validation->getError('no_surat'); ?>
                         </div>
@@ -160,6 +159,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                         <button type="submit" class="btn btn-primary" id="btnTambahSuratMasuk">Tambah</button>
+
                     </div>
                 </form>
             </div>
@@ -235,7 +235,12 @@
 <?php endforeach; ?>
 
 
-
-
+<script>
+    if (<?= $status ?> = 1) {
+        $(window).on('load', function() {
+            $('#staticBackdrop').modal('show');
+        });
+    }
+</script>
 
 <?= $this->endSection(); ?>

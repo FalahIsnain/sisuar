@@ -21,7 +21,7 @@ class SuratMasuk extends BaseController
 
     public function index()
     {
-
+        $status = 1;
         $id = $this->request->uri->getSegment(2);
         helper(['form', 'url']);
         $jumlahRecord = $this->SuratMasukModels->where('id_surat', $id)->countAllResults();
@@ -33,21 +33,17 @@ class SuratMasuk extends BaseController
             'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
             'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
             'validation' => \Config\Services::validation(),
+            'status'=>$status
+            
         ];
-        $dataEdit = [
-            'dataEdit' => $this->SuratMasukModels->getOne($id),
-
-        ];
-
-
-        return view('surat/suratmasuk/indexsuratmasuk.php', $data, $dataEdit);
+        return view('surat/suratmasuk/indexsuratmasuk.php', $data);
     }
 
     public function tambahSuratMasuk()
     {
-
         helper(['form', 'url']);
-        if (!$this->validate([
+        $status = 'success';
+        if ($this->validate([
             'no_surat' => [
                 'rules' => 'required',
                 'errors' => [
@@ -105,28 +101,34 @@ class SuratMasuk extends BaseController
 
         ])) {
 
-            return redirect()->to(base_url('/SuratMasuk'))->withInput();
+            
+            $file = $this->request->getFile('file');
+            $namaFile = $file->getName();
+            $file->move('asset/pdf', $namaFile);
+            $dataSuratMasuk = [
+                'no_surat' => $this->request->getVar('no_surat'),
+                'asal_surat' => $this->request->getVar('asal_surat'),
+                'tujuan_surat' => $this->request->getVar('tujuan_surat'),
+                'perihal' => $this->request->getVar('perihal'),
+                'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+                'isi_ringkas' => $this->request->getVar('isi_ringkas'),
+                'ket_surat' => $this->request->getVar('ket_surat'),
+                'alasan' => $this->request->getVar('alasan'),
+                'jenis_surat' => 'Masuk',
+                'file' =>  $namaFile,
+            ];
+            $status='success';
+            // dd( $dataSuratMasuk);
+                
+                
+            session()->setFlashdata('pesan', 'Berhasil Di Tambahkan',$status);
+            $this->SuratMasukModels->save($dataSuratMasuk);
+            return redirect()->to(base_url('/SuratMasuk'));
+
         }
-
-
-        $file = $this->request->getFile('file');
-        $namaFile = $file->getName();
-        $file->move('asset/pdf', $namaFile);
-        $dataSuratMasuk = [
-            'no_surat' => $this->request->getVar('no_surat'),
-            'asal_surat' => $this->request->getVar('asal_surat'),
-            'tujuan_surat' => $this->request->getVar('tujuan_surat'),
-            'perihal' => $this->request->getVar('perihal'),
-            'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
-            'isi_ringkas' => $this->request->getVar('isi_ringkas'),
-            'ket_surat' => $this->request->getVar('ket_surat'),
-            'alasan' => $this->request->getVar('alasan'),
-            'jenis_surat' => 'Masuk',
-            'file' =>  $namaFile,
-        ];
-        session()->setFlashdata('pesan', 'Berhasil Di Tambahkan');
-        $this->SuratMasukModels->save($dataSuratMasuk);
-        return redirect()->to(base_url('/SuratMasuk'));
+        $status='false';
+        session()->setFlashdata('pesan', 'Gagal Ditambahkan',$status);
+        return redirect()->to(base_url('/SuratMasuk',$status))->withInput();
     }
 
     public function hapusSuratMasuk()
