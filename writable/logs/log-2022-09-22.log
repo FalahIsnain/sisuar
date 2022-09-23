@@ -1,0 +1,100 @@
+CRITICAL - 2022-09-22 21:23:01 --> Undefined variable: status
+in APPPATH\Views\layout\surat\template.php on line 294.
+ 1 APPPATH\Views\layout\surat\template.php(294): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\layout\\surat\\template.php', 294, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\surat\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/surat/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/dashboardsurat.php', [], true)
+ 6 APPPATH\Controllers\BerandaSurat.php(34): view('surat/dashboardsurat.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:28:00 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 106.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:28:21 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 106.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:28:22 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 106.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:29:39 --> Undefined variable: status
+in APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php on line 241.
+ 1 APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php(241): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php', 241, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/indexsuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(37): view('surat/suratmasuk/indexsuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:29:52 --> Undefined variable: status
+in APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php on line 241.
+ 1 APPPATH\Views\surat\suratmasuk\indexsuratmasuk.php(241): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php', 241, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\indexsuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/indexsuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(37): view('surat/suratmasuk/indexsuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:30:34 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:31:03 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:31:03 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:31:04 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:31:22 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:41:33 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:42:25 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-22 21:43:10 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahSuratMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

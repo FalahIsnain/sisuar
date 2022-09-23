@@ -90,76 +90,77 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('/SuratMasuk/tambahSuratMasuk') ?>" class=row g-3 needs-validation" method="post" enctype="multipart/form-data" id="formTambahSuratMasuk" novalidate>
-                    <?= csrf_field(); ?>
+                <form class="row g-3 needs-validation" novalidate action="<?= base_url('/SuratMasuk/tambahSuratMasuk') ?>" enctype="multipart/form-data">
                     <div class="col-12">
-                        <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('no_surat')) ? 'is-invalid' : ''; ?>" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus required>
+                        <label for="validationCustom01" class="form-label">No surat</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="no_surat" name="no_surat" required>
                         <div class="invalid-feedback">
-                            <?= $validation->getError('no_surat'); ?>
+                           Silahkan Isi  No Surat!
                         </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputPassword4" class="form-label">Asal Surat</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('asal_surat')) ? 'is-invalid' : ''; ?>" id="asal_surat" name="asal_surat">
+                        <label for="validationCustom01" class="form-label">Asal Surat</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="asal_surat" name="asal_surat" required>
                         <div class="invalid-feedback">
-                            <?= $validation->getError('asal_surat'); ?>
+                            Asal Surat Tidak Boleh Kosong!
                         </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Tujuan</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('tujuan_surat')) ? 'is-invalid' : ''; ?>" id="tujuan_surat" name="tujuan_surat">
+                        <label for="validationCustom02" class="form-label">Tujuan Surat</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="tujuan_surat" name="tujuan_surat" required>
                         <div class="invalid-feedback">
-                            <?= $validation->getError('tujuan_surat'); ?>
+                            Tujuan Surat Tidak Boleh Kosong!
                         </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Perihal</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('perihal')) ? 'is-invalid' : ''; ?>" id="perihal" name="perihal">
+                        <label for="validationCustom02" class="form-label">Perihal</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="perihal" name="perihal" required>
                         <div class="invalid-feedback">
-                            <?= $validation->getError('perihal'); ?>
+                            Perihal Tidak Boleh Kosong!
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Masuk</label>
-                        <input type="date" class="form-control <?= ($validation->hasError('tanggal_masuk')) ? 'is-invalid' : ''; ?>" id="tanggal_masuk" name="tanggal_masuk">
+                        <label for="validationCustom02" class="form-label">Tanggal Masuk</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_masuk" name="tanggal_masuk" required>
                         <div class="invalid-feedback">
-                            <?= $validation->getError('tanggal_masuk'); ?>
+                            Tanggal Masuk Tidak Boleh Kosong!
                         </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Isi Ringkas</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('isi_ringkas')) ? 'is-invalid' : ''; ?>" id="isi_ringkas" name="isi_ringkas">
+                        <label for="validationCustom02" class="form-label">Isi Ringkas</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="isi_ringkas" name="isi_ringkas" required>
                         <div class="invalid-feedback">
-                            <?= $validation->getError('isi_ringkas'); ?>
+                           Isi Ringkas Tidak Boleh Kosong!
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="validationCustom02" class="form-label">Alasan</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="alasan" name="alasan" required>
+                        <div class="invalid-feedback">
+                            Alasan Tidak Boleh Kosong!
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="inputState" class="form-label">Terlaksana</label>
-                        <select id="ket_surat" class="form-select <?= ($validation->hasError('ket_surat')) ? 'is-invalid' : ''; ?>" name="ket_surat" require>
+                        <label for="validationCustom04" class="form-label">Keterangan</label>
+                        <select class="form-select" id="validationCustom04" id="ket_surat" name="ket_surat" required>
+                            <option selected disabled value="">Choose...</option>
                             <option value="Ya">Ya</option>
                             <option value="tidak">Tidak</option>
                         </select>
-
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Alasan</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('alasan')) ? 'is-invalid' : ''; ?>" id="alasan" name="alasan">
                         <div class="invalid-feedback">
-                            <?= $validation->getError('alasan'); ?>
+                            Silahkan Pilih Keterangan
                         </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control <?= ($validation->hasError('file')) ? 'is-invalid' : ''; ?>" id="inputZip" name="file">
+                        <label for="validationCustom02" class="form-label">file</label>
+                        <input type="file" class="form-control" id="validationCustom02" value="" id="file" name="file" required>
                         <div class="invalid-feedback">
-                            <?= $validation->getError('file'); ?>
+                            File Tidak Boleh Kosong!
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary" id="btnTambahSuratMasuk">Tambah</button>
-
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
                     </div>
                 </form>
             </div>
@@ -232,15 +233,6 @@
             </div>
         </div>
     </div>
-<?php endforeach; ?>
-
-
-<script>
-    if (<?= $status ?> = 1) {
-        $(window).on('load', function() {
-            $('#staticBackdrop').modal('show');
-        });
-    }
-</script>
+<?php endforeach; ?> 
 
 <?= $this->endSection(); ?>

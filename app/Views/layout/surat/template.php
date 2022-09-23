@@ -35,8 +35,8 @@
 <body>
 
     <?= $this->include('layout/sidebar'); ?>
-    
-   
+
+
 
     <!-- //boot5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
@@ -52,7 +52,12 @@
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
     <script src="https://cdn.datatables.net/datetime/1.1.2/js/dataTables.dateTime.min.js"></script>
+    <section class="home-section" style="background-color: white;">
+        <?= $this->include('layout/surat/navbar'); ?>
+        <?= $this->renderSection('content'); ?>
+        <?= $this->include('layout/footer'); ?>
 
+    </section>
     <script>
         var minDate, maxDate;
 
@@ -289,18 +294,4 @@
         })()
     </script>
 
-
-    <script>
-        if (<?php echo $status ?> = 1) {
-            $(window).on('load', function() {
-                $('#staticBackdrop').modal('show');
-            });
-        }
-    </script>
- <section class="home-section" style="background-color: white;">
-        <?= $this->include('layout/surat/navbar'); ?>
-        <?= $this->renderSection('content'); ?>
-        <?= $this->include('layout/footer'); ?>
-
-    </section>
 </body>
