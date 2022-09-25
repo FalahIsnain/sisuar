@@ -36,12 +36,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Filter</button>
             </form>
-
         </div>
-
-
-
-
         <table id="table" class="table table-striped" style="width:100%">
 
             <thead>

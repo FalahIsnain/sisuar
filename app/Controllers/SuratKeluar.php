@@ -42,7 +42,7 @@ class SuratKeluar extends BaseController
             'perihal' => $this->request->getVar('perihal'),
             'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
             'isi_ringkas' => $this->request->getVar('isi_ringkas'),
-            'jenis_surat'=>'Keluar',
+            'jenis_surat' => 'Keluar',
             'file' => $namaFile,
         ];
         $this->SuratKeluarModels->save($dataSuratKeluar);
@@ -57,7 +57,7 @@ class SuratKeluar extends BaseController
         session()->setFlashdata('pesan', 'data berhasil di hapus');
         return redirect()->to(base_url('/SuratKeluar'));
     }
-    
+
     public function edit($id_surat)
     {
         $file = $this->request->getFile('file');
@@ -69,10 +69,27 @@ class SuratKeluar extends BaseController
             'perihal' => $this->request->getVar('perihal'),
             'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
             'isi_ringkas' => $this->request->getVar('isi_ringkas'),
-            'jenis_surat'=>'Keluar',
+            'jenis_surat' => 'Keluar',
             'file' => $namaFile,
         ]);
 
         return redirect()->to(base_url('/SuratKeluar'));
+    }
+
+
+    public function cetakFilterSuratKeluar()
+    {
+        $tglmin = $this->request->getPost('tanggal_min');
+        $tglmax = $this->request->getPost('tanggal_max');
+        $data = [
+            'title' => 'Filter Surat Keluar',
+            'dataFilter' => $this->SuratKeluarModels->filterDate($tglmin, $tglmax),
+            'tanggalMin' => date('d-M-Y', strtotime($tglmin)),
+            'tanggalMax' => date('d-M-Y', strtotime($tglmax)),
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
+        ];
+        return view('surat/suratkeluar/filtersuratkeluar.php', $data);
     }
 }
