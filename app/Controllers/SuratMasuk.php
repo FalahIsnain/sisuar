@@ -90,4 +90,22 @@ class SuratMasuk extends BaseController
 
         return redirect()->to(base_url('/SuratMasuk'));
     }
+
+    public function cetakFilterSuratMasuk()
+    {
+        $tglmin = $this->request->getPost('tanggal_min');
+        $tglmax = $this->request->getPost('tanggal_max');
+
+        $data = [
+            'title' => 'Filter Surat Masuk',
+            'dataFilter' => $this->SuratMasukModels->filterDate($tglmin, $tglmax),
+            'tanggalMin' => date('d-M-Y', strtotime($tglmin)),
+            'tanggalMax' => date('d-M-Y', strtotime($tglmax)),
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
+
+        ];
+        return view('surat/suratmasuk/filtersuratmasuk.php', $data);
+    }
 }

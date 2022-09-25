@@ -58,7 +58,7 @@
         <?= $this->include('layout/footer'); ?>
 
     </section>
-    <script>
+    <!-- <script>
         var minDate, maxDate;
 
         // Custom filtering function which will search data in column four between two values
@@ -79,7 +79,7 @@
                 return false;
             }
         );
-    </script>
+    </script> -->
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
@@ -256,21 +256,7 @@
 
     <script>
         $(document).ready(function() {
-            minDate = new DateTime($('#min'), {
-                format: 'MMMM Do YYYY'
-            });
-            maxDate = new DateTime($('#max'), {
-                format: 'MMMM Do YYYY'
-            });
-
-            // DataTables initialisation
-            var table = $('#table').DataTable();
-
-            // Refilter the table
-            $('#min, #max').on('change', function() {
-                table.draw();
-            });
-
+            $('#table').DataTable();
         });
     </script>
 

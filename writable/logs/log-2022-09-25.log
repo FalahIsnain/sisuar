@@ -1,0 +1,33 @@
+CRITICAL - 2022-09-25 00:40:17 --> Undefined variable: suratmasuk
+in APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php on line 33.
+ 1 APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratmasuk', 'APPPATH\\Views\\surat\\suratmasuk\\filtersuratmasuk.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\filtersuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/filtersuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(105): view('surat/suratmasuk/filtersuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->cetakFilterSuratMasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 00:40:34 --> Cannot use object of type mysqli as array
+in APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php on line 35.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/filtersuratmasuk.php', [], true)
+ 4 APPPATH\Controllers\SuratMasuk.php(105): view('surat/suratmasuk/filtersuratmasuk.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->cetakFilterSuratMasuk()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 00:43:54 --> Undefined variable: jumlahSuratMasuk
+in APPPATH\Views\layout\surat\template.php on line 132.
+ 1 APPPATH\Views\layout\surat\template.php(132): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jumlahSuratMasuk', 'APPPATH\\Views\\layout\\surat\\template.php', 132, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\surat\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/surat/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/filtersuratmasuk.php', [], true)
+ 6 APPPATH\Controllers\SuratMasuk.php(105): view('surat/suratmasuk/filtersuratmasuk.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->cetakFilterSuratMasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
