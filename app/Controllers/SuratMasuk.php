@@ -40,9 +40,9 @@ class SuratMasuk extends BaseController
     public function tambahSuratMasuk()
     {
         helper(['form', 'url']);
-        $file = $this->request->getFile('berkas');
-        $namaFile = $file->getName();
-        $file->move('asset/pdf', $namaFile);
+        $fileUp = $this->request->getFile('file');
+        $namaFile = $fileUp->getName();
+        $fileUp->move('asset/pdf', $namaFile);
         $dataSuratMasuk = [
             'no_surat' => $this->request->getVar('no_surat'),
             'asal_surat' => $this->request->getVar('asal_surat'),

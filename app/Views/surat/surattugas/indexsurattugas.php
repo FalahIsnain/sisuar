@@ -36,11 +36,11 @@
                         <td><?= $sm['no_surat'] ?></td>
                         <td><?= $sm['keperluan'] ?></td>
                         <td><?= $sm['tempat_tujuan'] ?></td>
-                        <td><?= $dateMulai?> s/d <?=$dateSelesai ?></td>
+                        <td><?= $dateMulai ?> s/d <?= $dateSelesai ?></td>
                         <td><?= $sm['beban_biaya'] ?></td>
                         <td><?= $sm['tgl_rilis'] ?> </td>
                         <td>
-                            <a href="<?= base_url('asset/pdf/' . $sm['file'])?>"><?= $sm['file'] ?> </a>
+                            <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
                         </td>
                         <td>
                             <button type="button " class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formedit-<?= $sm['id_surat'] ?>">
@@ -70,40 +70,63 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('/SuratTugas/tambahSuratTugas') ?>" class="row g-3" method="post"  enctype="multipart/form-data">
-                    <?= csrf_field(); ?>
+                <form class="row g-3 needs-validation" method="post" action="<?= base_url('/SuratTugas/tambahSuratTugas') ?>" enctype="multipart/form-data" novalidate>
                     <div class="col-12">
-                        <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
+                        <label for="validationCustom01" class="form-label">No surat</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="no_surat" name="no_surat" required>
+                        <div class="invalid-feedback">
+                            Silahkan Isi No Surat!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputPassword4" class="form-label">Keperluan </label>
-                        <input type="text" class="form-control" id="keperluan" name="keperluan">
+                        <label for="validationCustom01" class="form-label">Keperluan</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="keperluan" name="keperluan" required>
+                        <div class="invalid-feedback">
+                            Asal Surat Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Tempat Tujuan</label>
-                        <input type="text" class="form-control" id="tempat_tujuan" name="tempat_tujuan">
+                        <label for="validationCustom02" class="form-label">Tempat Tujuan</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="tempat_tujuan" name="tempat_tujuan" required>
+                        <div class="invalid-feedback">
+                            Tujuan Surat Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Mulai</label>
-                        <input type="date" class="form-control" id="tanggal_mulai" name="tanggal_mulai">
+                        <label for="validationCustom02" class="form-label">Tanggal Mulai</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_mulai" name="tanggal_mulai" required>
+                        <div class="invalid-feedback">
+                            Tanggal Mulai Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Selesai</label>
-                        <input type="date" class="form-control" id="tanggal_selesai" name="tanggal_selesai">
+                        <label for="validationCustom02" class="form-label">Tanggal Selesai</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_selesai" name="tanggal_selesai" required>
+                        <div class="invalid-feedback">
+                            Tanggal Selesai Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Beban Biaya</label>
-                        <input type="text" class="form-control" id="beban_biaya" name="beban_biaya">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Surat</label>
-                        <input type="date" class="form-control" id="tgl_rilis" name="tgl_rilis">
+                        <label for="validationCustom02" class="form-label">Rincian Biaya</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="beban_biaya" name="beban_biaya" required>
+                        <div class="invalid-feedback">
+                            Rincian Biaya Tidak Boleh Kosong!
+                        </div>
                     </div>
 
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Tanggal Surat di Buat</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tgl_rilis" name="tgl_rilis" required>
+                        <div class="invalid-feedback">
+                            Tanggal Surat Tidak Boleh Kosong!
+                        </div>
+                    </div>
                     <div class="col-12">
-                        <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control" id="inputZip" name="file">
+                        <label for="validationCustom02" class="form-label">file</label>
+                        <input type="file" class="form-control" aria-label="file example" name="file" required>
+                        <div class="invalid-feedback">
+                            File Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -116,59 +139,84 @@
 </div>
 
 <?php foreach ($surattugas as $sm) : ?>
-<!-- ModalEdit -->
-<div class="modal fade" id="formedit-<?= $sm['id_surat'] ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Tambah Surat Tugas</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="<?= base_url('/SuratTugas/tambahSuratTugas') ?>" class="row g-3" method="post"  enctype="multipart/form-data">
-                    <?= csrf_field(); ?>
-                    <div class="col-12">
-                        <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" value="<?= $sm['no_surat']?>" auttofocus>
-                    </div>
-                    <div class="col-12">
-                        <label for="inputPassword4" class="form-label">Keperluan </label>
-                        <input type="text" class="form-control" id="keperluan" name="keperluan" value="<?= $sm['keperluan']?>">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Tempat Tujuan</label>
-                        <input type="text" class="form-control" id="tempat_tujuan" name="tempat_tujuan" value="<?= $sm['tempat_tujuan']?>">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Mulai</label>
-                        <input type="date" class="form-control" id="tanggal_mulai" name="tanggal_mulai" value="<?= $sm['tanggal_mulai']?>">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Selesai</label>
-                        <input type="date" class="form-control" id="tanggal_selesai" name="tanggal_selesai" value="<?= $sm['tanggal_selesai']?>">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Beban Biaya</label>
-                        <input type="text" class="form-control" id="beban_biaya" name="beban_biaya" value="<?= $sm['beban_biaya']?>">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Surat</label>
-                        <input type="date" class="form-control" id="tgl_rilis" name="tgl_rilis" value="<?= $sm['tgl_rilis']?>">
-                    </div>
+    <!-- ModalEdit -->
+    <div class="modal fade" id="formedit-<?= $sm['id_surat'] ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Edit Surat Tugas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?= base_url('/SuratTugas/edit/' . $sm['id_surat']) ?>" class="row g-3 needs-validation" method="post" enctype="multipart/form-data" novalidate>
+                        <?= csrf_field(); ?>
+                        <div class="col-12">
+                            <label for="validationCustom01" class="form-label">No surat</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="<?= $sm['no_surat'] ?>" id="no_surat" name="no_surat" required>
+                            <div class="invalid-feedback">
+                                Silahkan Isi No Surat!
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustom01" class="form-label">Keperluan</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="<?= $sm['keperluan'] ?>" id="keperluan" name="keperluan" required>
+                            <div class="invalid-feedback">
+                                Asal Surat Tidak Boleh Kosong!
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustom02" class="form-label">Tempat Tujuan</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['tempat_tujuan'] ?>" id="tempat_tujuan" name="tempat_tujuan" required>
+                            <div class="invalid-feedback">
+                                Tujuan Surat Tidak Boleh Kosong!
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom02" class="form-label">Tanggal Mulai</label>
+                            <input type="date" class="form-control" id="validationCustom02" value="<?= $sm['tanggal_mulai'] ?>" id="tanggal_mulai" name="tanggal_mulai" required>
+                            <div class="invalid-feedback">
+                                Tanggal Mulai Tidak Boleh Kosong!
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom02" class="form-label">Tanggal Selesai</label>
+                            <input type="date" class="form-control" id="validationCustom02" value="<?= $sm['tanggal_selesai'] ?>" id="tanggal_selesai" name="tanggal_selesai" required>
+                            <div class="invalid-feedback">
+                                Tanggal Selesai Tidak Boleh Kosong!
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustom02" class="form-label">Rincian Biaya</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['beban_biaya'] ?>" id="beban_biaya" name="beban_biaya" required>
+                            <div class="invalid-feedback">
+                                Rincian Biaya Tidak Boleh Kosong!
+                            </div>
+                        </div>
 
-                    <div class="col-12">
-                        <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control" id="inputZip" name="file" value="<?= $sm['file']?>">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
-                    </div>
-                </form>
+                        <div class="col-md-6">
+                            <label for="validationCustom02" class="form-label">Tanggal Surat di Buat</label>
+                            <input type="date" class="form-control" id="validationCustom02" value="<?= $sm['tgl_rilis'] ?>" id="tgl_rilis" name="tgl_rilis" required>
+                            <div class="invalid-feedback">
+                                Tanggal Surat Tidak Boleh Kosong!
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustom02" class="form-label">file</label>
+                            <input type="file" class="form-control" aria-label="file example" name="file" required>
+                            <div class="invalid-feedback">
+                                File Tidak Boleh Kosong!
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Tambah</button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 <?php endforeach; ?>
 
 <?= $this->endSection(); ?>

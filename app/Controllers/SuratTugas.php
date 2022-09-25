@@ -65,7 +65,7 @@ class SuratTugas extends BaseController
         $file = $this->request->getFile('file');
         $namaFile = $file->getName();
         $file->move('asset/pdf', $namaFile);
-        $this->SuratMasukModels->update($id_surat, [
+        $this->SuratTugasModels->update($id_surat, [
             'no_surat' => $this->request->getVar('no_surat'),
             'keperluan' => $this->request->getVar('keperluan'),
             'tempat_tujuan' => $this->request->getVar('tempat_tujuan'),

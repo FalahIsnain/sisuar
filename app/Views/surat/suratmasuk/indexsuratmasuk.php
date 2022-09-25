@@ -90,12 +90,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="row g-3 needs-validation" novalidate action="<?= base_url('/SuratMasuk/tambahSuratMasuk') ?>" enctype="multipart/form-data">
+                <form class="row g-3 needs-validation" method="post" action="<?= base_url('/SuratMasuk/tambahSuratMasuk') ?>" enctype="multipart/form-data" novalidate>
                     <div class="col-12">
                         <label for="validationCustom01" class="form-label">No surat</label>
                         <input type="text" class="form-control" id="validationCustom01" value="" id="no_surat" name="no_surat" required>
                         <div class="invalid-feedback">
-                           Silahkan Isi  No Surat!
+                            Silahkan Isi No Surat!
                         </div>
                     </div>
                     <div class="col-12">
@@ -130,7 +130,7 @@
                         <label for="validationCustom02" class="form-label">Isi Ringkas</label>
                         <input type="text" class="form-control" id="validationCustom02" value="" id="isi_ringkas" name="isi_ringkas" required>
                         <div class="invalid-feedback">
-                           Isi Ringkas Tidak Boleh Kosong!
+                            Isi Ringkas Tidak Boleh Kosong!
                         </div>
                     </div>
 
@@ -154,19 +154,21 @@
                     </div>
                     <div class="col-12">
                         <label for="validationCustom02" class="form-label">file</label>
-                        <input type="file" class="form-control" id="validationCustom02" value="" id="file" name="file" required>
+                        <input type="file" class="form-control" aria-label="file example" name="file" required>
                         <div class="invalid-feedback">
                             File Tidak Boleh Kosong!
                         </div>
                     </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Ubah</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
 
 <?php foreach ($suratmasuk as $sm) : ?>
     <div class="modal fade" id="formedit-<?= $sm['id_surat'] ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -177,35 +179,62 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('/SuratMasuk/edit/' . $sm['id_surat']) ?>" class="row g-3" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('/SuratMasuk/edit/' . $sm['id_surat']) ?>" class="row g-3 needs-validation" method="post" enctype="multipart/form-data" novalidate>
                         <?= csrf_field(); ?>
-                        <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">No surat</label>
-                            <input type="text" class="form-control" id="no_surat" name="no_surat" value="<?= $sm['no_surat'] ?>" auttofocus>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Asal Surat</label>
-                            <input type="text" class="form-control" id="asal_surat" name="asal_surat" value="<?= $sm['asal_surat'] ?>">
+                        <div class="col-12">
+                            <label for="validationCustom01" class="form-label">No surat</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="<?= $sm['no_surat'] ?>" id="no_surat" name="no_surat" required>
+                            <div class="invalid-feedback">
+                                Silahkan Isi No Surat!
+                            </div>
                         </div>
                         <div class="col-12">
-                            <label for="inputAddress" class="form-label">Tujuan</label>
-                            <input type="text" class="form-control" id="tujuan_surat" name="tujuan_surat" value="<?= $sm['tujuan_surat'] ?>">
+                            <label for="validationCustom01" class="form-label">Asal Surat</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="<?= $sm['asal_surat'] ?>" id="asal_surat" name="asal_surat" required>
+                            <div class="invalid-feedback">
+                                Asal Surat Tidak Boleh Kosong!
+                            </div>
                         </div>
                         <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Perihal</label>
-                            <input type="text" class="form-control" id="perihal" name="perihal" value="<?= $sm['perihal'] ?>">
+                            <label for="validationCustom02" class="form-label">Tujuan Surat</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['tujuan_surat'] ?>" id="tujuan_surat" name="tujuan_surat" required>
+                            <div class="invalid-feedback">
+                                Tujuan Surat Tidak Boleh Kosong!
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustom02" class="form-label">Perihal</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['perihal'] ?>" id="perihal" name="perihal" required>
+                            <div class="invalid-feedback">
+                                Perihal Tidak Boleh Kosong!
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputCity" class="form-label">Tanggal</label>
-                            <input type="date" class="form-control" id="tanggal_masuk" name="tanggal_masuk" value="<?= $sm['tanggal_masuk'] ?>">
+                            <label for="validationCustom02" class="form-label">Tanggal Masuk</label>
+                            <input type="date" class="form-control" id="validationCustom02" value="<?= $sm['tanggal_masuk'] ?>" id="tanggal_masuk" name="tanggal_masuk" required>
+                            <div class="invalid-feedback">
+                                Tanggal Masuk Tidak Boleh Kosong!
+                            </div>
                         </div>
                         <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Isi Ringkas</label>
-                            <input type="text" class="form-control" id="perihal" name="isi_ringkas" value="<?= $sm['isi_ringkas'] ?>">
+                            <label for="validationCustom02" class="form-label">Isi Ringkas</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['isi_ringkas'] ?>" id="isi_ringkas" name="isi_ringkas" required>
+                            <div class="invalid-feedback">
+                                Isi Ringkas Tidak Boleh Kosong!
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="validationCustom02" class="form-label">Alasan</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['alasan'] ?>" id="alasan" name="alasan" required>
+                            <div class="invalid-feedback">
+                                Alasan Tidak Boleh Kosong!
+                            </div>
                         </div>
                         <div class="col-md-4">
-                            <label for="inputState" class="form-label">Keterangan</label>
-                            <select id="ket_surat" class="form-select" name="ket_surat">
+                            <label for="validationCustom04" class="form-label">Keterangan</label>
+                            <select class="form-select" id="validationCustom04" id="ket_surat" name="ket_surat" required>
+                                <option selected disabled value="">Choose...</option>
                                 <?php if ($sm['ket_surat'] == "Ya") : ?>
                                     <option value="Ya" selected>Ya</option>
                                     <option value="tidak">Tidak</option>
@@ -214,15 +243,16 @@
                                     <option value="tidak" selected>Tidak</option>
                                 <?php endif; ?>
                             </select>
+                            <div class="invalid-feedback">
+                                Silahkan Pilih Keterangan!
+                            </div>
                         </div>
                         <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Alasan</label>
-                            <input type="text" class="form-control" id="perihal" name="alasan" value="<?= $sm['alasan'] ?>">
-                        </div>
-                        <div class="col-12">
-                            <label for="inputZip" class="form-label"></label>
-                            <input type="file" class="form-control" id="inputZip" name="file" value="<?= $sm['file'] ?>">
-
+                            <label for="validationCustom02" class="form-label">file</label>
+                            <input type="file" class="form-control" aria-label="file example" value="<?= $sm['file'] ?>" name="file" required>
+                            <div class="invalid-feedback">
+                                File Tidak Boleh Kosong!
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -233,6 +263,6 @@
             </div>
         </div>
     </div>
-<?php endforeach; ?> 
+<?php endforeach; ?>
 
 <?= $this->endSection(); ?>

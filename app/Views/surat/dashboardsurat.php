@@ -142,56 +142,88 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('/BerandaSurat/tambahSuratMasukDashboard') ?>" class="row g-3" method="post" enctype="multipart/form-data">
+                <form class="row g-3 needs-validation" method="post" action="<?= base_url('/BerandaSurat/tambahSuratMasukDashboard') ?>" enctype="multipart/form-data" novalidate>
                     <?= csrf_field(); ?>
                     <div class="col-12">
-                        <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
+                        <label for="validationCustom01" class="form-label">No surat</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="no_surat" name="no_surat" required>
+                        <div class="invalid-feedback">
+                            Silahkan Isi No Surat!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputPassword4" class="form-label">Asal Surat</label>
-                        <input type="text" class="form-control" id="asal_surat" name="asal_surat">
+                        <label for="validationCustom01" class="form-label">Asal Surat</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="asal_surat" name="asal_surat" required>
+                        <div class="invalid-feedback">
+                            Asal Surat Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Tujuan</label>
-                        <input type="text" class="form-control" id="tujuan_surat" name="tujuan_surat">
+                        <label for="validationCustom02" class="form-label">Tujuan Surat</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="tujuan_surat" name="tujuan_surat" required>
+                        <div class="invalid-feedback">
+                            Tujuan Surat Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Perihal</label>
-                        <input type="text" class="form-control" id="perihal" name="perihal">
+                        <label for="validationCustom02" class="form-label">Perihal</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="perihal" name="perihal" required>
+                        <div class="invalid-feedback">
+                            Perihal Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Masuk</label>
-                        <input type="date" class="form-control" id="tanggal_masuk" name="tanggal_masuk">
+                        <label for="validationCustom02" class="form-label">Tanggal Masuk</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_masuk" name="tanggal_masuk" required>
+                        <div class="invalid-feedback">
+                            Tanggal Masuk Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Isi Ringkas</label>
-                        <input type="text" class="form-control" id="perihal" name="isi ringkas">
+                        <label for="validationCustom02" class="form-label">Isi Ringkas</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="isi_ringkas" name="isi_ringkas" required>
+                        <div class="invalid-feedback">
+                            Isi Ringkas Tidak Boleh Kosong!
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="validationCustom02" class="form-label">Alasan</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="alasan" name="alasan" required>
+                        <div class="invalid-feedback">
+                            Alasan Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="inputState" class="form-label">Terlaksana</label>
-                        <select id="ket_surat" class="form-select" name="ket_surat">
+                        <label for="validationCustom04" class="form-label">Keterangan</label>
+                        <select class="form-select" id="validationCustom04" id="ket_surat" name="ket_surat" required>
+                            <option selected disabled value="">Choose...</option>
                             <option value="Ya">Ya</option>
                             <option value="tidak">Tidak</option>
                         </select>
+                        <div class="invalid-feedback">
+                            Silahkan Pilih Keterangan
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Alasan</label>
-                        <input type="text" class="form-control" id="perihal" name="alasan">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control" id="inputZip" name="file">
+                        <label for="validationCustom02" class="form-label">file</label>
+                        <input type="file" class="form-control" aria-label="file example" name="file" required>
+                        <div class="invalid-feedback">
+                            File Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
+                        <button type="submit" class="btn btn-primary">Ubah</button>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
 </div>
+
+
 <!-- Modal -->
 <div class="modal fade" id="keluar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -201,31 +233,51 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('/BerandaSurat/tambahSuratKeluarDashboard') ?>" class="row g-3" method="post" enctype="multipart/form-data">
-                    <?= csrf_field(); ?>
+                <form class="row g-3 needs-validation" method="post" action="<?= base_url('/BerandaSurat/tambahSuratKeluarDashboard') ?>" enctype="multipart/form-data" novalidate>
+                    <?php csrf_field() ?>
                     <div class="col-12">
-                        <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
+                        <label for="validationCustom01" class="form-label">No surat</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="no_surat" name="no_surat" required>
+                        <div class="invalid-feedback">
+                            Silahkan Isi No Surat!
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="validationCustom02" class="form-label">Tujuan Surat</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="tujuan_surat" name="tujuan_surat" required>
+                        <div class="invalid-feedback">
+                            Tujuan Surat Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputPassword4" class="form-label">Tujuan Surat</label>
-                        <input type="text" class="form-control" id="tujuan_surat" name="tujuan_surat" ">
-                    </div>
-                    <div class=" col-12">
-                        <label for="inputAddress" class="form-label">Perihal</label>
-                        <input type="text" class="form-control" id="perihal" name="perihal">
+                        <label for="validationCustom02" class="form-label">Perihal</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="perihal" name="perihal" required>
+                        <div class="invalid-feedback">
+                            Perihal Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal_keluar" name="tanggal_keluar">
+                        <label for="validationCustom02" class="form-label">Tanggal keluar</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_keluar" name="tanggal_keluar" required>
+                        <div class="invalid-feedback">
+                            Tanggal Masuk Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Isi Ringkas</label>
-                        <input type="text" class="form-control" id="isi_ringkas" name="isi_ringkas">
+                        <label for="validationCustom02" class="form-label">Isi Ringkas</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="isi_ringkas" name="isi_ringkas" required>
+                        <div class="invalid-feedback">
+                            Isi Ringkas Tidak Boleh Kosong!
+                        </div>
                     </div>
+
                     <div class="col-12">
-                        <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control" id="inputZip" name="file">
+                        <label for="validationCustom02" class="form-label">file</label>
+                        <input type="file" class="form-control" aria-label="file example" name="file" required>
+                        <div class="invalid-feedback">
+                            File Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -247,40 +299,63 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('/BerandaSurat/tambahSuratTugasDashboard') ?>" class="row g-3" method="post" enctype="multipart/form-data">
-                    <?= csrf_field(); ?>
+                <form class="row g-3 needs-validation" method="post" action="<?= base_url('/BerandaSurat/tambahSuratTugasDashboard') ?>" enctype="multipart/form-data" novalidate>
                     <div class="col-12">
-                        <label for="inputEmail4" class="form-label">No surat</label>
-                        <input type="text" class="form-control" id="no_surat" placeholder="C-5/PANRB/CG53/03/2022" name="no_surat" auttofocus>
+                        <label for="validationCustom01" class="form-label">No surat</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="no_surat" name="no_surat" required>
+                        <div class="invalid-feedback">
+                            Silahkan Isi No Surat!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputPassword4" class="form-label">Keperluan </label>
-                        <input type="text" class="form-control" id="keperluan" name="keperluan">
+                        <label for="validationCustom01" class="form-label">Keperluan</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" id="keperluan" name="keperluan" required>
+                        <div class="invalid-feedback">
+                            Asal Surat Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Tempat Tujuan</label>
-                        <input type="text" class="form-control" id="tempat_tujuan" name="tempat_tujuan">
+                        <label for="validationCustom02" class="form-label">Tempat Tujuan</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="tempat_tujuan" name="tempat_tujuan" required>
+                        <div class="invalid-feedback">
+                            Tujuan Surat Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Mulai</label>
-                        <input type="date" class="form-control" id="tanggal_mulai" name="tanggal_mulai">
+                        <label for="validationCustom02" class="form-label">Tanggal Mulai</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_mulai" name="tanggal_mulai" required>
+                        <div class="invalid-feedback">
+                            Tanggal Mulai Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Selesai</label>
-                        <input type="date" class="form-control" id="tanggal_selesai" name="tanggal_selesai">
+                        <label for="validationCustom02" class="form-label">Tanggal Selesai</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_selesai" name="tanggal_selesai" required>
+                        <div class="invalid-feedback">
+                            Tanggal Selesai Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Beban Biaya</label>
-                        <input type="text" class="form-control" id="beban_biaya" name="beban_biaya">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Tanggal Surat</label>
-                        <input type="date" class="form-control" id="tgl_rilis" name="tgl_rilis">
+                        <label for="validationCustom02" class="form-label">Rincian Biaya</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="beban_biaya" name="beban_biaya" required>
+                        <div class="invalid-feedback">
+                            Rincian Biaya Tidak Boleh Kosong!
+                        </div>
                     </div>
 
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Tanggal Surat di Buat</label>
+                        <input type="date" class="form-control" id="validationCustom02" value="" id="tgl_rilis" name="tgl_rilis" required>
+                        <div class="invalid-feedback">
+                            Tanggal Surat Tidak Boleh Kosong!
+                        </div>
+                    </div>
                     <div class="col-12">
-                        <label for="inputZip" class="form-label">Upload File</label>
-                        <input type="file" class="form-control" id="inputZip" name="file">
+                        <label for="validationCustom02" class="form-label">file</label>
+                        <input type="file" class="form-control" aria-label="file example" name="file" required>
+                        <div class="invalid-feedback">
+                            File Tidak Boleh Kosong!
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
