@@ -1,15 +1,20 @@
 <?= $this->extend('layout/surat/template'); ?>
 <?= $this->section('content'); ?>
 
-<div class="container ml-8 mt-3">
-    <center>
-        <div class="container mt-1">
+
+
+<div class="card">
+    <div class="card-body">
+        <center>
             <h5>
                 Filter Surat Keluar
-                Periode = <?= $tanggalMin ?> s/d <?= $tanggalMax ?>
             </h5>
-        </div>
-    </center>
+        </center>
+
+    </div>
+</div>
+<div class="container ml-8 mt-3">
+
 
     <div class="row mb-2" style="width:400px ;">
         <form class="row g-3 needs-validation" method="post" action="<?= base_url('/SuratKeluar/cetakFilterSuratKeluar') ?>" enctype="multipart/form-data" novalidate>
@@ -30,48 +35,6 @@
             <button type="submit" class="btn btn-primary">Filter</button>
         </form>
 
-    </div>
-    <div class="tablebox" style="width: 1300px;">
-
-        <table id="table" class="table table-striped" style="width:100%">
-            <thead>
-                <tr>
-                    <th>No surat</th>
-                    <th>Tujuan Surat</th>
-                    <th>Perihal</th>
-                    <th>Isi Ringkas</th>
-                    <th>Tanggal Keluar</th>
-                    <th>Berkas</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($dataFilter->getResultArray() as $sm) : ?>
-                    <tr>
-                        <td><?= $sm['no_surat'] ?></td>
-                        <td><?= $sm['tujuan_surat'] ?></td>
-                        <td><?= $sm['perihal'] ?></td>
-                        <td><?= $sm['isi_ringkas'] ?> </td>
-                        <?php $date = date('d-M-Y', strtotime($sm['tanggal_keluar'])) ?>
-                        <td><?= $date ?></td>
-                        <td>
-                            <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
-                        </td>
-                        <td>
-                            <button type="button " class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formedit-<?= $sm['id_surat'] ?>">
-                                <a><i class="fas fa-edit"></i></a>
-                            </button>
-                            <form action="<?= base_url('SuratKeluar/' . $sm['id_surat']) ?>" method="post" class="d-inline">
-                                <?= csrf_field(); ?>
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
-                            </form>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-
-        </table>
     </div>
 </div>
 

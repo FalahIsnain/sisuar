@@ -14,29 +14,13 @@
             <?= session()->getFlashData('pesan'); ?>
         </div>
     <?php endif; ?>
-    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <button type="button" class="btn btn-primary mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Tambah Surat
     </button>
+    <a href="<?= base_url('/SuratMasuk/formfilter') ?>">
+        <button class="btn btn-primary mt-2 mb-2" type="submit">Filter</button>
+    </a>
     <div class="tablebox" style="width: 1300px;">
-        <div class="row mb-2" style="width:400px ;">
-            <form class="row g-3 needs-validation" method="post" action="<?=base_url('/SuratMasuk/cetakFilterSuratMasuk') ?>" enctype="multipart/form-data" novalidate>
-                <div class="col-md-6">
-                    <label for="validationCustom02" class="form-label">Tanggal Minimal</label>
-                    <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_min" name="tanggal_min" required>
-                    <div class="invalid-feedback">
-                        Tanggal Minimal Tidak Boleh Kosong!
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <label for="validationCustom02" class="form-label">Tanggal Maxmimal</label>
-                    <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_max" name="tanggal_max" required>
-                    <div class="invalid-feedback">
-                        Tanggal Maxmimal Tidak Boleh Kosong!
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Filter</button>
-            </form>
-        </div>
         <table id="table" class="table table-striped" style="width:100%">
 
             <thead>
@@ -161,8 +145,8 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <label for="validationCustom02" class="form-label">file</label>
-                        <input type="file" class="form-control" aria-label="file example" name="file" required>
+                        <label for="formFile" class="form-label">test</label>
+                        <input class="form-control" type="file" id="formFile" name="file" required>
                         <div class="invalid-feedback">
                             File Tidak Boleh Kosong!
                         </div>
@@ -189,6 +173,8 @@
                 <div class="modal-body">
                     <form action="<?= base_url('/SuratMasuk/edit/' . $sm['id_surat']) ?>" class="row g-3 needs-validation" method="post" enctype="multipart/form-data" novalidate>
                         <?= csrf_field(); ?>
+                        <input type="hidden" name="fileLama" value="<?= $sm['file']; ?>"> </input>
+
                         <div class="col-12">
                             <label for="validationCustom01" class="form-label">No surat</label>
                             <input type="text" class="form-control" id="validationCustom01" value="<?= $sm['no_surat'] ?>" id="no_surat" name="no_surat" required>
@@ -255,12 +241,11 @@
                                 Silahkan Pilih Keterangan!
                             </div>
                         </div>
+                        
                         <div class="col-12">
-                            <label for="validationCustom02" class="form-label">file</label>
-                            <input type="file" class="form-control" aria-label="file example" value="<?= $sm['file'] ?>" name="file" required>
-                            <div class="invalid-feedback">
-                                File Tidak Boleh Kosong!
-                            </div>
+                        <label for="validationCustom02" class="costum-file-label"><?= $sm['file'] ?></label>
+                            <input class="form-control" type="file" id="formFile" name="file" value="<?= $sm['file'] ?>">
+                        </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

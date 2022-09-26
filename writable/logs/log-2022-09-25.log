@@ -31,3 +31,200 @@ in APPPATH\Views\layout\surat\template.php on line 132.
  8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
  9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:12:56 --> Undefined variable: tanggalMin
+in APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php on line 9.
+ 1 APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tanggalMin', 'APPPATH\\Views\\surat\\suratmasuk\\filtersuratmasuk.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\filtersuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/filtersuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(109): view('surat/suratmasuk/filtersuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->formfilter()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:13:27 --> Undefined variable: tanggalMin
+in APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php on line 9.
+ 1 APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tanggalMin', 'APPPATH\\Views\\surat\\suratmasuk\\filtersuratmasuk.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\filtersuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/filtersuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(109): view('surat/suratmasuk/filtersuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->formfilter()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:14:46 --> Undefined variable: tanggalMin
+in APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php on line 10.
+ 1 APPPATH\Views\surat\suratmasuk\filtersuratmasuk.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tanggalMin', 'APPPATH\\Views\\surat\\suratmasuk\\filtersuratmasuk.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\filtersuratmasuk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/filtersuratmasuk.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(109): view('surat/suratmasuk/filtersuratmasuk.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->formfilter()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:25:31 --> Invalid file: surat/suratmasuk/filtersuratkeluar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('surat/suratmasuk/filtersuratkeluar.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/filtersuratkeluar.php', [], true)
+ 3 APPPATH\Controllers\SuratKeluar.php(92): view('surat/suratmasuk/filtersuratkeluar.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->formfilter()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:39:32 --> syntax error, unexpected '$file' (T_VARIABLE)
+in APPPATH\Controllers\SuratMasuk.php on line 82.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\SuratMasuk.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\SuratMasuk')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\SuratMasuk')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\SuratMasuk')
+ 5 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\SuratMasuk', true)
+ 6 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:47:48 --> unlink(asset/pdfTranskrip Nilai -Falah.pdf): No such file or directory
+in APPPATH\Controllers\SuratMasuk.php on line 71.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset/pdfTranskrip Nilai -Falah.pdf): No such file or directory', 'APPPATH\\Controllers\\SuratMasuk.php', 71, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(71): unlink('asset/pdfTranskrip Nilai -Falah.pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->hapusSuratMasuk('28')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:48:59 --> Call to a member function getName() on null
+in APPPATH\Controllers\SuratMasuk.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->edit('18')
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:49:18 --> Undefined variable: namaFile
+in APPPATH\Controllers\SuratMasuk.php on line 102.
+ 1 APPPATH\Controllers\SuratMasuk.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: namaFile', 'APPPATH\\Controllers\\SuratMasuk.php', 102, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->edit('18')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:51:20 --> Undefined variable: namaFile
+in APPPATH\Controllers\SuratMasuk.php on line 102.
+ 1 APPPATH\Controllers\SuratMasuk.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: namaFile', 'APPPATH\\Controllers\\SuratMasuk.php', 102, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->edit('18')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:51:34 --> Undefined variable: namaFile
+in APPPATH\Controllers\SuratMasuk.php on line 102.
+ 1 APPPATH\Controllers\SuratMasuk.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: namaFile', 'APPPATH\\Controllers\\SuratMasuk.php', 102, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->edit('18')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 20:51:58 --> Undefined variable: namaFile
+in APPPATH\Controllers\SuratMasuk.php on line 91.
+ 1 APPPATH\Controllers\SuratMasuk.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: namaFile', 'APPPATH\\Controllers\\SuratMasuk.php', 91, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->edit('18')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 21:00:19 --> unlink(asset/pdf/): Is a directory
+in APPPATH\Controllers\SuratMasuk.php on line 71.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset/pdf/): Is a directory', 'APPPATH\\Controllers\\SuratMasuk.php', 71, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(71): unlink('FCPATH\\asset\\pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->hapusSuratMasuk('20')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 21:00:41 --> unlink(asset/pdf): Is a directory
+in APPPATH\Controllers\SuratMasuk.php on line 87.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset/pdf): Is a directory', 'APPPATH\\Controllers\\SuratMasuk.php', 87, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(87): unlink('FCPATH\\asset\\pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->edit('18')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 21:02:03 --> unlink(asset/pdf): Is a directory
+in APPPATH\Controllers\SuratMasuk.php on line 87.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset/pdf): Is a directory', 'APPPATH\\Controllers\\SuratMasuk.php', 87, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(87): unlink('FCPATH\\asset\\pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->edit('29')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 21:02:49 --> unlink(asset/pdf/): Is a directory
+in APPPATH\Controllers\SuratMasuk.php on line 87.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(asset/pdf/): Is a directory', 'APPPATH\\Controllers\\SuratMasuk.php', 87, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(87): unlink('FCPATH\\asset\\pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->edit('29')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:11:30 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\SuratKeluar.php(78): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\asset\\pdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:12:36 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\SuratKeluar.php(77): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\asset\\pdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:12:51 --> Undefined variable: file
+in APPPATH\Controllers\SuratKeluar.php on line 68.
+ 1 APPPATH\Controllers\SuratKeluar.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: file', 'APPPATH\\Controllers\\SuratKeluar.php', 68, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:13:24 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\SuratKeluar.php(78): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\asset\\pdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:13:32 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\SuratKeluar.php(78): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\asset\\pdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:14:10 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\SuratKeluar.php(78): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\asset\\pdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:14:38 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\SuratKeluar.php(78): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\asset\\pdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:16:33 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\SuratKeluar.php(78): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\asset\\pdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-25 22:17:32 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\SuratKeluar.php(76): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\asset\\pdf', 'Form KP-2.pdf')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->edit('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

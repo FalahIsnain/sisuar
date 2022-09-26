@@ -150,6 +150,7 @@
                 <div class="modal-body">
                     <form action="<?= base_url('/SuratTugas/edit/' . $sm['id_surat']) ?>" class="row g-3 needs-validation" method="post" enctype="multipart/form-data" novalidate>
                         <?= csrf_field(); ?>
+                        <input type="hidden" name="fileLama" value="<?= $sm['file']; ?>"> </input>
                         <div class="col-12">
                             <label for="validationCustom01" class="form-label">No surat</label>
                             <input type="text" class="form-control" id="validationCustom01" value="<?= $sm['no_surat'] ?>" id="no_surat" name="no_surat" required>
@@ -201,11 +202,8 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <label for="validationCustom02" class="form-label">file</label>
-                            <input type="file" class="form-control" aria-label="file example" name="file" required>
-                            <div class="invalid-feedback">
-                                File Tidak Boleh Kosong!
-                            </div>
+                            <label for="validationCustom02" class="costum-file-label"><?= $sm['file'] ?></label>
+                            <input class="form-control" type="file" id="formFile" name="file" value="<?= $sm['file'] ?>">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

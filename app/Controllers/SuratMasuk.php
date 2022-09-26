@@ -64,6 +64,11 @@ class SuratMasuk extends BaseController
     {
         helper(['form', 'url']);
         $id = $this->request->uri->getSegment(2);
+        //Cari File berdasarkan Id
+        $hapusFile = $this->SuratMasukModels->find($id);
+
+        // Hapus file
+        unlink('asset/pdf/' . $hapusFile['file']);
         $this->SuratMasukModels->delete($id);
         session()->setFlashdata('pesan', 'data berhasil di hapus');
         return redirect()->to(base_url('/SuratMasuk'));
@@ -72,9 +77,16 @@ class SuratMasuk extends BaseController
 
     public function edit($id_surat)
     {
+
         $file = $this->request->getFile('file');
-        $namaFile = $file->getName();
-        $file->move('asset/pdf', $namaFile);
+        // cek File 
+        if ($file->getError() == 4) {
+            $namaFile = $this->request->getVar('fileLama');
+        } else {
+            $namaFile = $file->getName();
+            $file->move('asset/pdf', $namaFile);
+            unlink('asset/pdf/' . $this->request->getVar('fileLama'));
+        }
         $this->SuratMasukModels->update($id_surat, [
             'no_surat' => $this->request->getVar('no_surat'),
             'asal_surat' => $this->request->getVar('asal_surat'),
@@ -84,11 +96,29 @@ class SuratMasuk extends BaseController
             'isi_ringkas' => $this->request->getVar('isi_ringkas'),
             'ket_surat' => $this->request->getVar('ket_surat'),
             'alasan' => $this->request->getVar('alasan'),
-            'jenis_surat' => 'Surat Masuk',
+            'jenis_surat' => 'Masuk',
             'file' => $namaFile,
         ]);
 
         return redirect()->to(base_url('/SuratMasuk'));
+    }
+
+
+    public function formfilter()
+    {
+
+        helper(['form', 'url']);
+
+
+        $data = [
+            'title' => 'SISUAR',
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
+            'validation' => \Config\Services::validation(),
+
+        ];
+        return view('surat/suratmasuk/filtersuratmasuk.php', $data);
     }
 
     public function cetakFilterSuratMasuk()
@@ -106,6 +136,6 @@ class SuratMasuk extends BaseController
             'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
 
         ];
-        return view('surat/suratmasuk/filtersuratmasuk.php', $data);
+        return view('surat/suratmasuk/cetakfiltersuratmasuk.php', $data);
     }
 }

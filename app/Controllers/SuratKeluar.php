@@ -53,6 +53,11 @@ class SuratKeluar extends BaseController
     {
         helper(['form', 'url']);
         $id = $this->request->uri->getSegment(2);
+        //Cari File berdasarkan Id
+        $hapusFile = $this->SuratKeluarModels->find($id);
+
+        // Hapus file
+        unlink('asset/pdf/' . $hapusFile['file']);
         $this->SuratKeluarModels->delete($id);
         session()->setFlashdata('pesan', 'data berhasil di hapus');
         return redirect()->to(base_url('/SuratKeluar'));
@@ -61,8 +66,13 @@ class SuratKeluar extends BaseController
     public function edit($id_surat)
     {
         $file = $this->request->getFile('file');
-        $namaFile = $file->getName();
-        $file->move('asset/pdf', $namaFile);
+        if ($file->getError() == 4) {
+            $namaFile = $this->request->getVar('fileLama');
+        } else {
+            $namaFile = $file->getName();
+            $file->move('asset/pdf', $namaFile);
+            unlink('asset/pdf/' . $this->request->getVar('fileLama'));
+        }
         $this->SuratKeluarModels->update($id_surat, [
             'no_surat' => $this->request->getVar('no_surat'),
             'tujuan_surat' => $this->request->getVar('tujuan_surat'),
@@ -73,9 +83,25 @@ class SuratKeluar extends BaseController
             'file' => $namaFile,
         ]);
 
+
         return redirect()->to(base_url('/SuratKeluar'));
     }
 
+
+    public function formfilter()
+    {
+
+        helper(['form', 'url']);
+        $data = [
+            'title' => 'SISUAR',
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
+            'validation' => \Config\Services::validation(),
+
+        ];
+        return view('surat/suratkeluar/filtersuratkeluar.php', $data);
+    }
 
     public function cetakFilterSuratKeluar()
     {
@@ -90,6 +116,6 @@ class SuratKeluar extends BaseController
             'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
             'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
         ];
-        return view('surat/suratkeluar/filtersuratkeluar.php', $data);
+        return view('surat/suratkeluar/cetakfiltersuratkeluar.php', $data);
     }
 }

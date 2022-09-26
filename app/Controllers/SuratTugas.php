@@ -55,6 +55,11 @@ class SuratTugas extends BaseController
     {
         helper(['form', 'url']);
         $id = $this->request->uri->getSegment(2);
+        //Cari File berdasarkan Id
+        $hapusFile = $this->SuratTugasModels->find($id);
+
+        // Hapus file
+        unlink('asset/pdf/' . $hapusFile['file']);
         $this->SuratTugasModels->delete($id);
         session()->setFlashdata('pesan', 'data berhasil di hapus');
         return redirect()->to(base_url('/SuratTugas'));
@@ -62,9 +67,17 @@ class SuratTugas extends BaseController
 
     public function edit($id_surat)
     {
+
         $file = $this->request->getFile('file');
-        $namaFile = $file->getName();
-        $file->move('asset/pdf', $namaFile);
+        // cek File 
+        if ($file->getError() == 4) {
+            $namaFile = $this->request->getVar('fileLama');
+        } else {
+            $namaFile = $file->getName();
+            $file->move('asset/pdf', $namaFile);
+            unlink('asset/pdf/' . $this->request->getVar('fileLama'));
+        };
+        
         $this->SuratTugasModels->update($id_surat, [
             'no_surat' => $this->request->getVar('no_surat'),
             'keperluan' => $this->request->getVar('keperluan'),
