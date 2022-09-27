@@ -53,6 +53,7 @@ $routes->delete('/SuratTugas/(:num)', 'SuratTugas::hapusSuratTugas/$1');
 $routes->add('/SuratMasuk/edit/(:any)', 'SuratMasuk::edit/$1');
 $routes->add('/SuratKeluar/edit/(:any)', 'SuratKeluar::edit/$1');
 $routes->add('/SuratTugas/edit/(:any)', 'SuratTugas::edit/$1');
+$routes->add('/SuratMasuk/disposisi/(:any)', 'SuratMasuk::disposisi/$1');
 
 
 

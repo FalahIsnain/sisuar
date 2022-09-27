@@ -1,0 +1,18 @@
+CRITICAL - 2022-09-26 01:45:16 --> syntax error, unexpected '?>'
+in APPPATH\Views\surat\suratmasuk\disposisi.php on line 70.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 3 APPPATH\Controllers\SuratMasuk.php(153): view('surat/suratmasuk/disposisi.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('29')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 01:46:29 --> syntax error, unexpected ';'
+in APPPATH\Views\surat\suratmasuk\disposisi.php on line 70.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 3 APPPATH\Controllers\SuratMasuk.php(153): view('surat/suratmasuk/disposisi.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('29')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

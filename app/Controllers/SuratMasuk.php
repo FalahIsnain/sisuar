@@ -138,4 +138,18 @@ class SuratMasuk extends BaseController
         ];
         return view('surat/suratmasuk/cetakfiltersuratmasuk.php', $data);
     }
+
+    public function disposisi()
+    {
+
+        helper(['form', 'url']);
+        $data = [
+            'title' => 'SISUAR',
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
+            'validation' => \Config\Services::validation(),
+        ];
+        return view('surat/suratmasuk/disposisi.php', $data);
+    }
 }

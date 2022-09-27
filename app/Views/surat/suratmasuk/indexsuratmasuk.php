@@ -30,10 +30,9 @@
                     <th>Tujuan</th>
                     <th>Perihal</th>
                     <th>Isi Ringkas</th>
-                    <th>Terlaksana</th>
-                    <th>alasan</th>
                     <th>Tanggal Masuk</th>
                     <th>Berkas</th>
+                    <th>Tindakan</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -45,13 +44,14 @@
                         <td><?= $sm['tujuan_surat'] ?></td>
                         <td><?= $sm['perihal'] ?></td>
                         <td><?= $sm['isi_ringkas'] ?></td>
-                        <td><?= $sm['ket_surat'] ?> </td>
-                        <td><?= $sm['alasan'] ?> </td>
                         <?php $date = date('d-M-Y', strtotime($sm['tanggal_masuk'])) ?>
                         <td><?= $date ?></td>
                         <td>
                             <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
                         </td>
+                        <td><a href="<?= site_url('SuratMasuk/Disposisi/' . $sm['id_surat']) ?>">
+                                <button type="button" class="btn btn-success">Disposisi</button>
+                            </a> </td>
                         <td>
                             <button type="button " class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formedit-<?= $sm['id_surat'] ?>">
                                 <a><i class="fas fa-edit"></i></a>
@@ -61,6 +61,7 @@
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin');"><i class="fas fa-trash-alt"></i></button>
                             </form>
+
                         </td>
 
                     </tr>
@@ -241,20 +242,20 @@
                                 Silahkan Pilih Keterangan!
                             </div>
                         </div>
-                        
+
                         <div class="col-12">
-                        <label for="validationCustom02" class="costum-file-label"><?= $sm['file'] ?></label>
+                            <label for="validationCustom02" class="costum-file-label"><?= $sm['file'] ?></label>
                             <input class="form-control" type="file" id="formFile" name="file" value="<?= $sm['file'] ?>">
                         </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" class="btn btn-primary">Ubah</button>
-                        </div>
-                    </form>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-primary">Ubah</button>
+                </div>
+                </form>
             </div>
         </div>
+    </div>
     </div>
 <?php endforeach; ?>
 

@@ -37,4 +37,5 @@ class SuratMasukModels extends Model
     {
         return $this->table('surat_masuk')->where('tanggal_masuk >=', $tglmin)->where('tanggal_masuk <=', $tglmax)->get();
     }
+    
 }
