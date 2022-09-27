@@ -56,8 +56,8 @@
         <?= $this->include('layout/surat/navbar'); ?>
         <?= $this->renderSection('content'); ?>
         <?= $this->include('layout/footer'); ?>
-
     </section>
+
     <!-- <script>
         var minDate, maxDate;
 

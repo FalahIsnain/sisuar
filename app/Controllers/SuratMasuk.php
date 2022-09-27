@@ -163,7 +163,7 @@ class SuratMasuk extends BaseController
         helper(['form', 'url']);
         $id_surat =  $this->request->getPost('id_surat');
         $size_arr = $this->request->getPost('arrDisposisi[]');
-        $disposisiString = implode(",", $size_arr);
+        $disposisiString = implode(" \n ", $size_arr);
 
         $dataDisposisi = [
             'id_surat' => $this->request->getPost('id_surat'),

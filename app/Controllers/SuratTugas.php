@@ -91,4 +91,34 @@ class SuratTugas extends BaseController
         ]);
         return redirect()->to(base_url('/SuratTugas'));
     }
+    public function formfilter()
+    {
+
+        helper(['form', 'url']);
+        $data = [
+            'title' => 'SISUAR',
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
+            'validation' => \Config\Services::validation(),
+
+        ];
+        return view('surat/surattugas/filtersurattugas.php', $data);
+    }
+
+    public function cetakFilterSuratTugas()
+    {
+        $tglmin = $this->request->getPost('tanggal_min');
+        $tglmax = $this->request->getPost('tanggal_max');
+        $data = [
+            'title' => 'Filter Surat Keluar',
+            'dataFilter' => $this->SuratTugasModels->filterDate($tglmin, $tglmax),
+            'tanggalMin' => date('d-M-Y', strtotime($tglmin)),
+            'tanggalMax' => date('d-M-Y', strtotime($tglmax)),
+            'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
+            'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
+            'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
+        ];
+        return view('surat/surattugas/cetakfiltersurattugas.php', $data);
+    }
 }

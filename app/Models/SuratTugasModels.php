@@ -24,4 +24,8 @@ class SuratTugasModels extends Model
     {
         return $this->db->table('surat_tugas')->countAll();
     }
+    public function filterDate($tglmin, $tglmax)
+    {
+        return $this->table('surat_tugas')->where('tgl_rilis >=', $tglmin)->where('tgl_rilis <=', $tglmax)->get();
+    }
 }

@@ -1,0 +1,73 @@
+CRITICAL - 2022-09-27 01:01:34 --> Invalid file: surat/surattugas/filtersurattugasphp.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('surat/surattugas/filtersurattugasphp.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/surattugas/filtersurattugasphp', [], true)
+ 3 APPPATH\Controllers\SuratTugas.php(106): view('surat/surattugas/filtersurattugasphp', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratTugas->formfilter()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratTugas))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 01:01:51 --> Invalid file: surat/surattugas/filtersurattugasphp.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('surat/surattugas/filtersurattugasphp.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/surattugas/filtersurattugasphp', [], true)
+ 3 APPPATH\Controllers\SuratTugas.php(106): view('surat/surattugas/filtersurattugasphp', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratTugas->formfilter()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratTugas))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 01:02:10 --> Invalid file: surat/surattugas/filtersurattugasphp.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('surat/surattugas/filtersurattugasphp.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/surattugas/filtersurattugasphp', [], true)
+ 3 APPPATH\Controllers\SuratTugas.php(106): view('surat/surattugas/filtersurattugasphp', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratTugas->formfilter()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratTugas))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 01:02:11 --> Invalid file: surat/surattugas/filtersurattugasphp.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('surat/surattugas/filtersurattugasphp.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/surattugas/filtersurattugasphp', [], true)
+ 3 APPPATH\Controllers\SuratTugas.php(106): view('surat/surattugas/filtersurattugasphp', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratTugas->formfilter()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratTugas))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 01:03:38 --> Undefined variable: dat
+in APPPATH\Views\surat\surattugas\indexsurattugas.php on line 45.
+ 1 APPPATH\Views\surat\surattugas\indexsurattugas.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dat', 'APPPATH\\Views\\surat\\surattugas\\indexsurattugas.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\surattugas\\indexsurattugas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/surattugas/indexsurattugas.php', [], true)
+ 5 APPPATH\Controllers\SuratTugas.php(31): view('surat/surattugas/indexsurattugas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratTugas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratTugas))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 01:19:17 --> implode(): Invalid arguments passed
+in APPPATH\Controllers\SuratMasuk.php on line 166.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'implode(): Invalid arguments passed', 'APPPATH\\Controllers\\SuratMasuk.php', 166, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(166): implode(' /n ', null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 01:19:29 --> implode(): Invalid arguments passed
+in APPPATH\Controllers\SuratMasuk.php on line 166.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'implode(): Invalid arguments passed', 'APPPATH\\Controllers\\SuratMasuk.php', 166, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(166): implode(' 
+ ', null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-27 01:19:31 --> implode(): Invalid arguments passed
+in APPPATH\Controllers\SuratMasuk.php on line 166.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'implode(): Invalid arguments passed', 'APPPATH\\Controllers\\SuratMasuk.php', 166, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(166): implode(' 
+ ', null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

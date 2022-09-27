@@ -11,9 +11,12 @@
         </div>
     </center>
 
-    <button type="button" class="btn btn-primary mb-4 mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <button type="button" class="btn btn-primary mb-2 mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Tambah Surat
     </button>
+    <a href="<?= base_url('/SuratTugas/formfilter') ?>">
+        <button class="btn btn-primary mt-2 mb-2" type="submit">Filter</button>
+    </a>
     <div class="tablebox" style="width: 1300px;">
         <table id="table" class="table table-striped" style="width:100%">
             <thead>
@@ -31,14 +34,15 @@
             <tbody>
                 <?php foreach ($surattugas as $sm) : ?>
                     <tr>
-                        <?php $dateMulai = date('d-m-Y', strtotime($sm['tanggal_mulai'])) ?>
-                        <?php $dateSelesai = date('d-m-Y', strtotime($sm['tanggal_selesai'])) ?>
+                        <?php $dateMulai = date('d-M-Y', strtotime($sm['tanggal_mulai'])) ?>
+                        <?php $dateSelesai = date('d-M-Y', strtotime($sm['tanggal_selesai'])) ?>
+                        <?php $dateRilis = date('d-M-Y', strtotime($sm['tgl_rilis'])) ?>
                         <td><?= $sm['no_surat'] ?></td>
                         <td><?= $sm['keperluan'] ?></td>
                         <td><?= $sm['tempat_tujuan'] ?></td>
                         <td><?= $dateMulai ?> s/d <?= $dateSelesai ?></td>
                         <td><?= $sm['beban_biaya'] ?></td>
-                        <td><?= $sm['tgl_rilis'] ?> </td>
+                        <td><?= $dateRilis ?></td>
                         <td>
                             <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
                         </td>
