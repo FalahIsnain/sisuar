@@ -5,18 +5,21 @@ namespace App\Controllers;
 use App\Models\SuratKeluarModels;
 use App\Models\SuratMasukModels;
 use App\Models\SuratTugasModels;
+use App\Models\DisposisiModels;
 
 class SuratMasuk extends BaseController
 {
     protected $SuratMasukModels;
     protected $SuratKeluarModels;
     protected $SuratTugasModels;
+    protected $DisposisiModels;
 
     public function __construct()
     {
         $this->SuratKeluarModels = new SuratKeluarModels();
         $this->SuratMasukModels = new SuratMasukModels();
         $this->SuratTugasModels = new SuratTugasModels();
+        $this->DisposisiModels = new DisposisiModels();
     }
 
     public function index()
@@ -139,17 +142,38 @@ class SuratMasuk extends BaseController
         return view('surat/suratmasuk/cetakfiltersuratmasuk.php', $data);
     }
 
-    public function disposisi()
+    public function disposisi($id_surat)
     {
 
         helper(['form', 'url']);
         $data = [
             'title' => 'SISUAR',
+            'detailSurat' => $this->SuratMasukModels->getOne($id_surat),
+            'disposisiCetak' => $this->DisposisiModels->getDisposisi($id_surat),
             'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
             'jumlahSuratKeluar' => $this->SuratKeluarModels->hitungSuratKeluar(),
             'jumlahSuratTugas' => $this->SuratTugasModels->hitungSuratTugas(),
             'validation' => \Config\Services::validation(),
         ];
         return view('surat/suratmasuk/disposisi.php', $data);
+    }
+
+    public function tambahDisposisi()
+    {
+        helper(['form', 'url']);
+        $id_surat =  $this->request->getPost('id_surat');
+        $size_arr = $this->request->getPost('arrDisposisi[]');
+        $disposisiString = implode(",", $size_arr);
+
+        $dataDisposisi = [
+            'id_surat' => $this->request->getPost('id_surat'),
+            'dari' => $this->request->getPost('dari'),
+            'kepada' => $this->request->getPost('kepada'),
+            'ket' => $this->request->getPost('keterangan'),
+            'disposisi' => $disposisiString
+        ];
+        session()->setFlashdata('pesan', 'Berhasil Di Tambahkan');
+        $this->DisposisiModels->save($dataDisposisi);
+        return redirect()->to(base_url('/SuratMasuk/disposisi/' . $id_surat));
     }
 }

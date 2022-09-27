@@ -16,3 +16,195 @@ in APPPATH\Views\surat\suratmasuk\disposisi.php on line 70.
  5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
  6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 20:57:17 --> Undefined variable: sm
+in APPPATH\Views\surat\suratmasuk\disposisi.php on line 48.
+ 1 APPPATH\Views\surat\suratmasuk\disposisi.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sm', 'APPPATH\\Views\\surat\\suratmasuk\\disposisi.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\disposisi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(154): view('surat/suratmasuk/disposisi.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('27')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 20:57:18 --> Undefined variable: sm
+in APPPATH\Views\surat\suratmasuk\disposisi.php on line 48.
+ 1 APPPATH\Views\surat\suratmasuk\disposisi.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sm', 'APPPATH\\Views\\surat\\suratmasuk\\disposisi.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\disposisi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(154): view('surat/suratmasuk/disposisi.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('27')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 20:59:42 --> Undefined variable: sm
+in APPPATH\Views\surat\suratmasuk\disposisi.php on line 243.
+ 1 APPPATH\Views\surat\suratmasuk\disposisi.php(243): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sm', 'APPPATH\\Views\\surat\\suratmasuk\\disposisi.php', 243, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\disposisi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(154): view('surat/suratmasuk/disposisi.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('27')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 21:50:03 --> Too few arguments to function App\Controllers\SuratMasuk::tambahDisposisi(), 0 passed in C:\xampp\htdocs\sisuar\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\SuratMasuk.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 21:55:00 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 846.
+ 1 SYSTEMPATH\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->update('29', [...])
+ 4 APPPATH\Controllers\SuratMasuk.php(168): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 21:55:14 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 846.
+ 1 SYSTEMPATH\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->update('29', [...])
+ 4 APPPATH\Controllers\SuratMasuk.php(168): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-26 21:56:53 --> mysqli_sql_exception: Column 'ket' cannot be null in C:\xampp\htdocs\sisuar\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sisuar\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `di...', 0)
+#1 C:\xampp\htdocs\sisuar\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `di...')
+#2 C:\xampp\htdocs\sisuar\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `di...')
+#3 C:\xampp\htdocs\sisuar\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `di...', Array, false)
+#4 C:\xampp\htdocs\sisuar\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sisuar\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sisuar\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sisuar\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sisuar\app\Controllers\SuratMasuk.php(171): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+#10 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+#11 C:\xampp\htdocs\sisuar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sisuar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-09-26 21:56:53 --> Column 'ket' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `disposisi` (`id_surat`, `dari`, `kepada`, `ket`) VALUES (\'29\', \'asd\', \'asd\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `disposisi` (`id_surat`, `dari`, `kepada`, `ket`) VALUES (\'29\', \'asd\', \'asd\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `disposisi` (`id_surat`, `dari`, `kepada`, `ket`) VALUES (\'29\', \'asd\', \'asd\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `disposisi` (`id_surat`, `dari`, `kepada`, `ket`) VALUES (:id_surat:, :dari:, :kepada:, :ket:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SuratMasuk.php(171): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 21:57:24 --> Too few arguments to function App\Controllers\SuratMasuk::disposisi(), 0 passed in C:\xampp\htdocs\sisuar\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\SuratMasuk.php on line 145.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 21:57:29 --> Too few arguments to function App\Controllers\SuratMasuk::disposisi(), 0 passed in C:\xampp\htdocs\sisuar\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\SuratMasuk.php on line 145.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:06:19 --> Undefined variable: dataFilter
+in APPPATH\Views\surat\suratmasuk\disposisi.php on line 264.
+ 1 APPPATH\Views\surat\suratmasuk\disposisi.php(264): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataFilter', 'APPPATH\\Views\\surat\\suratmasuk\\disposisi.php', 264, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\disposisi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(158): view('surat/suratmasuk/disposisi.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('29')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:06:48 --> Undefined variable: dataDisposisi
+in APPPATH\Views\surat\suratmasuk\disposisi.php on line 264.
+ 1 APPPATH\Views\surat\suratmasuk\disposisi.php(264): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataDisposisi', 'APPPATH\\Views\\surat\\suratmasuk\\disposisi.php', 264, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\disposisi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(158): view('surat/suratmasuk/disposisi.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('29')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:07:31 --> Undefined variable: data
+in APPPATH\Views\surat\suratmasuk\disposisi.php on line 264.
+ 1 APPPATH\Views\surat\suratmasuk\disposisi.php(264): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\surat\\suratmasuk\\disposisi.php', 264, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\suratmasuk\\disposisi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 5 APPPATH\Controllers\SuratMasuk.php(158): view('surat/suratmasuk/disposisi.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('29')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:18:52 --> implode(): Invalid arguments passed
+in APPPATH\Controllers\SuratMasuk.php on line 171.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'implode(): Invalid arguments passed', 'APPPATH\\Controllers\\SuratMasuk.php', 171, [...])
+ 2 APPPATH\Controllers\SuratMasuk.php(171): implode(' ', null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:24:08 --> Undefined property: App\Controllers\SuratMasuk::$input
+in APPPATH\Controllers\SuratMasuk.php on line 165.
+ 1 APPPATH\Controllers\SuratMasuk.php(165): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\SuratMasuk::$input', 'APPPATH\\Controllers\\SuratMasuk.php', 165, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:24:26 --> Call to undefined method App\Models\DisposisiModels::post
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\SuratMasuk.php(165): CodeIgniter\Model->__call('post', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:24:57 --> Call to undefined method App\Models\DisposisiModels::getPost
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\SuratMasuk.php(165): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:25:08 --> Call to undefined method App\Models\DisposisiModels::getPost
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\SuratMasuk.php(165): CodeIgniter\Model->__call('getPost', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:34:03 --> A non well formed numeric value encountered
+in APPPATH\Controllers\SuratMasuk.php on line 168.
+ 1 APPPATH\Controllers\SuratMasuk.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well formed numeric value encountered', 'APPPATH\\Controllers\\SuratMasuk.php', 168, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:35:51 --> A non-numeric value encountered
+in APPPATH\Controllers\SuratMasuk.php on line 168.
+ 1 APPPATH\Controllers\SuratMasuk.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\SuratMasuk.php', 168, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-26 22:36:00 --> A non-numeric value encountered
+in APPPATH\Controllers\SuratMasuk.php on line 168.
+ 1 APPPATH\Controllers\SuratMasuk.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\SuratMasuk.php', 168, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->tambahDisposisi()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

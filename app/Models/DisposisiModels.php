@@ -15,7 +15,7 @@ class DisposisiModels extends Model
         'dari',
         'kepada',
         'ket',
-        'desposisi'
+        'disposisi'
     ];
     public function getDisposisi($idSurat)
     {
