@@ -1,58 +1,88 @@
 <?= $this->extend('layout/surat/template'); ?>
 <?= $this->section('content'); ?>
 
-<div class="container" style="width:500px">
-    <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="container ml-8 mt-1">
+    <div class="row">
         <div class="col">
-            <canvas id="suratmasuk"></canvas>
+            <div class="row" style=" height:170px ;">
+                <div class="card mt-1" style="background-color: #FF5C7E; width: 700px;height: 145px;" border-radius:10>
+                    <div class="card-body">
+                        <h5 class="card-title">Surat Masuk</h5>
+                        <p class="card-text">Jumlah Surat Masuk : <?= $jumlahSuratMasuk ?> </p>
+                        <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-success">Lihat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style=" height:170px ;">
+                <div class="card mt-1" style="background-color: #36A2EB; width: 700px;height: 145px;" border-radius:10>
+                    <div class="card-body">
+                        <h5 class="card-title">Surat Keluar</h5>
+                        <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
+                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-success" style="">Lihat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style=" height:170px ;">
+                <div class="card mt-1" style="background-color: #FFCD55; width: 700px;height: 145px;" border-radius:10>
+                    <div class="card-body">
+                        <h5 class="card-title">Surat Tugas</h5>
+                        <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratTugas ?></p>
+                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-success">Lihat</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col">
-            <canvas id="suratkeluar"></canvas>
+            <center>
+                <div class="card" style="width: 490px;">
+                    <div class="card-body">
+                        <canvas id="suratdashboard"></canvas>
+                    </div>
+                </div>
+            </center>
         </div>
-        <div class="col">
-            <canvas id="surattugas"></canvas>
+    </div>
+
+
+
+    <!-- <div class="container mt-3">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card" style="background-color: #FF5C7E;" border-radius:10>
+                    <div class="card-body">
+                        <h6></h6>
+                        <h5 class="card-title">Surat Masuk</h5>
+                        <p class="card-text">Jumlah Surat Masuk : <?= $jumlahSuratMasuk ?> </p>
+                        <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-success">Lihat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="background-color: #36A2EB;" border-radius:10>
+                    <div class="card-body">
+                        <h5 class="card-title">Surat Keluar</h5>
+                        <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
+                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-success" style="">Lihat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="background-color: #FFCD55;" border-radius:10>
+                    <div class="card-body">
+                        <h5 class="card-title">Surat Tugas</h5>
+                        <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratTugas ?></p>
+                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-success">Lihat</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div> -->
 
-    <canvas id="suratdashboard"></canvas>
-</div>
-<div class="container mt-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card" style="background-color: #FF5C7E;" border-radius:10>
-                <div class="card-body">
-                    <h5 class="card-title">Surat Masuk</h5>
-                    <p class="card-text">Jumlah Surat Masuk : <?= $jumlahSuratMasuk ?> </p>
-                    <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-success">Lihat</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="background-color: #36A2EB;" border-radius:10>
-                <div class="card-body">
-                    <h5 class="card-title">Surat Keluar</h5>
-                    <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
-                    <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-success" style="">Lihat</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="background-color: #FFCD55;" border-radius:10>
-                <div class="card-body">
-                    <h5 class="card-title">Surat Tugas</h5>
-                    <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratTugas ?></p>
-                    <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-success">Lihat</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <br>
+    <hr class="style1" style="border-top: 1px solid #8c8b8b">
+    <br>
 
-<br>
-<hr class="style1" style="border-top: 1px solid #8c8b8b">
-<br>
 
-<div class="container ml-8 mt-1">
     <div class="btn-group">
         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Tambah
@@ -124,13 +154,13 @@
                     <?php endforeach; ?>
                 </tbody>
 
-
-
-            </table>
         </div>
-    </div>
 
+        </table>
+    </div>
 </div>
+
+
 
 
 <!-- Modal MASUK -->
