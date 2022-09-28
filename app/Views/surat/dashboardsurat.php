@@ -68,7 +68,7 @@
             <table id="table" class="table table-striped" style="width:100%">
                 <thead>
                     <tr style="background-color: #8c8b8b;color:white">
-                        <th>Jenis</th>
+                        <th>Jenis Surat</th>
                         <th>No surat</th>
                         <th>Tujuan</th>
                         <th>Perihal</th>
