@@ -1,7 +1,7 @@
 <?= $this->extend('layout/surat/template'); ?>
 <?= $this->section('content'); ?>
 
-<div class="container ml-8 mt-1">
+<div class="container ml-8 mt-4">
     <div class="row">
         <div class="col">
             <div class="row" style=" height:170px ;">
