@@ -2,6 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 
+/* body{
+  background-image:url('../asset/landing1.png') ;
+  background-size: cover;
+} */
+
+/*===== HEADER HERO =====*/
+.header-hero {
+  height: 800px;
+  position: relative; 
+  background-size: cover;
+
+}
+
+.header-hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 47%;
+  height: 100%; 
+}
+ 
+
 *{
   margin: 0;
   padding: 0;
@@ -267,3 +289,10 @@
   justify-content:left ;
 }
 
+.navbar{
+  font-family: 'Nunito', sans-serif;
+}
+
+.landing{
+  background-image:url('/asset/landing1.png') ;
+}

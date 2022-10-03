@@ -9,35 +9,55 @@
                     <div class="card-body">
                         <div class="container">
                             <div class="row">
-                                <div class="col" >
-                                    <p class="card-title" style="font: size 12px;">Surat Masuk</p>
-                                    <a href="<?= base_url('/SuratMasuk') ?>" class="btn" style="background-color:<?php echo $btnPrimary ?> ;">Lihat</a>
+                                <div class="col">
+                                    <p class="card-title" style="font-size: 30px;font-weight: bolder;">SURAT <br> MASUK</p>
+                                </div>
+                                <div class="col">
+                                    <a href="<?= base_url('/SuratMasuk') ?>"><img src="https://cdn-icons-png.flaticon.com/512/3502/3502487.png" alt="" width="70px"></i></a>
                                 </div>
                                 <div class="col" style=" text-align: right;">
-                                    <p style="font-size:42px; font-weight:bold; "><?= $jumlahSuratMasuk ?> </p>
-                                </div>  
+                                    <p style="font-size:70px; font-weight:bold; "><?= $jumlahSuratMasuk ?> </p>
+                                </div>
                             </div>
                         </div>
-
-
                     </div>
-</div>
+                </div>
             </div>
             <div class="row" style=" height:170px ;">
                 <div class="card mt-1" style="background-color: <?php echo $suratKeluarWrn ?>; width: 700px;height: 145px;" border-radius:10>
                     <div class="card-body">
-                        <h5 class="card-title">Surat Keluar</h5>
-                        <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
-                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn" style="background-color:<?php echo $btnPrimary ?> ;">Lihat</a>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-title" style="font-size: 30px;font-weight: bolder;">SURAT <br> KELUAR</p>
+                                </div>
+                                <div class="col">
+                                    <a href="<?= base_url('/SuratKeluar') ?>"><img src="https://cdn-icons-png.flaticon.com/512/3502/3502487.png" alt="" width="70px"></i></a>
+                                </div>
+                                <div class="col" style=" text-align: right;">
+                                    <p style="font-size:70px; font-weight:bold; "><?= $jumlahSuratKeluar ?> </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row" style=" height:170px ;">
                 <div class="card mt-1" style="background-color: <?php echo $suratTugasWrn ?>; width: 700px;height: 145px;" border-radius:10>
                     <div class="card-body">
-                        <h5 class="card-title">Surat Tugas</h5>
-                        <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratTugas ?></p>
-                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-info" >Lihat</a>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-title" style="font-size: 30px;font-weight: bolder;">SURAT <br> TUGAS</p>
+                                </div>
+                                <div class="col">
+                                    <a href="<?= base_url('/SuratTugas') ?>"><img src="https://cdn-icons-png.flaticon.com/512/3502/3502487.png" alt="" width="70px"></i></a>
+                                </div>
+                                <div class="col" style=" text-align: right;">
+                                    <p style="font-size:70px; font-weight:bold; "><?= $jumlahSuratTugas ?> </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
