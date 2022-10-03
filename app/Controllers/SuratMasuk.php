@@ -29,6 +29,9 @@ class SuratMasuk extends BaseController
         $jumlahRecord = $this->SuratMasukModels->where('id_surat', $id)->countAllResults();
 
         $data = [
+            'suratMasukWrn'=>'#F6F3A7',
+            'suratKeluarWrn'=>'#F6C523',
+            'suratTugasWrn'=>'#228C7B',
             'title' => 'SISUAR',
             'suratmasuk' => $this->SuratMasukModels->findAll(),
             'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
@@ -52,7 +55,7 @@ class SuratMasuk extends BaseController
             'tujuan_surat' => $this->request->getVar('tujuan_surat'),
             'perihal' => $this->request->getVar('perihal'),
             'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
-            'isi_ringkas' => $this->request->getVar('isi_ringkas'),
+            'isi_ringkas' => "-",
             'ket_surat' => $this->request->getVar('ket_surat'),
             'alasan' => $this->request->getVar('alasan'),
             'jenis_surat' => 'Masuk',
@@ -147,6 +150,9 @@ class SuratMasuk extends BaseController
 
         helper(['form', 'url']);
         $data = [
+            'suratMasukWrn'=>'#F6F3A7',
+            'suratKeluarWrn'=>'#F6C523',
+            'suratTugasWrn'=>'#228C7B',
             'title' => 'SISUAR',
             'detailSurat' => $this->SuratMasukModels->getOne($id_surat),
             'disposisiCetak' => $this->DisposisiModels->getDisposisi($id_surat),

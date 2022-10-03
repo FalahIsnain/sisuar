@@ -1,0 +1,103 @@
+ERROR - 2022-10-02 20:48:24 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in F:\XAMPP\htdocs\sisuar\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 F:\XAMPP\htdocs\sisuar\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'suratarsip', 3306, '', 0)
+#1 F:\XAMPP\htdocs\sisuar\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\XAMPP\htdocs\sisuar\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\XAMPP\htdocs\sisuar\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\XAMPP\htdocs\sisuar\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\XAMPP\htdocs\sisuar\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\XAMPP\htdocs\sisuar\app\Controllers\BerandaSurat.php(26): CodeIgniter\BaseModel->findAll()
+#7 F:\XAMPP\htdocs\sisuar\system\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+#8 F:\XAMPP\htdocs\sisuar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+#9 F:\XAMPP\htdocs\sisuar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\XAMPP\htdocs\sisuar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in F:\XAMPP\htdocs\sisuar\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 F:\XAMPP\htdocs\sisuar\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\XAMPP\htdocs\sisuar\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\XAMPP\htdocs\sisuar\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\XAMPP\htdocs\sisuar\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\XAMPP\htdocs\sisuar\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\XAMPP\htdocs\sisuar\app\Controllers\BerandaSurat.php(26): CodeIgniter\BaseModel->findAll()
+#6 F:\XAMPP\htdocs\sisuar\system\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+#7 F:\XAMPP\htdocs\sisuar\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+#8 F:\XAMPP\htdocs\sisuar\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\XAMPP\htdocs\sisuar\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-10-02 20:48:24 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `surat_masuk`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\BerandaSurat.php(26): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-02 21:14:55 --> Undefined variable: suratMasukWrn
+in APPPATH\Views\layout\surat\template.php on line 134.
+ 1 APPPATH\Views\layout\surat\template.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratMasukWrn', 'APPPATH\\Views\\layout\\surat\\template.php', 134, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\surat\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/surat/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/surattugas/indexsurattugas.php', [], true)
+ 6 APPPATH\Controllers\SuratTugas.php(31): view('surat/surattugas/indexsurattugas.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratTugas->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratTugas))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-02 21:15:13 --> Undefined variable: suratMasukWrn
+in APPPATH\Views\layout\surat\template.php on line 134.
+ 1 APPPATH\Views\layout\surat\template.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratMasukWrn', 'APPPATH\\Views\\layout\\surat\\template.php', 134, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\surat\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/surat/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratkeluar/indexsuratkeluar.php', [], true)
+ 6 APPPATH\Controllers\SuratKeluar.php(31): view('surat/suratkeluar/indexsuratkeluar.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-02 21:15:44 --> Undefined variable: suratMasukWrn
+in APPPATH\Views\layout\surat\template.php on line 134.
+ 1 APPPATH\Views\layout\surat\template.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratMasukWrn', 'APPPATH\\Views\\layout\\surat\\template.php', 134, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\surat\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/surat/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratkeluar/indexsuratkeluar.php', [], true)
+ 6 APPPATH\Controllers\SuratKeluar.php(31): view('surat/suratkeluar/indexsuratkeluar.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-02 21:17:42 --> Undefined variable: bntPrimary
+in APPPATH\Views\surat\dashboardsurat.php on line 14.
+ 1 APPPATH\Views\surat\dashboardsurat.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: bntPrimary', 'APPPATH\\Views\\surat\\dashboardsurat.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\surat\\dashboardsurat.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/dashboardsurat.php', [], true)
+ 5 APPPATH\Controllers\BerandaSurat.php(38): view('surat/dashboardsurat.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BerandaSurat->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BerandaSurat))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-02 21:31:38 --> Undefined variable: suratMasukWrn
+in APPPATH\Views\layout\surat\template.php on line 134.
+ 1 APPPATH\Views\layout\surat\template.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratMasukWrn', 'APPPATH\\Views\\layout\\surat\\template.php', 134, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\surat\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/surat/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/disposisi.php', [], true)
+ 6 APPPATH\Controllers\SuratMasuk.php(161): view('surat/suratmasuk/disposisi.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->disposisi('30')
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

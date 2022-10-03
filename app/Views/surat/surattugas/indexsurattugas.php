@@ -25,7 +25,8 @@
                     <th>keperluan</th>
                     <th>Tempat</th>
                     <th>Tanggal Pelaksanaan</th>
-                    <th>Biaya</th>
+                    <th>Pembebanan Biaya</th>
+                    <th>Alat Angkut</th>
                     <th>Tanggal surat</th>
                     <th>Berkas</th>
                     <th>Aksi</th>
@@ -42,6 +43,7 @@
                         <td><?= $sm['tempat_tujuan'] ?></td>
                         <td><?= $dateMulai ?> s/d <?= $dateSelesai ?></td>
                         <td><?= $sm['beban_biaya'] ?></td>
+                        <td><?= $sm['alat_angkut'] ?></td>
                         <td><?= $dateRilis ?></td>
                         <td>
                             <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
@@ -111,10 +113,18 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <label for="validationCustom02" class="form-label">Rincian Biaya</label>
+                        <label for="validationCustom02" class="form-label">Pembebanan Biaya</label>
                         <input type="text" class="form-control" id="validationCustom02" value="" id="beban_biaya" name="beban_biaya" required>
                         <div class="invalid-feedback">
-                            Rincian Biaya Tidak Boleh Kosong!
+                        Pembebanan Biaya Tidak Boleh Kosong!
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="validationCustom02" class="form-label">Alat angkut yang digunakan</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="alat_angkut" name="alat_angkut" required>
+                        <div class="invalid-feedback">
+                        Alat angkut yang digunakan Tidak Boleh Kosong!
                         </div>
                     </div>
 
@@ -125,6 +135,7 @@
                             Tanggal Surat Tidak Boleh Kosong!
                         </div>
                     </div>
+
                     <div class="col-12">
                         <label for="validationCustom02" class="form-label">file</label>
                         <input type="file" class="form-control" aria-label="file example" name="file" required>
@@ -132,6 +143,7 @@
                             File Tidak Boleh Kosong!
                         </div>
                     </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                         <button type="submit" class="btn btn-primary">Tambah</button>
@@ -191,12 +203,20 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <label for="validationCustom02" class="form-label">Rincian Biaya</label>
+                            <label for="validationCustom02" class="form-label">Pembebanan Biaya</label>
                             <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['beban_biaya'] ?>" id="beban_biaya" name="beban_biaya" required>
                             <div class="invalid-feedback">
-                                Rincian Biaya Tidak Boleh Kosong!
+                                Pembebanan Biaya Tidak Boleh Kosong!
                             </div>
                         </div>
+
+                        <div class="col-12">
+                        <label for="validationCustom02" class="form-label">Alat angkut yang digunakan</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['alat_angkut'] ?>" id="alat_angkut" name="alat_angkut" required>
+                        <div class="invalid-feedback">
+                        Alat angkut yang digunakan Tidak Boleh Kosong!
+                        </div>
+                    </div>
 
                         <div class="col-md-6">
                             <label for="validationCustom02" class="form-label">Tanggal Surat di Buat</label>

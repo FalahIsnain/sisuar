@@ -45,10 +45,10 @@
 
                                 <td><?= $date = date('d-M-Y', strtotime($detailSurat['tanggal_masuk'])) ?></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <th scope="row">Isi Ringkas : </th>
                                 <td><?= $detailSurat['isi_ringkas'] ?></td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <th scope="row">Keterangan : </th>
                                 <td><?= $detailSurat['ket_surat'] ?></td>

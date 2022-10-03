@@ -131,9 +131,9 @@
                         label: 'Surat',
                         data: [<?php echo $jumlahSuratMasuk ?>, <?php echo $jumlahSuratKeluar ?>, <?php echo $jumlahSuratTugas ?>],
                         backgroundColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(54, 162, 235)',
-                            'rgb(255, 205, 86)'
+                            '<?php echo $suratMasukWrn ?>',
+                            '<?php echo $suratKeluarWrn ?>',
+                            '<?php echo $suratTugasWrn ?>'
                         ],
                         hoverOffset: 4
                     }]

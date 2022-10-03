@@ -1,6 +1,14 @@
-<div class="sec-header">
-    <div class="con-header w-container">
-        <h1 class="con-header-h1">Dinas Pekerjaan Umum Penataan Ruang</h1>
-        <h3 class="con-header-h3">Pemerintah Provinsi Kalimantan Selatan</h3>
+<div class="header bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                Header
+            </div>
+            <div class="col-6 text-right">
+                000 000 0000
+            </div>
+        </div>
+        <!--/row-->
     </div>
+    <!--container-->
 </div>

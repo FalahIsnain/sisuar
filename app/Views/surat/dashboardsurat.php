@@ -5,29 +5,39 @@
     <div class="row">
         <div class="col">
             <div class="row" style=" height:170px ;">
-                <div class="card mt-1" style="background-color: #FF5C7E; width: 700px;height: 145px;" border-radius:10>
+                <div class="card mt-1" style="background-color: <?php echo $suratMasukWrn ?>; width: 700px;height: 145px;" border-radius:10>
                     <div class="card-body">
-                        <h5 class="card-title">Surat Masuk</h5>
-                        <p class="card-text">Jumlah Surat Masuk : <?= $jumlahSuratMasuk ?> </p>
-                        <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-success">Lihat</a>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col" >
+                                    <p class="card-title" style="font: size 12px;">Surat Masuk</p>
+                                    <a href="<?= base_url('/SuratMasuk') ?>" class="btn" style="background-color:<?php echo $btnPrimary ?> ;">Lihat</a>
+                                </div>
+                                <div class="col" style=" text-align: right;">
+                                    <p style="font-size:42px; font-weight:bold; "><?= $jumlahSuratMasuk ?> </p>
+                                </div>  
+                            </div>
+                        </div>
+
+
                     </div>
-                </div>
+</div>
             </div>
             <div class="row" style=" height:170px ;">
-                <div class="card mt-1" style="background-color: #36A2EB; width: 700px;height: 145px;" border-radius:10>
+                <div class="card mt-1" style="background-color: <?php echo $suratKeluarWrn ?>; width: 700px;height: 145px;" border-radius:10>
                     <div class="card-body">
                         <h5 class="card-title">Surat Keluar</h5>
                         <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
-                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-success" style="">Lihat</a>
+                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn" style="background-color:<?php echo $btnPrimary ?> ;">Lihat</a>
                     </div>
                 </div>
             </div>
             <div class="row" style=" height:170px ;">
-                <div class="card mt-1" style="background-color: #FFCD55; width: 700px;height: 145px;" border-radius:10>
+                <div class="card mt-1" style="background-color: <?php echo $suratTugasWrn ?>; width: 700px;height: 145px;" border-radius:10>
                     <div class="card-body">
                         <h5 class="card-title">Surat Tugas</h5>
                         <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratTugas ?></p>
-                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-success">Lihat</a>
+                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-info" >Lihat</a>
                     </div>
                 </div>
             </div>

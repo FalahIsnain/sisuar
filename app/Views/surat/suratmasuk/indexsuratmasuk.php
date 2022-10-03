@@ -1,6 +1,5 @@
 <?= $this->extend('layout/surat/template'); ?>
 <?= $this->section('content'); ?>
-
 <div class="container ml-8">
     <center>
         <div class="container mt-1">
@@ -29,10 +28,10 @@
                     <th>Asal Surat</th>
                     <th>Tujuan</th>
                     <th>Perihal</th>
-                    <th>Isi Ringkas</th>
+                    <!-- <th>Isi Ringkas</th> -->
                     <th>Tanggal Masuk</th>
                     <th>Berkas</th>
-                    <th>Tindakan</th>
+                    <th>Tanggapan</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -43,15 +42,23 @@
                         <td><?= $sm['asal_surat'] ?></td>
                         <td><?= $sm['tujuan_surat'] ?></td>
                         <td><?= $sm['perihal'] ?></td>
-                        <td><?= $sm['isi_ringkas'] ?></td>
+                        <!-- <td><?= $sm['isi_ringkas'] ?></td> -->
                         <?php $date = date('d-M-Y', strtotime($sm['tanggal_masuk'])) ?>
                         <td><?= $date ?></td>
                         <td>
                             <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
                         </td>
-                        <td><a href="<?= site_url('SuratMasuk/Disposisi/' . $sm['id_surat']) ?>">
+                        <td>
+                         <?php
+                            if ($sm['ket_surat'] == 'Ya') { ?>
+                                <a href="<?= site_url('SuratMasuk/Disposisi/' . $sm['id_surat']) ?>">
                                 <button type="button" class="btn btn-success">Disposisi</button>
-                            </a> </td>
+                            </a> 
+                            <?php } 
+                            else { ?> 
+                               <button type="button" class="btn btn-danger">Disposisi</button>
+                        <?php } ?>                              
+                        </td>
                         <td>
                             <button type="button " class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formedit-<?= $sm['id_surat'] ?>">
                                 <a><i class="fas fa-edit"></i></a>
@@ -110,30 +117,22 @@
                             Perihal Tidak Boleh Kosong!
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-12">
                         <label for="validationCustom02" class="form-label">Tanggal Masuk</label>
                         <input type="date" class="form-control" id="validationCustom02" value="" id="tanggal_masuk" name="tanggal_masuk" required>
                         <div class="invalid-feedback">
                             Tanggal Masuk Tidak Boleh Kosong!
                         </div>
                     </div>
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                         <label for="validationCustom02" class="form-label">Isi Ringkas</label>
                         <input type="text" class="form-control" id="validationCustom02" value="" id="isi_ringkas" name="isi_ringkas" required>
                         <div class="invalid-feedback">
                             Isi Ringkas Tidak Boleh Kosong!
                         </div>
-                    </div>
-
+                    </div> -->
                     <div class="col-12">
-                        <label for="validationCustom02" class="form-label">Alasan</label>
-                        <input type="text" class="form-control" id="validationCustom02" value="" id="alasan" name="alasan" required>
-                        <div class="invalid-feedback">
-                            Alasan Tidak Boleh Kosong!
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="validationCustom04" class="form-label">Keterangan</label>
+                        <label for="validationCustom04" class="form-label">Disposisi</label>
                         <select class="form-select" id="validationCustom04" id="ket_surat" name="ket_surat" required>
                             <option selected disabled value="">Choose...</option>
                             <option value="Ya">Ya</option>
@@ -144,6 +143,14 @@
                         </div>
                     </div>
                     <div class="col-12">
+                        <label for="validationCustom02" class="form-label">Alasan</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" id="alasan" name="alasan" required>
+                        <div class="invalid-feedback">
+                            Alasan Tidak Boleh Kosong!
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
                         <label for="formFile" class="form-label">test</label>
                         <input class="form-control" type="file" id="formFile" name="file" required>
                         <div class="invalid-feedback">
@@ -152,7 +159,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Ubah</button>
+                        <button type="submit" class="btn btn-primary">Tambah</button>
                     </div>
                 </form>
             </div>
@@ -209,13 +216,13 @@
                                 Tanggal Masuk Tidak Boleh Kosong!
                             </div>
                         </div>
-                        <div class="col-12">
+                        <!-- <div class="col-12">
                             <label for="validationCustom02" class="form-label">Isi Ringkas</label>
                             <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['isi_ringkas'] ?>" id="isi_ringkas" name="isi_ringkas" required>
                             <div class="invalid-feedback">
                                 Isi Ringkas Tidak Boleh Kosong!
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="col-12">
                             <label for="validationCustom02" class="form-label">Alasan</label>

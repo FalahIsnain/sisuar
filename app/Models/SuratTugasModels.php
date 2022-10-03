@@ -15,6 +15,7 @@ class SuratTugasModels extends Model
      'tanggal_mulai', 
      'tanggal_selesai', 
      'beban_biaya', 
+     'alat_angkut', 
      'tgl_rilis',
      'file',
      'jenis_surat'

@@ -23,6 +23,10 @@ class BerandaSurat extends BaseController
     {
         $data = [
             'title' => 'SISUAR',
+            'suratMasukWrn'=>'#F2D388',
+            'suratKeluarWrn'=>'#C98474',
+            'suratTugasWrn'=>'#874C62',
+            'btnPrimary'=>'#874C62',
             'suratmasuk' => $this->SuratMasukModels->findAll(),
             'suratkeluar' => $this->SuratKeluarModels->findAll(),
             'surattugas' => $this->SuratTugasModels->findAll(),
@@ -60,6 +64,7 @@ class BerandaSurat extends BaseController
         $namaFile = $file->getName();
         $file->move('asset/pdf', $namaFile);
         $dataSuratKeluar = [
+
             'no_surat' => $this->request->getVar('no_surat'),
             'tujuan_surat' => $this->request->getVar('tujuan_surat'),
             'perihal' => $this->request->getVar('perihal'),
@@ -77,6 +82,7 @@ class BerandaSurat extends BaseController
         $namaFile = $file->getName();
         $file->move('asset/pdf', $namaFile);
         $dataSuratTugas = [
+
             'no_surat' => $this->request->getVar('no_surat'),
             'keperluan' => $this->request->getVar('keperluan'),
             'tempat_tujuan' => $this->request->getVar('tempat_tujuan'),

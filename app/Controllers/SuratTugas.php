@@ -22,6 +22,9 @@ class SuratTugas extends BaseController
     public function index()
     {
         $data = [
+            'suratMasukWrn'=>'#F6F3A7',
+            'suratKeluarWrn'=>'#F6C523',
+            'suratTugasWrn'=>'#228C7B',
             'title' => 'SISUAR',
             'surattugas' => $this->SuratTugasModels->findAll(),
             'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),
@@ -43,6 +46,7 @@ class SuratTugas extends BaseController
             'tanggal_mulai' => $this->request->getVar('tanggal_mulai'),
             'tanggal_selesai' => $this->request->getVar('tanggal_selesai'),
             'beban_biaya' => $this->request->getVar('beban_biaya'),
+            'alat_angkut' => $this->request->getVar('alat_angkut'),
             'tgl_rilis' => $this->request->getVar('tgl_rilis'),
             'jenis_surat' => "Tugas",
             'file' => $namaFile,
@@ -85,6 +89,7 @@ class SuratTugas extends BaseController
             'tanggal_mulai' => $this->request->getVar('tanggal_mulai'),
             'tanggal_selesai' => $this->request->getVar('tanggal_selesai'),
             'beban_biaya' => $this->request->getVar('beban_biaya'),
+            'alat_angkut' => $this->request->getVar('alat_angkut'),
             'tgl_rilis' => $this->request->getVar('tgl_rilis'),
             'jenis_surat' => "Tugas",
             'file' => $namaFile,

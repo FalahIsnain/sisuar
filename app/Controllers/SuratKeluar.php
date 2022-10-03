@@ -21,6 +21,9 @@ class SuratKeluar extends BaseController
     public function index()
     {
         $data = [
+            'suratMasukWrn'=>'#F6F3A7',
+            'suratKeluarWrn'=>'#F6C523',
+            'suratTugasWrn'=>'#228C7B',
             'title' => 'SISUAR',
             'suratkeluar' => $this->SuratKeluarModels->findAll(),
             'jumlahSuratMasuk' => $this->SuratMasukModels->hitungSuratMasuk(),

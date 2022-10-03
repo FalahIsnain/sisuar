@@ -31,10 +31,9 @@
 </head>
 
 <body>
-    <?= $this->include('layout/sidebar'); ?>
-    <section class="home-section" style="background-color: white;">
-        <?= $this->renderSection('content'); ?>
-    </section>
+<?= $this->include('layout/dashboard/navbar'); ?>
+    <?= $this->renderSection('content'); ?>
+    
     <?= $this->include('layout/footer'); ?>
 
     <!-- //boot5 -->
@@ -43,8 +42,6 @@
     <!-- Jquery -->
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-
 
     <!-- datatables -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
