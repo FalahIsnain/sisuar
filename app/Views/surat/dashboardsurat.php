@@ -2,111 +2,47 @@
 <?= $this->section('content'); ?>
 
 <div class="container ml-8 mt-4">
-    <div class="row">
-        <div class="col">
-            <div class="row" style=" height:170px ;">
-                <div class="card mt-1" style="background-color: <?php echo $suratMasukWrn ?>; width: 700px;height: 145px;" border-radius:10>
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="card-title" style="font-size: 30px;font-weight: bolder;">SURAT <br> MASUK</p>
-                                </div>
-                                <div class="col">
-                                    <a href="<?= base_url('/SuratMasuk') ?>"><img src="https://cdn-icons-png.flaticon.com/512/3502/3502487.png" alt="" width="70px"></i></a>
-                                </div>
-                                <div class="col" style=" text-align: right;">
-                                    <p style="font-size:70px; font-weight:bold; "><?= $jumlahSuratMasuk ?> </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="col">
+        <center>
+            <div class="card" style="width: 490px;">
+                <div class="card-body">
+                    <canvas id="suratdashboard"></canvas>
                 </div>
             </div>
-            <div class="row" style=" height:170px ;">
-                <div class="card mt-1" style="background-color: <?php echo $suratKeluarWrn ?>; width: 700px;height: 145px;" border-radius:10>
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="card-title" style="font-size: 30px;font-weight: bolder;">SURAT <br> KELUAR</p>
-                                </div>
-                                <div class="col">
-                                    <a href="<?= base_url('/SuratKeluar') ?>"><img src="https://cdn-icons-png.flaticon.com/512/3502/3502487.png" alt="" width="70px"></i></a>
-                                </div>
-                                <div class="col" style=" text-align: right;">
-                                    <p style="font-size:70px; font-weight:bold; "><?= $jumlahSuratKeluar ?> </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style=" height:170px ;">
-                <div class="card mt-1" style="background-color: <?php echo $suratTugasWrn ?>; width: 700px;height: 145px;" border-radius:10>
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="card-title" style="font-size: 30px;font-weight: bolder;">SURAT <br> TUGAS</p>
-                                </div>
-                                <div class="col">
-                                    <a href="<?= base_url('/SuratTugas') ?>"><img src="https://cdn-icons-png.flaticon.com/512/3502/3502487.png" alt="" width="70px"></i></a>
-                                </div>
-                                <div class="col" style=" text-align: right;">
-                                    <p style="font-size:70px; font-weight:bold; "><?= $jumlahSuratTugas ?> </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <center>
-                <div class="card" style="width: 490px;">
-                    <div class="card-body">
-                        <canvas id="suratdashboard"></canvas>
-                    </div>
-                </div>
-            </center>
-        </div>
+        </center>
     </div>
 
-
-
-    <!-- <div class="container mt-3">
+    <div class="container mt-5">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
-                <div class="card" style="background-color: #FF5C7E;" border-radius:10>
+                <div class="card" style="background-color: <?php echo $suratMasukWrn ?>;" border-radius:10>
                     <div class="card-body">
-                        <h6></h6>
                         <h5 class="card-title">Surat Masuk</h5>
                         <p class="card-text">Jumlah Surat Masuk : <?= $jumlahSuratMasuk ?> </p>
-                        <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-success">Lihat</a>
+                        <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-primary">Lihat</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="background-color: #36A2EB;" border-radius:10>
+                <div class="card" style="background-color:  <?php echo $suratKeluarWrn ?>;" border-radius:10>
                     <div class="card-body">
                         <h5 class="card-title">Surat Keluar</h5>
                         <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
-                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-success" style="">Lihat</a>
+                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-primary" style="">Lihat</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="background-color: #FFCD55;" border-radius:10>
+                <div class="card" style="background-color: <?php echo $suratTugasWrn ?>" border-radius:10>
                     <div class="card-body">
                         <h5 class="card-title">Surat Tugas</h5>
                         <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratTugas ?></p>
-                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-success">Lihat</a>
+                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-primary">Lihat</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <br>
     <hr class="style1" style="border-top: 1px solid #8c8b8b">

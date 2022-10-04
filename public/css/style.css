@@ -1,18 +1,26 @@
 /* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
 
 /* body{
   background-image:url('../asset/landing1.png') ;
   background-size: cover;
 } */
 
+/*===========================
+        03.ABOUT css 
+===========================*/
+
+
+
+
+
+
 /*===== HEADER HERO =====*/
 .header-hero {
   height: 800px;
   position: relative; 
   background-size: cover;
-
 }
 
 .header-hero-image {
@@ -29,6 +37,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
+
 }
 .sidebar{
   position: fixed;

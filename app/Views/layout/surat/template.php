@@ -53,7 +53,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
     <script src="https://cdn.datatables.net/datetime/1.1.2/js/dataTables.dateTime.min.js"></script>
     <section class="home-section" style="background-color: white;">
-        <?= $this->include('layout/surat/navbar'); ?>
         <?= $this->renderSection('content'); ?>
         <?= $this->include('layout/footer'); ?>
     </section>

@@ -28,7 +28,7 @@
     <!-- <div class="bg-warning py-2">
         Some top header info
     </div> -->
-    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark" style="background-color: #3F4E4F;">
         <div class="container">
             <img src="https://raw.githubusercontent.com/aldiskatel/cdn/main/dist/2.png" width="50px" style="margin-right: 6px ;">
             <a class="navbar-brand" href="#">DINAS PEKERJAAN UMUM PENATAAN RUANG <br>

@@ -23,6 +23,32 @@
     <!--</div> <!-- header hero image -->
 </div>
 
+<?php $color = "#798795" ?>
+<?php $styleJudul = "color:#404040;font-weight:800;" ?>
+<div class="container marketing mt-5">
+    <div class="row">
+
+        <center>
+            <p style="color:#f14836; padding-bottom: 65px ; padding-top: 40px;letter-spacing: 5px;font-size: 18px;">TENTANG KAMI</p>
+        </center>
+
+        <div class="col-lg-4">
+            <h3 style="<?php echo $styleJudul ?>">Seksi Monitoring/Evaluasi</h3>
+            <p style="color: <?php echo $color ?>;font">Sistem ini berjalan dengan mengimplementasikan Geographic Information Sistem sehingga mempermudah dalam pemantauan dengan bentuk peta.</p>
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <h3 style="<?php echo $styleJudul ?>">Seksi Pemberdayaan</h3>
+            <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keahlian berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <h3 style="<?php echo $styleJudul ?>">Seksi Pengawasan</h3>
+            <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keterampilan berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
+
+        </div>
+    </div>
+</div>
 
 <div class="container text-center mt-5">
     <div class="row">
@@ -49,4 +75,6 @@
                 </div>
             </div>
         </div>
-        <?= $this->endSection(); ?>
+    </div>
+</div>
+<?= $this->endSection(); ?>
