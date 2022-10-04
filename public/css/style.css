@@ -97,7 +97,7 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover{
-  background: #0c0560;
+  background: #3F4E4F;
 }
 .sidebar .nav-links li .iocn-link{
   display: flex;
@@ -141,7 +141,7 @@
 .sidebar .nav-links li .sub-menu{
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
-  background: #140d5c;
+  background: #3F4E4F;
   display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu{

@@ -1,8 +1,8 @@
-<div class="sidebar close">
+<div class="sidebar close" style="background-color: #3F4E4F;">
     <div class="logo-details">
         <img src="https://raw.githubusercontent.com/aldiskatel/cdn/main/dist/2.png" width="50px" alt="">
     </div>
-    <ul class="nav-links">
+    <ul class="nav-links" style="background-color: #3F4E4F;">
         <li>
             <a href="<?= base_url('/') ?>">
                 <i class='bx bxs-home-alt-2'></i>

@@ -33,10 +33,12 @@
         </center>
 
         <div class="col-lg-4">
+            <i class="fa-regular fa-monitor-waveform" style="color: blue;"></i>
             <h3 style="<?php echo $styleJudul ?>">Seksi Monitoring/Evaluasi</h3>
             <p style="color: <?php echo $color ?>;font">Sistem ini berjalan dengan mengimplementasikan Geographic Information Sistem sehingga mempermudah dalam pemantauan dengan bentuk peta.</p>
 
-        </div><!-- /.col-lg-4 -->
+        </div>
+        <!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <h3 style="<?php echo $styleJudul ?>">Seksi Pemberdayaan</h3>
             <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keahlian berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
@@ -58,7 +60,7 @@
                 <div class="card-body">
 
                     <a href="<?= base_url('/BerandaSurat') ?>">
-                        <button type="button" class="btn btn-primary btn-lg" style="width:300px;">Surat</button>
+                        <button type="button" class="btn" style="width:300px;background:#3F4E4F">Surat</button>
                     </a>
 
                 </div>
@@ -75,6 +77,41 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="container text-center mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <a href="https://www.pu.go.id/">
+                <img src="asset\logopupr.jpeg" width="50px" alt="">
+            </a>
+            <h3 class="mt-1 mb-2" style="color:black">Kementrian PUPR <br> Republik Indonesia</h3>
+        </div>
+        <div class="col text-center">
+            <a href="https://dinaspupr.kalselprov.go.id/home">
+                <img src="https://raw.githubusercontent.com/aldiskatel/cdn/main/dist/2.png" width="50px" alt="">
+            </a>
+            <h3 class="mt-1 mb-2" style="color:black">Dinas PUPR <br> Provinsi Kalimantan Selatan</h3>
+        </div>
+        <div class="col text-center">
+            <a href="https://pamsimas.pu.go.id/">
+                <img src="asset\logopamsinas.png" width="80px" alt="">
+            </a>
+            <h3 class="mt-1 " style="color:black">PAMSIMAS <br> Republik Indonesia</h3>
+        </div>
+        <div class="col text-center">
+            <a href="https://kalselprov.go.id/">
+                <img src="https://raw.githubusercontent.com/aldiskatel/cdn/main/dist/2.png" width="50px" alt="">
+            </a>
+            <h3 class="mt-1 mb-2" style="color:black">Provinsi Kalimantan Selatan</h3>
+        </div>
+        <div class="col text-center">
+            <a href="https://binakonstruksi.pu.go.id/">
+                <img src="asset\logopupr.jpeg" width="50px" alt="">
+            </a>
+            <h3 class="mt-1 mb-2" style="color:black">Direktorat Jendral <br> Binakontruksi PUPR </h3>
+        </div>
+
     </div>
 </div>
 <?= $this->endSection(); ?>
