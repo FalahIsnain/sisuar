@@ -81,7 +81,7 @@
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1">SISUAR</h2>
-            <p class="lead">Sistem Surat dan Pengarsipan berbasis web. Aplikasi Siswar merupakan aplikasi yang dibangun secara khusus untuk kebutuhan administrasi persuratan dan pengarsipan pada Bidang Bina Konstruksi Dinas PUPR Provinsi Kalimantan Selatan.</p>
+            <p class="lead">Sistem Surat dan Pengarsipan berbasis web. Aplikasi Sisuar merupakan aplikasi yang dibangun secara khusus untuk kebutuhan administrasi persuratan dan pengarsipan pada Bidang Bina Konstruksi Dinas PUPR Provinsi Kalimantan Selatan.</p>
             <a href="<?= base_url('/BerandaSurat') ?>">
                 <button type="button" class="btn" style="width:300px;background:#3F4E4F;color: white;">Surat</button>
             </a>
@@ -197,6 +197,9 @@
             <h3 style="font-weight:bolder ;">Kepala<br> Bidang </h3>
             <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/kabid2.png" width="215px" alt="">
         </div>
+    </div>
+
+    <div class="row mt-5">
         <div class="col">
             <h3 style="font-weight:bolder ;">Kepala Seksi Pengawasan</h3>
             <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/Kasi.png" width="215px" alt="">
@@ -209,6 +212,7 @@
             <h3 style="font-weight:bolder ;">Kepala Seksi Monev & Pengaturan</h3>
             <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/subhan-.png" width="215px" alt="">
         </div>
+
     </div>
 
 

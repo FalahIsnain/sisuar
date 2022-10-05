@@ -23,10 +23,10 @@ class BerandaSurat extends BaseController
     {
         $data = [
             'title' => 'SISUAR',
-            'suratMasukWrn'=>'#FF5C7E',
-            'suratKeluarWrn'=>'#59D97E',
-            'suratTugasWrn'=>'#FFCD55',
-            'btnPrimary'=>'#874C62',
+            'suratMasukWrn' => '#9DAB86  ',
+            'suratKeluarWrn' => '#57837B',
+            'suratTugasWrn' => '#FFD369',
+            'btnPrimary' => '#874C62',
             'suratmasuk' => $this->SuratMasukModels->findAll(),
             'suratkeluar' => $this->SuratKeluarModels->findAll(),
             'surattugas' => $this->SuratTugasModels->findAll(),
@@ -51,7 +51,7 @@ class BerandaSurat extends BaseController
             'isi_ringkas' => $this->request->getVar('isi_ringkas'),
             'ket_surat' => $this->request->getVar('ket_surat'),
             'alasan' => $this->request->getVar('alasan'),
-            'jenis_surat'=>'Surat Masuk',
+            'jenis_surat' => 'Surat Masuk',
             'file' =>  $namaFile,
         ];
         session()->setFlashdata('pesan', 'Berhasil Di Tambahkan');
@@ -70,7 +70,7 @@ class BerandaSurat extends BaseController
             'perihal' => $this->request->getVar('perihal'),
             'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
             'isi_ringkas' => $this->request->getVar('isi_ringkas'),
-            'jenis_surat'=>'Surat Keluar',
+            'jenis_surat' => 'Surat Keluar',
             'file' => $namaFile,
         ];
         $this->SuratKeluarModels->save($dataSuratKeluar);
