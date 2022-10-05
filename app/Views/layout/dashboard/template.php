@@ -33,7 +33,7 @@
 <body>
     <?= $this->include('layout/dashboard/navbar'); ?>
     <?= $this->renderSection('content'); ?>
-    <?= $this->include('layout/footer'); ?>
+    <?= $this->include('layout/footer-home'); ?>
 
 
 

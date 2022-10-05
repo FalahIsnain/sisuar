@@ -38,9 +38,9 @@
             </button>
             <div class="collapse navbar-collapse" id="main_nav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#"> HOME </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"> ABOUT </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"> CONTACT </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home"> HOME </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"> ABOUT </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"> CONTACT </a></li>
                 </ul>
             </div> <!-- navbar-collapse.// -->
         </div> <!-- container-fluid.// -->
