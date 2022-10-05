@@ -24,77 +24,10 @@
     <!--</div> <!-- header hero image -->
 </div>
 
-<!-- TENTANG KAMI -->
-
-
-<?php $color = "#798795" ?>
-<?php $styleJudul = "color:#5e8b7e;font-weight:800;" ?>
-<div class="container marketing mt-5" id="about">
-    <div class="row">
-        <center>
-            <p style="color:#f14836; padding-bottom: 65px ; padding-top: 40px;letter-spacing: 5px;font-size: 18px;">TENTANG KAMI</p>
-        </center>
-
-        <div class="col-lg-4">
-
-            <center>
-                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/09/logo4.png" width="100px">
-            </center>
-            <br>
-            <h3 style="<?php echo $styleJudul ?>">Seksi Monitoring/Evaluasi</h3>
-            <p style="color: <?php echo $color ?>;font">Sistem ini berjalan dengan mengimplementasikan Geographic Information Sistem sehingga mempermudah dalam pemantauan dengan bentuk peta.</p>
-
-        </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <center>
-                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/09/logo3.png" width="100px">
-            </center>
-            <br>
-            <h3 style="<?php echo $styleJudul ?>">Seksi Pemberdayaan</h3>
-            <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keahlian berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-
-            <center>
-                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/09/logo6.png" width="140px">
-            </center>
-            <br>
-            <h3 style="<?php echo $styleJudul ?>">Seksi Pengawasan</h3>
-            <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keterampilan berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
-
-        </div>
-    </div>
 </div>
 
 
 
-<!-- CONTAINER FEATURE -->
-
-<div class="container ml-5" id="feature">
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 style="color:#5E8B7E;font-weight: bolder;">SISUAR</h2>
-            <p class="lead">Sistem Surat dan Pengarsipan berbasis web. Aplikasi Sisuar merupakan aplikasi yang dibangun secara khusus untuk kebutuhan administrasi persuratan dan pengarsipan pada Bidang Bina Konstruksi Dinas PUPR Provinsi Kalimantan Selatan.</p>
-            <a href="<?= base_url('/BerandaSurat') ?>">
-                <button type="button" class="btn" style="width:300px;background:#5E8B7E;color: white;font-weight: bold;">Tambah Surat</button>
-            </a>
-        </div>
-        <div class="col-md-5">
-            <img src="asset\suraticon.png" class="card-img-top" alt="...">
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-    <!-- /END THE FEATURETTES -->
-
-</div>
 
 <!-- <div class="container text-center mt-5">
     <div class="row">
@@ -127,8 +60,13 @@
 
 <!-- STRUKTUR -->
 
-<div class="container ml-5" id="struktur">
+<div class="container mt-3" id="struktur">
     <div class="row featurette">
+        <center>
+            <p style="color:#f14836; padding-bottom: 65px ; padding-top: 40px;letter-spacing: 5px;font-size: 18px;">DINAS PEKERJAAN UMUM PENATAAN RUANG 
+            <br> KALIMANTAN SELATAN
+        </p>
+        </center>
         <div class="col-md-7 order-md-2">
             <h2 style="color:#5E8B7E;font-weight: bolder;">Kepala Dinas PU Kalimantan Selatan <span class="text-muted"></span></h2>
             <p class="lead">Direktorat Jenderal Bina Konstruksi mempunyai tugas menyelenggarakan perumusan dan pelaksanaan kebijakan di bidang pembinaan jasa konstruksi sesuai dengan ketentuan peraturan perundang-undangan.</p>
@@ -188,36 +126,105 @@
     </div>
 
 </div>
+<!-- TENTANG KAMI -->
+<hr class="featurette-divider">
 
-<!-- KEPALA BIDANG -->
 
-<div class="container mt-5 text-center">
+<?php $color = "#798795" ?>
+<?php $styleJudul = "color:#5e8b7e;font-weight:800;" ?>
+<div class="container marketing mt-5" id="about">
     <div class="row">
-        <div class="col">
-            <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala<br> Bidang </h3>
-            <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/kabid2.png" width="215px" alt="">
+        <center>
+            <p style="color:#f14836; padding-bottom: 65px ; padding-top: 40px;letter-spacing: 5px;font-size: 18px;">TENTANG BINAKONTRUKSI</p>
+        </center>
+
+        <div class="col-lg-4">
+
+            <center>
+                <img src="asset\monitoring.svg" width="180px">
+            </center>
+            <br>
+            <h3 style="<?php echo $styleJudul ?>">Seksi Monitoring/Evaluasi</h3>
+            <p style="color: <?php echo $color ?>;font">Sistem ini berjalan dengan mengimplementasikan Geographic Information Sistem sehingga mempermudah dalam pemantauan dengan bentuk peta.</p>
+
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <center>
+                <img src="asset\pemberdayaan.svg" width="230px">
+            </center>
+            <br>
+            <h3 style="<?php echo $styleJudul ?>">Seksi Pemberdayaan</h3>
+            <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keahlian berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+
+            <center>
+                <img src="asset\pengawasan.svg" width="200px">
+            </center>
+            <br>
+            <h3 style="<?php echo $styleJudul ?>">Seksi Pengawasan</h3>
+            <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keterampilan berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
+
         </div>
     </div>
-
-    <div class="row mt-5">
-        <div class="col">
-            <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Pengawasan</h3>
-            <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/Kasi.png" width="215px" alt="">
-        </div>
-        <div class="col">
-            <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Pemberdayaan</h3>
-            <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/kasi2-1.png" width="215px" alt="">
-        </div>
-        <div class="col">
-            <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Monev & Pengaturan</h3>
-            <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/subhan-.png" width="215px" alt="">
-        </div>
-
-    </div>
-
-
     <hr class="featurette-divider">
+    <!-- KEPALA BIDANG -->
 
+    <div class="container mt-5 text-center">
+        <div class="row">
+            <div class="col">
+                <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala<br> Bidang </h3>
+                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/kabid2.png" width="215px" alt="">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Pengawasan</h3>
+                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/Kasi.png" width="215px" alt="">
+            </div>
+            <div class="col">
+                <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Pemberdayaan</h3>
+                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/kasi2-1.png" width="215px" alt="">
+            </div>
+            <div class="col">
+                <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Monev & Pengaturan</h3>
+                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/subhan-.png" width="215px" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- CONTAINER FEATURE -->
+
+    <div class="container mt-5 " id="feature">
+
+        <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider">
+
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 style="color:#5E8B7E;font-weight: bolder;">SISUAR</h2>
+                <p class="lead">Sistem Surat dan Pengarsipan berbasis web. Aplikasi Sisuar merupakan aplikasi yang dibangun secara khusus untuk kebutuhan administrasi persuratan dan pengarsipan pada Bidang Bina Konstruksi Dinas PUPR Provinsi Kalimantan Selatan.</p>
+                <a href="<?= base_url('/BerandaSurat') ?>">
+                    <button type="button" class="btn" style="width:300px;background:#5E8B7E;color: white;font-weight: bold;">Tambah Surat</button>
+                </a>
+            </div>
+
+            <div class="col-md-5">
+                <img src="asset\surat.svg" style="width:300px;margin-left:180px;" class="card-img-top" alt="...">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <!-- /END THE FEATURETTES -->
+
+    </div>
     <!-- PARTER -->
     <div class="container text-center mt-5">
         <div class="row">
@@ -253,4 +260,5 @@
             </div>
         </div>
     </div>
+
     <?= $this->endSection(); ?>

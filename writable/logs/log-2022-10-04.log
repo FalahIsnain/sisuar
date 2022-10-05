@@ -1,0 +1,24 @@
+CRITICAL - 2022-10-04 23:09:16 --> Undefined variable: suratMasukWrn
+in APPPATH\Views\layout\surat\template.php on line 132.
+ 1 APPPATH\Views\layout\surat\template.php(132): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratMasukWrn', 'APPPATH\\Views\\layout\\surat\\template.php', 132, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\surat\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/surat/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratmasuk/filtersuratmasuk.php', [], true)
+ 6 APPPATH\Controllers\SuratMasuk.php(127): view('surat/suratmasuk/filtersuratmasuk.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratMasuk->formfilter()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-04 23:09:22 --> Undefined variable: suratMasukWrn
+in APPPATH\Views\layout\surat\template.php on line 132.
+ 1 APPPATH\Views\layout\surat\template.php(132): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: suratMasukWrn', 'APPPATH\\Views\\layout\\surat\\template.php', 132, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\surat\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/surat/template', [], true)
+ 5 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('surat/suratkeluar/filtersuratkeluar.php', [], true)
+ 6 APPPATH\Controllers\SuratKeluar.php(106): view('surat/suratkeluar/filtersuratkeluar.php', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\SuratKeluar->formfilter()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SuratKeluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

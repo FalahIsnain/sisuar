@@ -32,7 +32,7 @@
         <div class="container">
             <img src="https://raw.githubusercontent.com/aldiskatel/cdn/main/dist/2.png" width="50px" style="margin-right: 6px ;">
             <a class="navbar-brand" href="#">DINAS PEKERJAAN UMUM PENATAAN RUANG <br>
-                PEMERINTAH PROVINSI KALIMANTAN SELATAH</a>
+                PEMERINTAH PROVINSI KALIMANTAN SELATAN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
