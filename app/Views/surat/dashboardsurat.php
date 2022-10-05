@@ -19,7 +19,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Surat Masuk</h5>
                         <p class="card-text">Jumlah Surat Masuk : <?= $jumlahSuratMasuk ?> </p>
-                        <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-primary">Lihat</a>
+                        <a href="<?= base_url('/SuratMasuk') ?>" class="btn btn-dark">Lihat</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Surat Keluar</h5>
                         <p class="card-text">Jumlah Surat Keluar : <?= $jumlahSuratKeluar ?></p>
-                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-primary" style="">Lihat</a>
+                        <a href="<?= base_url('/SuratKeluar') ?>" class="btn btn-dark" style="">Lihat</a>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Surat Tugas</h5>
                         <p class="card-text">Jumlah Surat Tugas :<?= $jumlahSuratTugas ?></p>
-                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-primary">Lihat</a>
+                        <a href="<?= base_url('/SuratTugas') ?>" class="btn btn-dark">Lihat</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
         <div class="tablebox" style="width: 1300px;">
             <table id="table" class="table table-striped" style="width:100%">
                 <thead>
-                    <tr style="background-color: #8c8b8b;color:white">
+                    <tr style="background-color: #5E8B7E;color:white">
                         <th>Jenis Surat</th>
                         <th>No surat</th>
                         <th>Tujuan</th>

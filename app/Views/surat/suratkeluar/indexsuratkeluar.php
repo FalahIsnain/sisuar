@@ -20,7 +20,7 @@
     <div class="tablebox" style="width: 1300px;">
         <table id="table" class="table table-striped" style="width:100%">
             <thead>
-                <tr>
+                <tr style="background-color: #5E8B7E;color:white">
                     <th>No surat</th>
                     <th>Tujuan Surat</th>
                     <th>Perihal</th>

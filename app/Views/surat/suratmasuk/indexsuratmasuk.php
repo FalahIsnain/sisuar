@@ -23,7 +23,7 @@
         <table id="table" class="table table-striped" style="width:100%">
 
             <thead>
-                <tr>
+                <tr style="background-color: #5E8B7E;color:white">
                     <th>No surat</th>
                     <th>Asal Surat</th>
                     <th>Tujuan</th>
@@ -49,15 +49,14 @@
                             <a href="<?= base_url('asset/pdf/' . $sm['file']) ?>"><?= $sm['file'] ?> </a>
                         </td>
                         <td>
-                         <?php
+                            <?php
                             if ($sm['ket_surat'] == 'Ya') { ?>
                                 <a href="<?= site_url('SuratMasuk/Disposisi/' . $sm['id_surat']) ?>">
-                                <button type="button" class="btn btn-success">Disposisi</button>
-                            </a> 
-                            <?php } 
-                            else { ?> 
-                               <button type="button" class="btn btn-danger">Disposisi</button>
-                        <?php } ?>                              
+                                    <button type="button" class="btn btn-success">Disposisi</button>
+                                </a>
+                            <?php } else { ?>
+                                <button type="button" class="btn btn-danger">Disposisi</button>
+                            <?php } ?>
                         </td>
                         <td>
                             <button type="button " class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formedit-<?= $sm['id_surat'] ?>">
@@ -149,7 +148,7 @@
                             Alasan Tidak Boleh Kosong!
                         </div>
                     </div>
-                    
+
                     <div class="col-12">
                         <label for="formFile" class="form-label">test</label>
                         <input class="form-control" type="file" id="formFile" name="file" required>

@@ -28,7 +28,7 @@
 
 
 <?php $color = "#798795" ?>
-<?php $styleJudul = "color:#404040;font-weight:800;" ?>
+<?php $styleJudul = "color:#5e8b7e;font-weight:800;" ?>
 <div class="container marketing mt-5" id="about">
     <div class="row">
         <center>
@@ -80,10 +80,10 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">SISUAR</h2>
+            <h2 style="color:#5E8B7E;font-weight: bolder;">SISUAR</h2>
             <p class="lead">Sistem Surat dan Pengarsipan berbasis web. Aplikasi Sisuar merupakan aplikasi yang dibangun secara khusus untuk kebutuhan administrasi persuratan dan pengarsipan pada Bidang Bina Konstruksi Dinas PUPR Provinsi Kalimantan Selatan.</p>
             <a href="<?= base_url('/BerandaSurat') ?>">
-                <button type="button" class="btn" style="width:300px;background:#3F4E4F;color: white;">Surat</button>
+                <button type="button" class="btn" style="width:300px;background:#5E8B7E;color: white;font-weight: bold;">Tambah Surat</button>
             </a>
         </div>
         <div class="col-md-5">
@@ -130,7 +130,7 @@
 <div class="container ml-5" id="struktur">
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Kepala Dinas PU Kalimantan Selatan <span class="text-muted"></span></h2>
+            <h2 style="color:#5E8B7E;font-weight: bolder;">Kepala Dinas PU Kalimantan Selatan <span class="text-muted"></span></h2>
             <p class="lead">Direktorat Jenderal Bina Konstruksi mempunyai tugas menyelenggarakan perumusan dan pelaksanaan kebijakan di bidang pembinaan jasa konstruksi sesuai dengan ketentuan peraturan perundang-undangan.</p>
 
             <div class="accordion" id="accordionExample">
@@ -194,22 +194,22 @@
 <div class="container mt-5 text-center">
     <div class="row">
         <div class="col">
-            <h3 style="font-weight:bolder ;">Kepala<br> Bidang </h3>
+            <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala<br> Bidang </h3>
             <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/kabid2.png" width="215px" alt="">
         </div>
     </div>
 
     <div class="row mt-5">
         <div class="col">
-            <h3 style="font-weight:bolder ;">Kepala Seksi Pengawasan</h3>
+            <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Pengawasan</h3>
             <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/Kasi.png" width="215px" alt="">
         </div>
         <div class="col">
-            <h3 style="font-weight:bolder ;">Kepala Seksi Pemberdayaan</h3>
+            <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Pemberdayaan</h3>
             <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/kasi2-1.png" width="215px" alt="">
         </div>
         <div class="col">
-            <h3 style="font-weight:bolder ;">Kepala Seksi Monev & Pengaturan</h3>
+            <h3 style="color:#5E8B7E;font-weight: bolder;">Kepala Seksi Monev & Pengaturan</h3>
             <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/subhan-.png" width="215px" alt="">
         </div>
 

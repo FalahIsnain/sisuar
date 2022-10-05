@@ -23,9 +23,9 @@ class BerandaSurat extends BaseController
     {
         $data = [
             'title' => 'SISUAR',
-            'suratMasukWrn' => '#9DAB86  ',
-            'suratKeluarWrn' => '#57837B',
-            'suratTugasWrn' => '#FFD369',
+            'suratMasukWrn' => '#EC7272      ',
+            'suratKeluarWrn' => '#FFD369     ',
+            'suratTugasWrn' => '#63B4B8    ',
             'btnPrimary' => '#874C62',
             'suratmasuk' => $this->SuratMasukModels->findAll(),
             'suratkeluar' => $this->SuratKeluarModels->findAll(),

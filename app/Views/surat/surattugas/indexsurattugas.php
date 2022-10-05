@@ -20,7 +20,7 @@
     <div class="tablebox" style="width: 1300px;">
         <table id="table" class="table table-striped" style="width:100%">
             <thead>
-                <tr>
+                <tr style="background-color: #5E8B7E;color:white;justify-content: center;">
                     <th>No surat</th>
                     <th>keperluan</th>
                     <th>Tempat</th>
@@ -116,7 +116,7 @@
                         <label for="validationCustom02" class="form-label">Pembebanan Biaya</label>
                         <input type="text" class="form-control" id="validationCustom02" value="" id="beban_biaya" name="beban_biaya" required>
                         <div class="invalid-feedback">
-                        Pembebanan Biaya Tidak Boleh Kosong!
+                            Pembebanan Biaya Tidak Boleh Kosong!
                         </div>
                     </div>
 
@@ -124,7 +124,7 @@
                         <label for="validationCustom02" class="form-label">Alat angkut yang digunakan</label>
                         <input type="text" class="form-control" id="validationCustom02" value="" id="alat_angkut" name="alat_angkut" required>
                         <div class="invalid-feedback">
-                        Alat angkut yang digunakan Tidak Boleh Kosong!
+                            Alat angkut yang digunakan Tidak Boleh Kosong!
                         </div>
                     </div>
 
@@ -211,12 +211,12 @@
                         </div>
 
                         <div class="col-12">
-                        <label for="validationCustom02" class="form-label">Alat angkut yang digunakan</label>
-                        <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['alat_angkut'] ?>" id="alat_angkut" name="alat_angkut" required>
-                        <div class="invalid-feedback">
-                        Alat angkut yang digunakan Tidak Boleh Kosong!
+                            <label for="validationCustom02" class="form-label">Alat angkut yang digunakan</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="<?= $sm['alat_angkut'] ?>" id="alat_angkut" name="alat_angkut" required>
+                            <div class="invalid-feedback">
+                                Alat angkut yang digunakan Tidak Boleh Kosong!
+                            </div>
                         </div>
-                    </div>
 
                         <div class="col-md-6">
                             <label for="validationCustom02" class="form-label">Tanggal Surat di Buat</label>
