@@ -133,14 +133,14 @@
             <h2 class="featurette-heading">Kepala Dinas PU Kalimantan Selatan <span class="text-muted"></span></h2>
             <p class="lead">Direktorat Jenderal Bina Konstruksi mempunyai tugas menyelenggarakan perumusan dan pelaksanaan kebijakan di bidang pembinaan jasa konstruksi sesuai dengan ketentuan peraturan perundang-undangan.</p>
 
-            <div class="accordion accordion-flush" id="accordionFlushStayOpenExample">
+            <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <b>Tugas pokok dan fungsi</b>
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p>Direktorat Jenderal Bina Konstruksi mempunyai tugas menyelenggarakan perumusan dan pelaksanaan kebijakan di bidang pembinaan jasa .konstruksi sesuai dengan ketentuan peraturan perundang-undangan.</p>
                             <p>Dalam melaksanakan tugas Direktorat Jenderal Bina Konstruksi menyelenggarakan fungsi:</p>
@@ -158,12 +158,12 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <b>Unit Kerja</b>
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <li>Sekretariat Direktorat Jenderal</li>
                             <li>Bina Investasi Infrastruktur</li>
@@ -174,10 +174,13 @@
                             <li>Balai Jasa Konstruksi</li>
                             <li>Balai Penerapan Teknologi Konstruksi</li>
                             <li>Balai Material dan Peralatan</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
         <div class="col-md-5 order-md-1">
             <img width="532" height="789" src="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/profil-kadis2.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://kalselprov.monjaki.id/wp-content/uploads/2020/08/profil-kadis2.png 732w, https://kalselprov.monjaki.id/wp-content/uploads/2020/08/profil-kadis2-222x300.png 222w" sizes="(max-width: 732px) 100vw, 732px">
