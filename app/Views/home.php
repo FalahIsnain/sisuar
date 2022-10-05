@@ -33,18 +33,31 @@
         </center>
 
         <div class="col-lg-4">
-            <i class="fa-regular fa-monitor-waveform" style="color: blue;"></i>
+
+            <center>
+                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/09/logo4.png" width="100px">
+            </center>
+            <br>
             <h3 style="<?php echo $styleJudul ?>">Seksi Monitoring/Evaluasi</h3>
             <p style="color: <?php echo $color ?>;font">Sistem ini berjalan dengan mengimplementasikan Geographic Information Sistem sehingga mempermudah dalam pemantauan dengan bentuk peta.</p>
 
         </div>
         <!-- /.col-lg-4 -->
         <div class="col-lg-4">
+            <center>
+                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/09/logo3.png"  width="100px" >
+            </center>
+            <br>
             <h3 style="<?php echo $styleJudul ?>">Seksi Pemberdayaan</h3>
             <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keahlian berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
 
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
+
+            <center>
+                <img src="https://kalselprov.monjaki.id/wp-content/uploads/2020/09/logo6.png"  width="140px">
+            </center>
+            <br>
             <h3 style="<?php echo $styleJudul ?>">Seksi Pengawasan</h3>
             <p style="color: <?php echo $color ?>">Tenaga dengan sertifikat keterampilan berdasarkan klasifikasi dan kualifikasi yang ditetapkan sesuai dengan ketentuan peraturan perundang-undangan tentang jasa konstruksi.</p>
 
